@@ -5,11 +5,20 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"summit.webassembly.org\" > out/CNAME && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out github-page master"
   },
   "dependencies": {
     "next": "9.1.4",
     "react": "16.12.0",
-    "react-dom": "16.12.0"
+    "react-dom": "16.12.0",
+    "react-icons": "^3.8.0",
+    "styled-components": "^4.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.14",
+    "@types/react": "^16.9.13",
+    "@types/styled-components": "^4.4.0",
+    "typescript": "^3.7.2"
   }
 }
