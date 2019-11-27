@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+package-lock.json
 /.pnp
 .pnp.js
 
@@ -11,7 +12,8 @@
 # next.js
 /.next/
 
-# production
+# built-files
+/out
 /build
 
 # misc
