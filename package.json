@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"summit.webassembly.org\" > out/CNAME && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out github-page master"
+    "export": "next build && next export && touch out/.nojekyll"
   },
   "dependencies": {
     "next": "9.1.4",
