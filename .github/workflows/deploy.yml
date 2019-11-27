@@ -1,0 +1,31 @@
+name: Deploy production site
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Navigate to repo
+      run: cd $GITHUB_WORKSPACE
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Install yarn
+      run: npm install yarn -g
+    - name: Install deps
+      run: yarn install
+    - name: Prepare site
+      run: yarn export
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BASE_BRANCH: dev
+        BRANCH: master
+        FOLDER: out
+        CLEAN: true
