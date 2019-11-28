@@ -9,29 +9,33 @@ export default () => {
         <title>WebAssembly</title>
       </Head>
       <div>
-        <Headline>
-          <Logo alt="WebAssembly logo" src="/static/webassembly-logo.svg" />
-        </Headline>
-        <Headline>
-          WebAssembly<br></br> Summit
-        </Headline>
-        <GrayDiv>
+        <header role="banner">
+          <Headline>
+            <Logo alt="WebAssembly logo" src="/static/webassembly-logo.svg" />
+          </Headline>
+          <Headline>
+            WebAssembly<br></br> Summit
+          </Headline>
+        </header>
+        <GrayDiv role="main">
           <WhiteSpan>February 10</WhiteSpan>, 2020<br></br>
           <WhiteSpan>Google</WhiteSpan>, Plymouth St 1625<br></br>
           <WhiteSpan>Mountain View</WhiteSpan> CA
         </GrayDiv>
-        <Spacer>
-          <a href="https://bit.ly/wasm-summit-2020">
-            <Button>
-              <FaBell style={{ margin: "0 20px 0 35px" }}></FaBell>
-              <div>Sign up for updates</div>
-            </Button>
-          </a>
-        </Spacer>
-        <Divider />
-        <ContactUs>
-          Contact us: <a href="mailto:wasm-summit-2020@chromium.org">wasm-summit-2020@chromium.org</a>
-        </ContactUs>
+        <div role="contentinfo">
+          <Spacer>
+            <a href="https://bit.ly/wasm-summit-2020">
+              <Button>
+                <FaBell style={{ margin: "0 20px 0 35px" }} role="img" aria-label="Sign Up Icon"></FaBell>
+                <div>Sign up for updates</div>
+              </Button>
+            </a>
+          </Spacer>
+          <Divider />
+          <ContactUs>
+            Contact us: <a href="mailto:wasm-summit-2020@chromium.org">wasm-summit-2020@chromium.org</a>
+          </ContactUs>
+        </div>
       </div>
     </Centered>
   );
@@ -61,12 +65,12 @@ const WhiteSpan = styled.span`
 
 const GrayDiv = styled.div`
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
   margin: 20px 20px;
   line-height: 1.5;
 `;
 
-const Headline = styled.div`
+const Headline = styled.h1`
   font-size: 38px;
   color: white;
   letter-spacing: 7px;
@@ -113,7 +117,7 @@ const ContactUs = styled.div`
   text-align: center;
 
   a, a:visited {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.7);
   }
 `;
 
