@@ -28,6 +28,10 @@ export default () => {
             </Button>
           </a>
         </Spacer>
+        <Divider />
+        <ContactUs>
+          Contact us: <a href="mailto:wasm-summit-2020@chromium.org">wasm-summit-2020@chromium.org</a>
+        </ContactUs>
       </div>
     </Centered>
   );
@@ -58,7 +62,7 @@ const WhiteSpan = styled.span`
 const GrayDiv = styled.div`
   font-size: 20px;
   color: rgba(255, 255, 255, 0.5);
-  margin: 30px 20px;
+  margin: 20px 20px;
   line-height: 1.5;
 `;
 
@@ -95,5 +99,21 @@ const Button = styled.div`
 const Spacer = styled.div`
   font-size: 20px;
   line-height: 1.5;
-  padding: 25px 20px 0 20px;
+  padding: 10px 20px 0 20px;
 `;
+
+const Divider = styled.hr`
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  margin-top: 3em;
+  margin-bottom: 1em;
+`;
+
+const ContactUs = styled.div`
+  color: #FFFFFF;
+  text-align: center;
+
+  a, a:visited {
+    color: rgba(255, 255, 255, 0.5);
+  }
+`;
+
