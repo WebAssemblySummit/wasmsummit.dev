@@ -38,6 +38,7 @@ export default class extends App {
           {/* <title>WebAssembly Community</title> */}
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="description" content="WebAssembly Summit 2020" />
           <link
             rel="shortcut icon"
             type="image/x-icon"
