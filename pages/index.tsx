@@ -41,7 +41,7 @@ export default () => {
       </CTA>
 
       <Footer>
-        <a href="#">Contact</a>|<a href="#">Code of conduct</a>
+        <a href="#">Contact</a> <a href="#">Code of conduct</a>
       </Footer>
     </Container>
   );
@@ -88,7 +88,7 @@ const Hero = styled.div`
 
 const Headline = styled.h1`
   font-size: 3.75rem;
-  text-shadow: 1px 4px 0px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
   margin: 20px 0px;
   padding: 0px;
   font-family: "IBM Plex Sans", sans-serif;
@@ -104,6 +104,7 @@ const Subheadline = styled.h3`
   font-weight: 500;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
   margin: 0;
   padding: 0;
 `;
@@ -111,6 +112,7 @@ const Subheadline = styled.h3`
 const Content = styled.p`
   font-size: 1.3rem;
   color: rgba(255, 255, 255, 0.7);
+  text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
   text-align: center;
   max-width: 900px;
   margin: 50px auto;
@@ -147,7 +149,7 @@ const Button = styled.a`
 const Footer = styled.footer`
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
-  margin: 40px 0px;
+  margin: 50px 0px;
   font-size: 1.1rem;
   a {
     color: rgba(255, 255, 255, 0.7);
