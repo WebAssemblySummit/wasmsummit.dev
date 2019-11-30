@@ -27,9 +27,12 @@ const LandingPage: FC = () => (
     </Hero>
 
     <Oneliner>
-      WebAssembly Summit is a <Highlight>one day</Highlight>,
-      <Highlight> single-track</Highlight>, conference for{" "}
-      <Highlight>all things </Highlight>
+      <OnelinerHighlight>Satellite conference</OnelinerHighlight> of the
+      <OnelinerHighlight> Wasm CG</OnelinerHighlight> in person meeting.
+      <br />
+      <OnelinerHighlight>
+        One day, single track, all things
+      </OnelinerHighlight>{" "}
       WebAssembly.
     </Oneliner>
 
@@ -69,10 +72,10 @@ const Container = styled.div`
 
 const Hero = styled.div`
   display: grid;
-  grid-template-columns: 1.6fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   align-items: flex-end;
   align-content: center;
-  margin-top: 1vh;
+  margin-top: 8vh;
 
   @media (max-width: 980px) {
     grid-template-columns: 1fr;
@@ -84,7 +87,10 @@ const Hero = styled.div`
 const Logo = styled.img`
   max-width: 100%;
   margin-left: auto;
+  flex-grow: 1;
+  flex-basis: 900px;
   width: 900px;
+  flex-shrink: 1;
 
   @media (max-width: 980px) {
     margin-bottom: 40px;
@@ -92,9 +98,10 @@ const Logo = styled.img`
 `;
 
 const Title = styled.div`
-  margin-right: 15%;
+  padding-right: 10%;
+
   @media (max-width: 980px) {
-    margin: 0 25px 0 10%;
+    padding: 0 10%;
   }
 `;
 
@@ -103,7 +110,7 @@ const Headline = styled.h1`
   text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
   margin: 20px 0px;
   padding: 0px;
-  letter-spacing: 7px;
+  letter-spacing: 5px;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
   line-height: 1.25;
@@ -134,7 +141,7 @@ const Subheadline = styled.h3`
 `;
 
 const Highlight = styled.span`
-  font-size: 1.55rem;
+  font-size: 1.6rem;
   color: white;
 `;
 
@@ -143,10 +150,18 @@ const Oneliner = styled.p`
   color: rgba(255, 255, 255, 0.75);
   text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
   text-align: left;
-  max-width: 900px;
-  margin: 50px auto;
+  margin: 40px auto;
   padding: 0 10%;
   line-height: 1.6;
+  max-width: 800px;
+
+  @media (max-width: 980px) {
+  }
+`;
+
+const OnelinerHighlight = styled.span`
+  font-size: 1.4rem;
+  color: white;
 `;
 
 const CallToAction = styled.div`
@@ -155,13 +170,13 @@ const CallToAction = styled.div`
 `;
 
 const Button = styled.a`
-  font-size: 1.67rem;
-  padding: 20px 25px;
+  font-size: 1.6rem;
+  padding: 15px 20px;
   background: ${(props: { primary?: boolean }) =>
     props.primary ? "#2D16A4" : "#fff"};
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  margin: 20px 20px;
+  margin: 3vh 20px;
   color: ${(props: { primary?: boolean }) =>
     props.primary ? "#fff" : "#2D16A4"};
   transition: all 0.1s ease;
@@ -181,7 +196,7 @@ const Button = styled.a`
 const Footer = styled.footer`
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
-  margin: 50px 0px;
+  margin: 5vh 0;
   font-size: 1.1rem;
 
   a {
