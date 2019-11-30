@@ -72,10 +72,10 @@ const Container = styled.div`
 
 const Hero = styled.div`
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1.3fr 1fr;
   align-items: flex-end;
   align-content: center;
-  margin-top: 8vh;
+  margin-top: 2vh;
 
   @media (max-width: 980px) {
     grid-template-columns: 1fr;
@@ -99,6 +99,7 @@ const Logo = styled.img`
 
 const Title = styled.div`
   padding-right: 10%;
+  margin: 0 0 3vh 0;
 
   @media (max-width: 980px) {
     padding: 0 10%;
@@ -150,8 +151,8 @@ const Oneliner = styled.p`
   color: rgba(255, 255, 255, 0.75);
   text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
   text-align: left;
-  margin: 40px auto;
-  padding: 0 10%;
+  margin: 2vh auto;
+  padding: 0 010%;
   line-height: 1.6;
   max-width: 800px;
 
@@ -196,7 +197,7 @@ const Button = styled.a`
 const Footer = styled.footer`
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
-  margin: 5vh 0;
+  margin: 2vh 0;
   font-size: 1.1rem;
 
   a {
