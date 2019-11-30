@@ -27,8 +27,8 @@ const LandingPage: FC = () => (
     </Hero>
 
     <Oneliner>
-      <OnelinerHighlight>One day, single track, all things</OnelinerHighlight>{" "}
-      WebAssembly.
+      A <OnelinerHighlight>one day, single track</OnelinerHighlight>, conference
+      about <OnelinerHighlight>all things</OnelinerHighlight> WebAssembly.
     </Oneliner>
 
     <CallToAction>
