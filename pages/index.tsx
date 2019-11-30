@@ -1,124 +1,155 @@
-import Head from "next/head";
+import { FC } from "react";
 import styled from "styled-components";
-import { FaBell } from "react-icons/fa";
+import Head from "next/head";
+import Link from "next/link";
 
-export default () => {
-  return (
-    <Container>
-      <Head>
-        <title>WebAssembly</title>
-      </Head>
+const LandingPage: FC = () => (
+  <Container>
+    <Head>
+      <title>WebAssembly Summit</title>
+    </Head>
 
-      <Hero>
-        <Logo src="/static/wasmsummit2.svg" alt="Web assembly summit logo" />
-        <div>
-          <Headline>
-            WebAssembly
-            <br />
-            Summit
-          </Headline>
-          <Subheadline>
-            February 10, 2020 <br />
-            Google, Plymouth St 1625
-            <br />
-            Mountain View CA
-          </Subheadline>
-        </div>
-      </Hero>
+    <Hero>
+      <Logo src="summit-logo.svg" alt="WebAssembly Summit Logo" />
+      <Title>
+        <Headline>
+          WebAssembly
+          <br />
+          Summit
+        </Headline>
+        <Subheadline>
+          <Highlight>February 10</Highlight>, 2020 <br />
+          <Highlight>Google</Highlight>, Plymouth St 1625
+          <br />
+          <Highlight>Mountain View</Highlight> CA
+        </Subheadline>
+      </Title>
+    </Hero>
 
-      <Content>
-        WebAssembly Summit is a one day, single-track, conference for all things
-        WebAssembly.
-      </Content>
+    <Oneliner>
+      WebAssembly Summit is a <Highlight>one day</Highlight>,
+      <Highlight> single-track</Highlight>, conference for{" "}
+      <Highlight>all things </Highlight>
+      WebAssembly.
+    </Oneliner>
 
-      <CTA>
-        <Button primary href="#">
-          Apply as speaker
-        </Button>
-        <Button primary={false} href="#">
-          Apply for tickets
-        </Button>
-      </CTA>
+    <CallToAction>
+      <Button
+        primary
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdY82WK8eGSDro2qLwU63wbf8bTQhcSmSmmofY8QuQceS9Tag/viewform"
+      >
+        Apply as speaker
+      </Button>
 
-      <Footer>
-        <a href="#">Contact</a> <a href="#">Code of conduct</a>
-      </Footer>
-    </Container>
-  );
-};
+      <Button href="https://docs.google.com/forms/d/e/1FAIpQLSdPRUyMntjziOO3vXIUI4KujAAE4auc06b2gnydDNjGIJ6E0A/viewform">
+        Apply for tickets
+      </Button>
+    </CallToAction>
 
-const Logo = styled.img`
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: 20px;
-  width: 1280px;
+    <Footer>
+      <a href="mailto:wasm-summit-2020@chromium.org">Contact</a>
+      <Link href="/code-of-conduct">
+        <a>Code of conduct</a>
+      </Link>
+    </Footer>
+  </Container>
+);
 
-  @media (max-width: 768px) {
-    margin-bottom: 40px;
-  }
-`;
+export default LandingPage;
 
 const Container = styled.div`
-  max-width: 1440px;
-  padding: 0px 50px;
-  margin: 0 auto;
   display: flex;
-  height: 98vh;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  @media (max-width: 768px) {
-    padding: 10px 20px;
-  }
+  justify-content: center;
+  align-items: center;
+  min-height: 95vh;
+  padding: 0;
+  margin: 0;
 `;
 
 const Hero = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.6fr 1fr;
   align-items: flex-end;
   align-content: center;
-  margin-top: 5vh;
-  @media (max-width: 1020px) {
+  margin-top: 1vh;
+
+  @media (max-width: 980px) {
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
-    text-align: center;
+  }
+`;
+
+const Logo = styled.img`
+  max-width: 100%;
+  margin-left: auto;
+  width: 900px;
+
+  @media (max-width: 980px) {
+    margin-bottom: 40px;
+  }
+`;
+
+const Title = styled.div`
+  margin-right: 15%;
+  @media (max-width: 980px) {
+    margin: 0 25px 0 10%;
   }
 `;
 
 const Headline = styled.h1`
-  font-size: 3.75rem;
+  font-size: 3.5rem;
   text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
   margin: 20px 0px;
   padding: 0px;
+  letter-spacing: 7px;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
-  line-height: 1.3;
-  @media (max-width: 768px) {
+  line-height: 1.25;
+
+  @media (max-width: 1280px) {
     font-size: 3rem;
+  }
+
+  @media (max-width: 980px) {
+    font-size: 3.5rem;
+  }
+
+  @media (max-width: 980px) {
+    font-size: 3.5rem;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 2.5rem;
   }
 `;
 
 const Subheadline = styled.h3`
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
   text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
-  margin: 0;
-  padding: 0;
 `;
 
-const Content = styled.p`
+const Highlight = styled.span`
+  font-size: 1.55rem;
+  color: white;
+`;
+
+const Oneliner = styled.p`
   font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.75);
   text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
-  text-align: center;
+  text-align: left;
   max-width: 900px;
   margin: 50px auto;
+  padding: 0 10%;
+  line-height: 1.6;
 `;
 
-const CTA = styled.div`
+const CallToAction = styled.div`
   margin: 0 auto;
   text-align: center;
 `;
@@ -126,15 +157,16 @@ const CTA = styled.div`
 const Button = styled.a`
   font-size: 1.67rem;
   padding: 20px 25px;
-  background: ${(props: { primary: boolean }) =>
+  background: ${(props: { primary?: boolean }) =>
     props.primary ? "#2D16A4" : "#fff"};
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   margin: 20px 20px;
-  color: ${(props: { primary: boolean }) =>
+  color: ${(props: { primary?: boolean }) =>
     props.primary ? "#fff" : "#2D16A4"};
   transition: all 0.1s ease;
   display: inline-block;
+
   &:hover {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     transform: scale(1.07);
@@ -142,7 +174,7 @@ const Button = styled.a`
 
   @media (max-width: 768px) {
     padding: 10px 20px;
-    margin: 5px 5px;
+    margin: 10px 5px;
   }
 `;
 
@@ -151,6 +183,7 @@ const Footer = styled.footer`
   color: rgba(255, 255, 255, 0.7);
   margin: 50px 0px;
   font-size: 1.1rem;
+
   a {
     color: rgba(255, 255, 255, 0.7);
     margin: 0px 10px;
