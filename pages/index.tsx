@@ -27,12 +27,7 @@ const LandingPage: FC = () => (
     </Hero>
 
     <Oneliner>
-      <OnelinerHighlight>Satellite conference</OnelinerHighlight> of the
-      <OnelinerHighlight> Wasm CG</OnelinerHighlight> in person meeting.
-      <br />
-      <OnelinerHighlight>
-        One day, single track, all things
-      </OnelinerHighlight>{" "}
+      <OnelinerHighlight>One day, single track, all things</OnelinerHighlight>{" "}
       WebAssembly.
     </Oneliner>
 
