@@ -195,7 +195,8 @@ const Footer = styled.footer`
   margin: 2vh 0;
   font-size: 1.1rem;
 
-  a {
+  a,
+  a:visited {
     color: rgba(255, 255, 255, 0.7);
     margin: 0px 10px;
     &:hover {
