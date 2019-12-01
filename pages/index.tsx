@@ -72,7 +72,7 @@ const Hero = styled.div`
   align-content: center;
   margin-top: 2vh;
 
-  @media (max-width: 980px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
@@ -87,8 +87,8 @@ const Logo = styled.img`
   width: 900px;
   flex-shrink: 1;
 
-  @media (max-width: 980px) {
-    margin-bottom: 40px;
+  @media (max-width: 768px) {
+    margin-bottom: 0;
   }
 `;
 
@@ -96,7 +96,7 @@ const Title = styled.div`
   padding-right: 10%;
   margin: 0 0 3vh 0;
 
-  @media (max-width: 980px) {
+  @media (max-width: 768px) {
     padding: 0 10%;
   }
 `;
@@ -115,11 +115,11 @@ const Headline = styled.h1`
     font-size: 3rem;
   }
 
-  @media (max-width: 980px) {
+  @media (max-width: 768px) {
     font-size: 3.5rem;
   }
 
-  @media (max-width: 980px) {
+  @media (max-width: 768px) {
     font-size: 3.5rem;
   }
 
@@ -130,6 +130,7 @@ const Headline = styled.h1`
 
 const Subheadline = styled.h3`
   font-size: 1.3rem;
+  margin: 0;
   font-weight: 500;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.75);
@@ -146,12 +147,12 @@ const Oneliner = styled.p`
   color: rgba(255, 255, 255, 0.75);
   text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
   text-align: left;
-  margin: 2vh auto;
-  padding: 0 010%;
+  margin: 3vh auto;
+  padding: 0 10%;
   line-height: 1.6;
-  max-width: 800px;
+  max-width: 768px;
 
-  @media (max-width: 980px) {
+  @media (max-width: 768px) {
   }
 `;
 
