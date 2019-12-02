@@ -45,7 +45,7 @@ const LandingPage: FC = () => (
     </CallToAction>
 
     <Footer>
-      <a href="mailto:wasm-summit-2020@chromium.org">Contact</a>
+      <a href="mailto:wasm-summit-2020@chromium.org">wasm-summit-2020@chromium.org</a>
       <Link href="/code-of-conduct">
         <a>Code of conduct</a>
       </Link>
