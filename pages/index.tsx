@@ -46,9 +46,8 @@ const LandingPage: FC = () => (
 
     <Footer>
       <a href="mailto:wasm-summit-2020@chromium.org">wasm-summit-2020@chromium.org</a>
-      <Link href="https://github.com/WebAssemblySummit/webassemblysummit.github.io/blob/dev/CODE_OF_CONDUCT.md">
-        <a>Code of conduct</a>
-      </Link>
+      <a href="https://github.com/WebAssemblySummit/webassemblysummit.github.io/blob/dev/CODE_OF_CONDUCT.md">Code of conduct</a>
+      <a href="https://twitter.com/search?q=%23WasmSummit&src=typed_query">#WasmSummit</a>
     </Footer>
   </Container>
 );
