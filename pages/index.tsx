@@ -47,7 +47,7 @@ const LandingPage: FC = () => (
     <OnelinerCentered>
       <OnelinerHighlight>
         <NoBreak>Application closes</NoBreak>
-        <NoBreak> December 9th</NoBreak>
+        <NoBreak> December 11th 17:00 PST</NoBreak>
       </OnelinerHighlight>
     </OnelinerCentered>
 
