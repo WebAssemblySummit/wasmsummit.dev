@@ -44,6 +44,13 @@ const LandingPage: FC = () => (
       </Button>
     </CallToAction>
 
+    <OnelinerCentered>
+      <OnelinerHighlight>
+        <NoBreak>Application closes</NoBreak>
+        <NoBreak> December 9th</NoBreak>
+      </OnelinerHighlight>
+    </OnelinerCentered>
+
     <Footer>
       <a href="mailto:wasm-summit-2020@chromium.org">wasm-summit-2020@chromium.org</a>
       <a href="https://github.com/WebAssemblySummit/webassemblysummit.github.io/blob/dev/CODE_OF_CONDUCT.md">Code of conduct</a>
@@ -155,6 +162,20 @@ const Oneliner = styled.p`
   }
 `;
 
+const OnelinerCentered = styled.p`
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.75);
+  text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  margin: 3vh auto;
+  padding: 0 10%;
+  line-height: 1.6;
+  max-width: 768px;
+
+  @media (max-width: 768px) {
+  }
+`;
+
 const OnelinerHighlight = styled.span`
   font-size: 1.4rem;
   color: white;
@@ -187,6 +208,10 @@ const Button = styled.a`
     padding: 10px 20px;
     margin: 10px 5px;
   }
+`;
+
+const NoBreak = styled.span`
+  white-space: nowrap;
 `;
 
 const Footer = styled.footer`
