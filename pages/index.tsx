@@ -19,7 +19,7 @@ const LandingPage: FC = () => (
         </Headline>
         <Subheadline>
           <Highlight>February 10</Highlight>, 2020 <br />
-          <Highlight>Google</Highlight>, Plymouth St 1625
+          <Highlight>Google</Highlight>, 1625 Plymouth St
           <br />
           <Highlight>Mountain View</Highlight> CA
         </Subheadline>
