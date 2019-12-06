@@ -19,6 +19,7 @@ Organizers contact info:
 
 - Ashley Williams, [@ag_dubs]
 - Aaron Turner, [@torch2424]
+- Michael Hablich, [@mhablich]
 - Surma, [@dassurma]
 
 For less urgent matters, or advance matters, please email us at wasm-summit-2020@chromium.org.
@@ -26,3 +27,4 @@ For less urgent matters, or advance matters, please email us at wasm-summit-2020
 [@ag_dubs]: https://twitter.com/ag_dubs
 [@torch2424]: https://twitter.com/torch2424
 [@dassurma]: https://twitter.com/dassurma
+[@mhablich]: https://twitter.com/mhablich
