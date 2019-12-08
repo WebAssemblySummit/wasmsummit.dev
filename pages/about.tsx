@@ -20,6 +20,9 @@ const Faq: FC<{ heading: string, children: ReactNode }> = ({ heading, children }
 
 const AboutPage: FC = () => (
     <div>
+        <Head>
+            <title>About — WebAssembly Summit</title>
+        </Head>
         <Header>
             <Link href="/">Home</Link>
             <a href="#organizers">Organizers</a>
