@@ -2,7 +2,7 @@
 
 ## Is this a community event?
 
-Yes, the summit is organised by individual people in the WebAssembly communitty, and at the time of writing sponsored by Google and Mozilla. 
+Yes, the summit is organised by individual people in the WebAssembly community, and at the time of writing sponsored by Google and Mozilla. 
 
 ## Who is organizing?
 
