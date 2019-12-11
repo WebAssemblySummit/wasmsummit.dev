@@ -38,12 +38,12 @@ const AboutPage: FC = () => (
                 <Faq heading="Who is organizing?">
                     The organizers are (in alphabetical order):
                     <ul>
-                        <li>Aaron Turner (<a href="https://twitter.com/torch2424">@torch2424</a>)</li>
-                        <li>Ashley Williams (<a href="https://twitter.com/ag_dubs">@ag_dubs</a>)</li>
-                        <li>Michael Hablich (<a href="https://twitter.com/MHablich">@MHablich</a>)</li>
-                        <li>Surma (<a href="https://twitter.com/DasSurma">@DasSurma</a>)</li>
-                        <li>Thomas Tränkler  (<a href="https://twitter.com/ttraenkler">@ttraenkler</a>)</li>
-                        <li>Till Schneidereit (<a href="https://twitter.com/tschneidereit">@tschneidereit</a>)</li>
+                        <li>Aaron Turner</li>
+                        <li>Ashley Williams</li>
+                        <li>Michael Hablich</li>
+                        <li>Surma</li>
+                        <li>Thomas Tränkler</li>
+                        <li>Till Schneidereit</li>
                     </ul>
 
                     With some help of some other awesome folks!
