@@ -4,7 +4,7 @@ import { createGlobalStyle } from "styled-components";
 
 // pages/_app.tsx
 const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap');
   html {
     margin: 0;
     padding: 0;

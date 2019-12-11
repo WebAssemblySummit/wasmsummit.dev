@@ -53,7 +53,7 @@ const LandingPage: FC = () => (
 
     <Footer>
       <NoBreak><a href="mailto:wasm-summit-2020@chromium.org">wasm-summit-2020@chromium.org</a></NoBreak>
-      <NoBreak><a href="https://github.com/WebAssemblySummit/webassemblysummit.github.io/blob/dev/FAQ.md">FAQ</a></NoBreak>
+      <NoBreak><Link href="/about#faq">FAQs</Link></NoBreak>
       <NoBreak><a href="https://github.com/WebAssemblySummit/webassemblysummit.github.io/blob/dev/CODE_OF_CONDUCT.md">Code of conduct</a></NoBreak>
       <NoBreak><a href="https://twitter.com/search?q=%23WasmSummit&src=typed_query">#WasmSummit</a></NoBreak>
     </Footer>
@@ -86,7 +86,7 @@ const Hero = styled.div`
   }
 `;
 
-const Logo = styled.img`
+export const Logo = styled.img`
   max-width: 100%;
   margin-left: auto;
   flex-grow: 1;
