@@ -31,23 +31,9 @@ const LandingPage: FC = () => (
       about <OnelinerHighlight>all things</OnelinerHighlight> WebAssembly.
     </Oneliner>
 
-    <CallToAction>
-      <Button
-        primary
-        href="https://docs.google.com/forms/d/e/1FAIpQLSdY82WK8eGSDro2qLwU63wbf8bTQhcSmSmmofY8QuQceS9Tag/viewform"
-      >
-        Apply as speaker
-      </Button>
-
-      <Button href="https://docs.google.com/forms/d/e/1FAIpQLSdPRUyMntjziOO3vXIUI4KujAAE4auc06b2gnydDNjGIJ6E0A/viewform">
-        Apply for tickets
-      </Button>
-    </CallToAction>
-
     <OnelinerCentered>
       <OnelinerHighlight>
-        <NoBreak>Application closes</NoBreak>
-        <NoBreak> December 11th 17:00 PST</NoBreak>
+        Applications to speak and attend are now closed
       </OnelinerHighlight>
     </OnelinerCentered>
 
