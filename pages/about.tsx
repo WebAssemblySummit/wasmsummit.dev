@@ -26,9 +26,6 @@ const AboutPage: FC = () => (
         <Header>
             <Link href="/">Home</Link>
             <a href="#faq">FAQs</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdY82WK8eGSDro2qLwU63wbf8bTQhcSmSmmofY8QuQceS9Tag/viewform">Apply as speaker</a>
-            <br />
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdPRUyMntjziOO3vXIUI4KujAAE4auc06b2gnydDNjGIJ6E0A/viewform">Apply for tickets</a>
         </Header>
         <AboutContainer>
             
