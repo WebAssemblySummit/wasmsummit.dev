@@ -21,7 +21,7 @@ const Faq: FC<{ heading: string; children: ReactNode }> = ({
   children
 }) => (
   <div style={{ margin: "30px 0px" }}>
-    <Paragraph bold>{heading}</Paragraph>
+    <Question bold>{heading}</Question>
     <Paragraph>{children}</Paragraph>
   </div>
 );
@@ -38,7 +38,7 @@ const AboutPage: FC = () => (
       <a href="#faq">FAQs</a>
     </Header>
     <AboutContainer>
-      <ContentContainer primary id="faq">
+      <ContentContainer id="faq">
         <Heading>FAQs</Heading>
         <Faq heading="Is this a community event?">
           Yes, the summit is organised by individual people in the WebAssembly
@@ -116,9 +116,6 @@ const Header = styled.div`
 const AboutContainer = styled.div`
   width: 100%;
   padding: 20px 0px;
-  background-color: #fbfbfb;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e7eefb' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  background-opacity: 0.2;
 `;
 
 const Heading = styled.h2`
@@ -126,10 +123,18 @@ const Heading = styled.h2`
   font-weight: 700;
 `;
 
+const Question = styled.div`
+  font-size: 1.4em;
+  margin: 5px 0px;
+  padding: 0px;
+  font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
+`;
+
 const Paragraph = styled.div`
   font-size: 1.4em;
   margin: 5px 0px;
   padding: 0px;
+  color: rgba(255, 255, 255, 0.8);
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
 `;
 
@@ -142,7 +147,7 @@ const ContentContainer = styled.div`
       props.primary ? "#fff" : "transparent"};
     box-shadow: ${(props: { primary?: boolean }) =>
       props.primary ? "0px 5px 30px rgba(0,0,0,0.01)" : "0px"};
-    color: #000;
+    color: #fff;
     max-width: 960px;
     margin: 30px auto;
     padding: 20px 40px;
