@@ -38,10 +38,26 @@ const LandingPage: FC = () => (
     </OnelinerCentered>
 
     <Footer>
-      <NoBreak><a href="mailto:wasm-summit-2020@chromium.org">wasm-summit-2020@chromium.org</a></NoBreak>
-      <NoBreak><Link href="/about#faq" as="/about#faq">FAQs</Link></NoBreak>
-      <NoBreak><a href="https://github.com/WebAssemblySummit/webassemblysummit.github.io/blob/dev/CODE_OF_CONDUCT.md">Code of conduct</a></NoBreak>
-      <NoBreak><a href="https://twitter.com/search?q=%23WasmSummit&src=typed_query">#WasmSummit</a></NoBreak>
+      <NoBreak>
+        <a href="mailto:wasm-summit-2020@chromium.org">
+          wasm-summit-2020@chromium.org
+        </a>
+      </NoBreak>
+      <NoBreak>
+        <Link href="/about.html#faq" as="/about#faq">
+          <a>FAQs</a>
+        </Link>
+      </NoBreak>
+      <NoBreak>
+        <a href="https://github.com/WebAssemblySummit/webassemblysummit.github.io/blob/dev/CODE_OF_CONDUCT.md">
+          Code of conduct
+        </a>
+      </NoBreak>
+      <NoBreak>
+        <a href="https://twitter.com/search?q=%23WasmSummit&src=typed_query">
+          #WasmSummit
+        </a>
+      </NoBreak>
     </Footer>
   </Container>
 );
