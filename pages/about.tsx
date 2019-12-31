@@ -126,7 +126,7 @@ const Heading = styled.h2`
   font-weight: 700;
 `;
 
-const Paragraph = styled.p`
+const Paragraph = styled.div`
   font-size: 1.4em;
   margin: 5px 0px;
   padding: 0px;
