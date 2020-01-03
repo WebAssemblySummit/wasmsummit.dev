@@ -105,45 +105,6 @@ const AboutPage: FC = () => (
             <SponsorLogo src="google-logo.svg" alt="Google Logo" />
             <SponsorLogo src="mozilla-logo.svg" alt="Mozilla Logo" />
           </Faq>
-          <Faq heading="Will you have a livestream?">
-            Yes, the summit will be livestreamed on Youtube and posted here once
-            available. So no worries, even if you are not able to attend, you
-            will be able to follow the event.
-          </Faq>
-          <Faq heading="Will you record the talks?">
-            Yes, the talks will be uploaded on Youtube and posted here once
-            available. So no worries, even if you cannot attend or follow the
-            livestream, you will be able to catch up on the talks later once
-            they are published.
-          </Faq>
-          <Faq heading="What if I need help?">
-            On-site, conference staff will be identifiable by their Wasm purple
-            tshirts with "STAFF" on their back. If you need help of any kind, to
-            report a bad situation, or anything else not specified that we can
-            help with, please find us on site, DM us on twitter, or call/text.
-          </Faq>
-          <Faq heading="Do you have a code of conduct?">
-            WebAssembly Summit is intended an inclusive conference for everyone
-            and will enforce the linked{" "}
-            <a href="https://github.com/WebAssemblySummit/webassemblysummit.github.io/blob/dev/CODE_OF_CONDUCT.md">
-              code of conduct
-            </a>{" "}
-            to make sure everybody feels welcome and safe.
-          </Faq>
-          <Faq heading="How to find you on Twitter?">
-            The official hashtag of the conference is{" "}
-            <a href="https://twitter.com/search?q=%23WasmSummit&src=typed_query">
-              #WasmSummit
-            </a>
-            . There is no dedicated Twitter account for the conference.
-          </Faq>
-          <Faq heading="Do you have a live chat?">
-            The official chat channel of the conference is the{" "}
-            <a href="http://discordapp.com/invite/nEFErF8">#summit</a> channel
-            on the WebAssembly Discord. Here you can exchange with the
-            organizers or other attendees before, during or after the
-            conference.
-          </Faq>
           <Faq heading="Who are the organizers of this event?">
             The organizers are (in alphabetical order):
             <ul>
@@ -162,6 +123,51 @@ const AboutPage: FC = () => (
             . <br />
             <br />
             Thanks for all the support from the WebAssembly community!
+          </Faq>
+          <Faq heading="Will you have a livestream?">
+            Yes, the summit will be livestreamed on Youtube and posted here once
+            available. So no worries, even if you are not able to attend, you
+            will be able to follow the event.
+          </Faq>
+          <Faq heading="Will you record the talks?">
+            Yes, the talks will be uploaded on Youtube and posted here once
+            available. So no worries, even if you cannot attend or follow the
+            livestream, you will be able to catch up on the talks later once
+            they are published.
+          </Faq>
+          <Faq heading="Which hotels can you recommend?">
+            Hotels can be expensive in Mountain View.{" "}
+            <a href="https://www.airbnb.com/s/1625-Plymouth-St--Mountain-View--Kalifornien--USA/all">
+              AirBnB
+            </a>{" "}
+            is a moderately priced option with offers around the conference
+            site.
+          </Faq>
+          <Faq heading="What is your Code of Conduct?">
+            WebAssembly Summit is intended an inclusive conference for everyone
+            and will enforce our{" "}
+            <a href="https://github.com/WebAssemblySummit/webassemblysummit.github.io/blob/dev/CODE_OF_CONDUCT.md">
+              code of conduct
+            </a>{" "}
+            to make sure everybody feels welcome and safe. On-site, conference
+            staff will be identifiable by their Wasm purple tshirts with "STAFF"
+            on their back. If you need help of any kind, to report a bad
+            situation, or anything else not specified that we can help with,
+            please find us on site, DM us on twitter, or call/text.
+          </Faq>
+          <Faq heading="Are you on Twitter?">
+            The official hashtag of the conference is{" "}
+            <a href="https://twitter.com/search?q=%23WasmSummit&src=typed_query">
+              #WasmSummit
+            </a>
+            . There is no dedicated Twitter account for the conference.
+          </Faq>
+          <Faq heading="Do you have a chat?">
+            The official chat channel of the conference is the{" "}
+            <a href="http://discordapp.com/invite/nEFErF8">#summit</a> channel
+            on the WebAssembly Discord. Here you can exchange with the
+            organizers or other attendees before, during or after the
+            conference.
           </Faq>
         </Row>
       </ContentContainer>
