@@ -44,8 +44,8 @@ const LandingPage: FC = () => (
         </a>
       </NoBreak>
       <NoBreak>
-        <Link href="/about.html#faq" as="/about#faq">
-          <a>FAQs</a>
+        <Link href="/about.html" as="/about">
+          <a>About</a>
         </Link>
       </NoBreak>
       <NoBreak>
