@@ -1,98 +1,13 @@
-import { FC, Children, ReactNode } from "react";
+import { FC, ReactNode } from "react";
 import styled from "styled-components";
-import Head from "next/head";
-import Link from "next/link";
-import { FaTwitter, FaYoutube } from "react-icons/fa";
+import Header from "../components/Header";
+import NavBar from "../components/NavBar";
 
-const Organizer: FC<{
-  image: string;
-  name: string;
-  link: string;
-  handle: string;
-}> = ({ image, name, link, handle }) => (
-  <SingleOrganizer>
-    <img src={image} />
-    <h3>{name}</h3>
-    <a href={link}>{handle}</a>
-  </SingleOrganizer>
-);
-
-const Faq: FC<{ heading: string; children: ReactNode }> = ({
-  heading,
-  children
-}) => (
-  <div style={{ breakInside: "avoid" }}>
-    <Question bold>{heading}</Question>
-    <Answer>{children}</Answer>
-  </div>
-);
-
-export const Logo = styled.img`
-  max-width: 100%;
-  margin-left: auto;
-  flex-grow: 1;
-  flex-basis: 50px;
-  width: 50px;
-  flex-shrink: 1;
-
-  @media (max-width: 768px) {
-    margin-bottom: 0;
-  }
-`;
-
-export const SponsorLogo = styled.img`
-  width: 200px;
-  margin: 25px;
-`;
-
-const A = styled.a`
-  margin: 0;
-`;
+const title = "About the Conference";
 
 const AboutPage: FC = () => (
-  <div>
-    <Head>
-      <title>About — WebAssembly Summit</title>
-    </Head>
-    <Header>
-      <HomeButton>
-        <Link href="/index.html" as="/">
-          <HomeButton>
-            <Logo src="webassembly-logo.svg" alt="WebAssembly Summit Logo" />
-            <WebAssemblySummit>WebAssembly Summit</WebAssemblySummit>
-          </HomeButton>
-        </Link>
-      </HomeButton>
-      <NavItems>
-        <Button>
-          <Link href="/news.html" as="/news">
-            <a>News</a>
-          </Link>
-        </Button>
-        <Button>
-          <Link href="/speakers.html" as="/speakers">
-            <a>Speakers</a>
-          </Link>
-        </Button>
-        <Button>
-          <Link href="/schedule.html" as="/schedule">
-            <a>Schedule</a>
-          </Link>
-        </Button>
-        <Button>
-          <Link href="/about.html" as="/about">
-            <a>About</a>
-          </Link>
-        </Button>
-        <Button>
-          <FaTwitter size={24}></FaTwitter>
-        </Button>
-        <Button>
-          <FaYoutube size={24}></FaYoutube>
-        </Button>
-      </NavItems>
-    </Header>
-    <Heading>About the Event</Heading>
+  <>
+    <Header title={title} />
     <AboutContainer>
       <ContentContainer id="faq">
         <Row>
@@ -105,7 +20,7 @@ const AboutPage: FC = () => (
             <SponsorLogo src="google-logo.svg" alt="Google Logo" />
             <SponsorLogo src="mozilla-logo.svg" alt="Mozilla Logo" />
           </Faq>
-          <Faq heading="Who are the organizers of this event?">
+          <Faq heading="Who are the organizers?">
             The organizers are (in alphabetical order):
             <ul>
               <li>Aaron Turner</li>
@@ -172,72 +87,54 @@ const AboutPage: FC = () => (
         </Row>
       </ContentContainer>
     </AboutContainer>
+  </>
+);
+
+export default AboutPage;
+
+const Organizer: FC<{
+  image: string;
+  name: string;
+  link: string;
+  handle: string;
+}> = ({ image, name, link, handle }) => (
+  <SingleOrganizer>
+    <img src={image} />
+    <h3>{name}</h3>
+    <a href={link}>{handle}</a>
+  </SingleOrganizer>
+);
+
+const Faq: FC<{ heading: string; children: ReactNode }> = ({
+  heading,
+  children
+}) => (
+  <div style={{ breakInside: "avoid" }}>
+    <Question bold>{heading}</Question>
+    <Answer>{children}</Answer>
   </div>
 );
 
-const HomeButton = styled.div`
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-`;
-
-const WebAssemblySummit = styled.div`
-  margin: 0 40px;
-`;
-
-const NavItems = styled.div`
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  margin: 0 15px;
-`;
-
-const Button = styled.div`
-  margin: 0 20px;
-`;
-
-const Header = styled.div`
-  display: flex;
-  background: #1b1d6e;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
-  padding: 15px;
-  position: sticky;
+export const DarkLayer = styled.div`
+  background-color: rgba(0, 0, 0, 0.1);
+  position: fixed;
   top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+`;
 
-  a {
-    color: #fff;
-    &:visited {
-      color: #fff;
-    }
-    margin: 20px;
-    font-size: 1.2em;
-  }
+export const SponsorLogo = styled.img`
+  width: 175px;
+  margin: 20px;
+`;
 
-  @media (max-width: 480px) {
-    a {
-      margin: 10px;
-      font-size: 1em;
-    }
-  }
+const A = styled.a`
+  margin: 0;
 `;
 
 const AboutContainer = styled.div`
   padding: 50px 5%;
-  background-color: rgba(0, 0, 0, 0.1);
-`;
-
-const Heading = styled.h1`
-  font-size: 2em;
-  font-weight: 700;
-  margin: 0px 0 0px 0;
-  padding: 5px 75px 15px 75px;
-  border-bottom: 5px solid rgba(255, 255, 255, 0.5);
-  text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
-  background-color: #1b1d6e;
 `;
 
 const Question = styled.div`
@@ -275,14 +172,6 @@ const ContentContainer = styled.div`
       text-decoration: underline;
     }
   }
-
-  @media (max-width: 768px) {
-    padding: 10px 20px;
-  }
-
-  /*   grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
-  align-content: center;
-  margin-top: 2vh; */
 `;
 
 const Row = styled.div`
@@ -306,5 +195,3 @@ const SingleOrganizer = styled.div`
   }
   margin: 10px 0px;
 `;
-
-export default AboutPage;
