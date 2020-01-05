@@ -1,9 +1,8 @@
 import { FC, ReactNode } from "react";
 import styled from "styled-components";
 import Header from "../components/Header";
-import NavBar from "../components/NavBar";
 
-const title = "About the Conference";
+const title = "About the Event";
 
 const AboutPage: FC = () => (
   <>
@@ -30,6 +29,8 @@ const AboutPage: FC = () => (
               <li>Thomas Tränkler</li>
               <li>Till Schneidereit</li>
             </ul>
+          </Faq>
+          <Faq heading="How to contact you?">
             If you need to get in contact with the organizers for whatever
             reason, please send an email to{" "}
             <a href="mailto:wasm-summit-2020@chromium.org">
@@ -38,6 +39,20 @@ const AboutPage: FC = () => (
             . <br />
             <br />
             Thanks for all the support from the WebAssembly community!
+          </Faq>
+          <Faq heading="Are you on Twitter?">
+            The official hashtag of the conference is{" "}
+            <a href="https://twitter.com/search?q=%23WasmSummit&src=typed_query">
+              #WasmSummit
+            </a>
+            . There is no dedicated Twitter account for the conference.
+          </Faq>
+          <Faq heading="Do you have a live chat?">
+            The official chat channel of the conference is the{" "}
+            <a href="http://discordapp.com/invite/nEFErF8">#summit</a> channel
+            on the WebAssembly Discord. Here you can exchange with the
+            organizers or other attendees before, during or after the
+            conference.
           </Faq>
           <Faq heading="Will you have a livestream?">
             Yes, the summit will be livestreamed on Youtube and posted here once
@@ -69,20 +84,6 @@ const AboutPage: FC = () => (
             on their back. If you need help of any kind, to report a bad
             situation, or anything else not specified that we can help with,
             please find us on site, DM us on twitter, or call/text.
-          </Faq>
-          <Faq heading="Are you on Twitter?">
-            The official hashtag of the conference is{" "}
-            <a href="https://twitter.com/search?q=%23WasmSummit&src=typed_query">
-              #WasmSummit
-            </a>
-            . There is no dedicated Twitter account for the conference.
-          </Faq>
-          <Faq heading="Do you have a chat?">
-            The official chat channel of the conference is the{" "}
-            <a href="http://discordapp.com/invite/nEFErF8">#summit</a> channel
-            on the WebAssembly Discord. Here you can exchange with the
-            organizers or other attendees before, during or after the
-            conference.
           </Faq>
         </Row>
       </ContentContainer>

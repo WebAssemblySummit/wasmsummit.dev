@@ -2,74 +2,50 @@ import { FC } from "react";
 import styled from "styled-components";
 import Head from "next/head";
 import Link from "next/link";
+import NavBar from "../components/NavBar";
 
 const LandingPage: FC = () => (
-  <Container>
-    <Head>
-      <title>WebAssembly Summit</title>
-    </Head>
+  <View>
+    <NavBar />
+    <Container>
+      <Hero>
+        <Logo src="summit-logo.svg" alt="WebAssembly Summit Logo" />
+        <Title>
+          <Headline>
+            WebAssembly
+            <br />
+            Summit
+          </Headline>
+          <Subheadline>
+            <Highlight>February 10</Highlight>, 2020 <br />
+            <Highlight>Google</Highlight>, 1625 Plymouth St
+            <br />
+            <Highlight>Mountain View</Highlight> CA
+          </Subheadline>
+        </Title>
+      </Hero>
 
-    <Hero>
-      <Logo src="summit-logo.svg" alt="WebAssembly Summit Logo" />
-      <Title>
-        <Headline>
-          WebAssembly
-          <br />
-          Summit
-        </Headline>
-        <Subheadline>
-          <Highlight>February 10</Highlight>, 2020 <br />
-          <Highlight>Google</Highlight>, 1625 Plymouth St
-          <br />
-          <Highlight>Mountain View</Highlight> CA
-        </Subheadline>
-      </Title>
-    </Hero>
-
-    <Oneliner>
-      A <OnelinerHighlight>one day, single track</OnelinerHighlight>, conference
-      about <OnelinerHighlight>all things</OnelinerHighlight> WebAssembly.
-    </Oneliner>
-
-    <OnelinerCentered>
-      <OnelinerHighlight>
-        Applications to speak and attend are now closed
-      </OnelinerHighlight>
-    </OnelinerCentered>
-
-    <Footer>
-      <NoBreak>
-        <a href="mailto:wasm-summit-2020@chromium.org">
-          wasm-summit-2020@chromium.org
-        </a>
-      </NoBreak>
-      <NoBreak>
-        <Link href="/about.html" as="/about">
-          <a>About</a>
-        </Link>
-      </NoBreak>
-      <NoBreak>
-        <a href="https://github.com/WebAssemblySummit/webassemblysummit.github.io/blob/dev/CODE_OF_CONDUCT.md">
-          Code of conduct
-        </a>
-      </NoBreak>
-      <NoBreak>
-        <a href="https://twitter.com/search?q=%23WasmSummit&src=typed_query">
-          #WasmSummit
-        </a>
-      </NoBreak>
-    </Footer>
-  </Container>
+      <Oneliner>
+        A <OnelinerHighlight>one day, single track</OnelinerHighlight>,
+        conference about <OnelinerHighlight>all things</OnelinerHighlight>{" "}
+        WebAssembly.
+      </Oneliner>
+    </Container>
+  </View>
 );
 
 export default LandingPage;
+
+const View = styled.div`
+  min-height: 100vh;
+`;
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 95vh;
+
   padding: 0;
   margin: 0;
 `;
@@ -79,12 +55,16 @@ const Hero = styled.div`
   grid-template-columns: 1.3fr 1fr;
   align-items: flex-end;
   align-content: center;
-  margin-top: 2vh;
+  margin-top: 7vh;
+  margin-bottom: 3vh;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
+
+    margin-top: 0vh;
+    margin-bottom: 0vh;
   }
 `;
 
@@ -160,23 +140,6 @@ const Oneliner = styled.p`
   padding: 0 10%;
   line-height: 1.6;
   max-width: 768px;
-
-  @media (max-width: 768px) {
-  }
-`;
-
-const OnelinerCentered = styled.p`
-  font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.75);
-  text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
-  text-align: center;
-  margin: 3vh auto;
-  padding: 0 10%;
-  line-height: 1.6;
-  max-width: 768px;
-
-  @media (max-width: 768px) {
-  }
 `;
 
 const OnelinerHighlight = styled.span`

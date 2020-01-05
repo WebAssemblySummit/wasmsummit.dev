@@ -2,6 +2,7 @@ import { FC } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import { FaTwitter /* FaYoutube */ } from "react-icons/fa";
+import { IoMdMenu } from "react-icons/io";
 import { IconType } from "react-icons/lib/cjs";
 
 const NavBar: FC = () => (
@@ -36,14 +37,33 @@ const NavBar: FC = () => (
         </Button>
       ))}
     </NavItems>
+    <BurgerMenu>
+      <IoMdMenu size={35}></IoMdMenu>
+    </BurgerMenu>
   </Box>
 );
 
 export default NavBar;
 
+const BurgerMenu = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 10px 20px;
+
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+`;
+
 const Logo = styled.img`
-  width: 50px;
-  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
+  width: 40px;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
+
+  @media screen and (max-width: 390px) {
+    width: 30px;
+  }
 `;
 
 const textNavItems: {
@@ -51,7 +71,7 @@ const textNavItems: {
   link?: string;
 }[] = [
   { label: "News" },
-  { label: "Speakers" },
+  { label: "Tickets" },
   { label: "Schedule" },
   {
     label: "About",
@@ -77,11 +97,11 @@ const HomeButton = styled.div`
 `;
 
 const WebAssemblySummit = styled.div`
-  margin: 0 0 0 40px;
-  text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
+  margin: 0 0 0 30px;
+  text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
 
-  @media screen and (max-width: 350px) {
-    font-size: 16px;
+  @media screen and (max-width: 390px) {
+    margin: 0 0 0 25px;
   }
 `;
 
@@ -93,7 +113,7 @@ const NavItems = styled.div`
   align-items: center;
   margin: 0 15px;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1023px) {
     display: none;
   }
 `;
@@ -101,38 +121,40 @@ const NavItems = styled.div`
 const Button = styled.div`
   margin: 0 20px;
   transition: 150ms;
-  text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
 
   &:hover {
     transform: scale(1.1);
-    a {
-    }
   }
 `;
 
 const ButtonDisabled = styled.div`
   margin: 0 20px;
-
-  a {
-    color: rgba(255, 255, 255, 0.25);
-  }
+  color: rgba(255, 255, 255, 0.1);
 `;
 
 const Box = styled.div`
   display: flex;
-  background: #1b1d6e;
+  background: linear-gradient(
+    0deg,
+    rgba(27, 29, 110, 0) 0%,
+    rgba(27, 29, 110, 0.1) 25%,
+    rgba(27, 29, 110, 0.4) 100%
+  );
   align-items: center;
   flex-direction: row;
   justify-content: flex-start;
   position: sticky;
-  top: 0;
+  padding: 5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
   a {
     color: #fff;
     &:visited {
       color: #fff;
     }
-    margin: 20px;
+    margin: 10px;
     font-size: 1.2em;
   }
 
