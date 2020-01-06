@@ -2,8 +2,8 @@ import { FC } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import { FaTwitter /* FaYoutube */ } from "react-icons/fa";
-import { IoMdMenu } from "react-icons/io";
 import { IconType } from "react-icons/lib/cjs";
+import BurgerMenu from "./BurgerMenu";
 
 const NavBar: FC = () => (
   <Box>
@@ -37,25 +37,11 @@ const NavBar: FC = () => (
         </Button>
       ))}
     </NavItems>
-    <BurgerMenu>
-      <IoMdMenu size={35}></IoMdMenu>
-    </BurgerMenu>
+    <BurgerMenu />
   </Box>
 );
 
 export default NavBar;
-
-const BurgerMenu = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  padding: 10px 20px;
-
-  @media screen and (min-width: 1024px) {
-    display: none;
-  }
-`;
 
 const Logo = styled.img`
   width: 40px;

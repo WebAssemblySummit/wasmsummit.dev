@@ -1,7 +1,5 @@
 import { FC } from "react";
 import styled from "styled-components";
-import Head from "next/head";
-import Link from "next/link";
 import NavBar from "../components/NavBar";
 
 const LandingPage: FC = () => (
@@ -55,8 +53,8 @@ const Hero = styled.div`
   grid-template-columns: 1.3fr 1fr;
   align-items: flex-end;
   align-content: center;
-  margin-top: 7vh;
-  margin-bottom: 3vh;
+  margin-top: 8vh;
+  margin-bottom: 5vh;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
