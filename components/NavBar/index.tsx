@@ -89,7 +89,7 @@ const textNavItems: {
 }[] = [
   /* { label: "News", link: "/news" }, */
   /* { label: "Schedule", link: "/schedule" }, */
-  { label: "Speakers", link: "/speakers" },
+  /* { label: "Speakers", link: "/speakers" }, */
   {
     label: "About",
     link: "/about"
