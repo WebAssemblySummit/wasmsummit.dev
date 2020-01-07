@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar";
 
 const LandingPage: FC = () => (
   <View>
-    <NavBar />
+    <NavBar bottom />
     <Container>
       <Hero>
         <Logo src="summit-logo.svg" alt="WebAssembly Summit Logo" />
@@ -36,6 +36,11 @@ export default LandingPage;
 
 const View = styled.div`
   min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    hsla(239, 60%, 48%, 0) 10%,
+    hsla(239, 60%, 48%, 1) 100%
+  );
 `;
 
 const Container = styled.div`
@@ -53,16 +58,16 @@ const Hero = styled.div`
   grid-template-columns: 1.3fr 1fr;
   align-items: flex-end;
   align-content: center;
-  margin-top: 8vh;
-  margin-bottom: 5vh;
+  margin-top: 7vh;
+  margin-bottom: 3vh;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
 
-    margin-top: 0vh;
-    margin-bottom: 0vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
   }
 `;
 
@@ -75,7 +80,7 @@ export const Logo = styled.img`
   flex-shrink: 1;
 
   @media (max-width: 768px) {
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 `;
 
@@ -111,7 +116,7 @@ const Headline = styled.h1`
   }
 
   @media (max-width: 450px) {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 `;
 
@@ -127,6 +132,10 @@ const Subheadline = styled.h3`
 const Highlight = styled.span`
   font-size: 1.6rem;
   color: white;
+
+  @media (max-width: 450px) {
+    font-size: 1.4rem;
+  }
 `;
 
 const Oneliner = styled.p`
@@ -138,11 +147,18 @@ const Oneliner = styled.p`
   padding: 0 10%;
   line-height: 1.6;
   max-width: 768px;
+
+  @media (max-width: 450px) {
+    font-size: 1.3rem;
+  }
 `;
 
 const OnelinerHighlight = styled.span`
   font-size: 1.4rem;
   color: white;
+  @media (max-width: 450px) {
+    font-size: 1.3rem;
+  }
 `;
 
 const CallToAction = styled.div`

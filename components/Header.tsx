@@ -1,7 +1,6 @@
 import { FC, ComponentType } from "react";
 import styled from "styled-components";
 import Head from "next/head";
-import NavBar from "./NavBar";
 
 type Props = {
   title?: string;
@@ -11,37 +10,31 @@ type Props = {
 const websiteName = "WebAssembly Summit";
 
 const Header: FC<Props> = ({ title, transparent }) => (
-  <Box>
+  <>
     <Head>
       <title>
         {websiteName}
         {title ? `: ${title}` : ""}
       </title>
     </Head>
-    <NavBar />
     {title ? (
       <Headline>
-        <Spacer></Spacer>
         <Heading>{title}</Heading>
       </Headline>
     ) : (
       undefined
     )}
-  </Box>
+  </>
 );
 
 export default Header;
 
 const Spacer = styled.div`
-  width: 80px;
+  width: 75px;
 
   @media screen and (max-width: 768px) {
     width: 30px;
   }
-`;
-
-const Box = styled.div`
-  background-color: #1b1d6e;
 `;
 
 const Headline = styled.div`
@@ -50,16 +43,19 @@ const Headline = styled.div`
   justify-content: flex-start;
   align-items: center;
   background-color: #1b1d6e;
-  border-bottom: 5px solid rgba(255, 255, 255, 0.5);
+
+  border-bottom: 4px solid hsl(256, 91%, 10%);
+  box-shadow: inset 0px 5px 20px hsla(256, 91%, 10%, 0.8);
 `;
 
 const Heading = styled.h1`
   flex: 1;
-  font-size: 2.2em;
+  font-size: 2em;
   font-weight: 700;
   margin: 0;
-  padding: 0 15px 15px 0px;
-  text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 3vh 10px 10px 6%;
+  text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
+  color: rgb(180, 180, 255);
 
   @media screen and (max-width: 768px) {
     font-size: 1.5em;

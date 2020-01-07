@@ -1,11 +1,13 @@
 import { FC, ReactNode } from "react";
 import styled from "styled-components";
 import Header from "../components/Header";
+import NavBar from "../components/NavBar";
 
-const title = "About the Event";
+const title = "About WebAssembly Summit";
 
 const AboutPage: FC = () => (
   <>
+    <NavBar bottom title={title} currentPage="About" />
     <Header title={title} />
     <AboutContainer>
       <ContentContainer id="faq">
@@ -123,6 +125,7 @@ export const DarkLayer = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: -1;
 `;
 
 export const SponsorLogo = styled.img`
@@ -135,7 +138,7 @@ const A = styled.a`
 `;
 
 const AboutContainer = styled.div`
-  padding: 50px 5%;
+  padding: 7vh 5%;
 `;
 
 const Question = styled.div`
@@ -144,7 +147,7 @@ const Question = styled.div`
   padding: 15px 15px;
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
   border-bottom: 3px solid rgba(255, 255, 255, 0.4);
-  text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
+  text-shadow: 2px 4px 5px hsla(237, 60%, 35%, 1);
 `;
 
 const Answer = styled.div`
