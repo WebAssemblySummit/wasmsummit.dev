@@ -75,7 +75,11 @@ const speakers: SpeakerProfile[] = [
 
 const SpeakersPage: FC = () => (
   <>
-    <NavBar title={title} currentPage="Speakers" />
+    <NavBar
+      title={title}
+      currentPage="Speakers"
+      backgroundColor="rgb(20, 20, 20)"
+    />
     <AboutContainer>
       <Sandbox />
       <ContentContainer id="faq">

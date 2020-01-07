@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar";
 
 const LandingPage: FC = () => (
   <View>
-    <NavBar />
+    <NavBar backgroundColor="#1b1d6e" />
     <Container>
       <Hero>
         <Logo src="summit-logo.svg" alt="WebAssembly Summit Logo" />
@@ -58,7 +58,7 @@ const Hero = styled.div`
   grid-template-columns: 1.3fr 1fr;
   align-items: flex-end;
   align-content: center;
-  margin-top: 7vh;
+  margin-top: 10vh;
   margin-bottom: 3vh;
 
   @media (max-width: 768px) {

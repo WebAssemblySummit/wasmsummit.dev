@@ -6,17 +6,17 @@ import { IconType } from "react-icons/lib/cjs";
 import { IoMdMenu } from "react-icons/io";
 
 const NavBar: FC<{
-  color?: string;
+  backgroundColor?: string;
   title?: string;
   currentPage?: string;
   bottom?: boolean;
-}> = ({ title, currentPage, bottom }) => {
+}> = ({ title, currentPage, bottom, backgroundColor }) => {
   const [open, setOpen] = useState(false);
   const Box = bottom ? BottomBox : TopBox;
 
   return (
     <>
-      <Box>
+      <Box backgroundColor={backgroundColor}>
         <Link href="/" as="/" passHref>
           <A>
             <HomeButton>
@@ -56,7 +56,7 @@ const NavBar: FC<{
           <IoMdMenu size={35}></IoMdMenu>
         </BurgerButton>
       </Box>
-      <Popup open={open} /* backgroundColor="#1b1d6e" */>
+      <Popup open={open} backgroundColor={backgroundColor}>
         {textNavItems.map(({ label, link }) =>
           link ? (
             <Link key={link} href={link} as={link} passHref>
@@ -121,10 +121,12 @@ const WebAssemblySummit = styled.div`
   text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
   text-align: center;
   letter-spacing: 1px;
-/*   color: ${(props: { active?: boolean }) =>
-  props.active ? "white" : "rgb(180, 180, 255)"};
- */  color: ${(props: { active?: boolean }) =>
-   props.active ? "white" : "rgb(150, 150, 150)"};
+  /*   
+  color: ${(props: { active?: boolean }) =>
+    props.active ? "white" : "rgb(180, 180, 255)"};
+ */  
+  color: ${(props: { active?: boolean }) =>
+    props.active ? "white" : "rgba(255, 255, 255, 0.75)"};
   transition: 150ms;
   padding: 0 10px;
 
@@ -193,6 +195,8 @@ const BottomBox = styled.div`
 
   /* box-shadow: inset 0px 5px 20px hsla(256, 91%, 10%, 0.8); */
   box-shadow: inset 0px 5px 20px hsla(256, 0%, 0%, 0.3);
+  background-color: ${(props?: { open?: boolean; backgroundColor?: string }) =>
+    props && props.backgroundColor ? props.backgroundColor : undefined};
 
   a {
     /*     color: #fff;
@@ -208,7 +212,7 @@ const TopBox = styled.div`
   display: flex;
   z-index: 1;
   /* background: #1b1d6e; */
-  background: rgb(20, 20, 20);
+  /* background: rgb(20, 20, 20); */
   align-items: center;
   flex-direction: row;
   justify-content: flex-start;
@@ -219,6 +223,8 @@ const TopBox = styled.div`
 
   /* box-shadow: inset 0px 5px 20px hsla(256, 91%, 10%, 0.8); */
   box-shadow: inset 0px 5px 20px hsla(256, 0%, 0%, 0.3);
+  background-color: ${(props?: { open?: boolean; backgroundColor?: string }) =>
+    props && props.backgroundColor ? props.backgroundColor : undefined};
 
   a {
     font-size: 1.2em;
@@ -262,13 +268,9 @@ const Popup = styled.div`
 
   transform: ${(props: { open?: boolean; backgroundColor?: string }) =>
     props.open ? "translateY(0)" : "translateY(-100%)"};
+  background-color: ${(props?: { open?: boolean; backgroundColor?: string }) =>
+    props && props.backgroundColor ? props.backgroundColor : undefined};
 `;
-
-/*   transform: ${(props: { open?: boolean; backgroundColor?: string }) =>
-  props.open ? "translateY(0)" : "translateY(-100%)"}; */
-/*   background-color: ${(props?: { backgroundColor: string }) =>
-  props && props.backgroundColor ? props.backgroundColor : undefined};
- */
 
 const PopupButton = styled.div`
   margin: 0;
@@ -282,7 +284,7 @@ const PopupButton = styled.div`
 const A = styled.a`
   margin: 0;
   /* color: rgb(180, 180, 255); */
-  color: rgb(150, 150, 150);
+  color: rgba(255, 255, 255, 0.75);
 
   &:hover {
     color: white;
