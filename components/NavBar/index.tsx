@@ -23,7 +23,7 @@ const NavBar: FC<{
               <Logo src="webassembly-logo.svg" alt="WebAssembly Summit Logo" />
               {/* <Header title={title}></Header> */}
               <WebAssemblySummit active={!currentPage}>
-                <span>WebAssembly Summit</span>
+                WebAssembly Summit
               </WebAssemblySummit>
             </HomeButton>
           </A>
@@ -56,7 +56,7 @@ const NavBar: FC<{
           <IoMdMenu size={35}></IoMdMenu>
         </BurgerButton>
       </Box>
-      <Popup open={open}>
+      <Popup open={open} /* backgroundColor="#1b1d6e" */>
         {textNavItems.map(({ label, link }) =>
           link ? (
             <Link key={link} href={link} as={link} passHref>
@@ -130,6 +130,10 @@ const WebAssemblySummit = styled.div`
 
   &:hover {
     color: white;
+  }
+
+  @media screen and (max-width: 749px) {
+    font-size: 0.9em;
   }
 `;
 
@@ -251,14 +255,20 @@ const Popup = styled.div`
   bottom: 0;
   transition: 200ms;
   z-index: 0;
-  transform: ${(prop: { open?: boolean }) =>
-    prop.open ? "translateY(0)" : "translateY(-100%)"};
-  background-color: #1b1d6e;
   width: 100%;
   height: 100vh;
   padding-top: 58px;
   font-size: 1.5em;
+
+  transform: ${(props: { open?: boolean; backgroundColor?: string }) =>
+    props.open ? "translateY(0)" : "translateY(-100%)"};
 `;
+
+/*   transform: ${(props: { open?: boolean; backgroundColor?: string }) =>
+  props.open ? "translateY(0)" : "translateY(-100%)"}; */
+/*   background-color: ${(props?: { backgroundColor: string }) =>
+  props && props.backgroundColor ? props.backgroundColor : undefined};
+ */
 
 const PopupButton = styled.div`
   margin: 0;

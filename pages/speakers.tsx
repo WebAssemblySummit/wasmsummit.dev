@@ -136,18 +136,18 @@ const SectionBody = styled.div`
   border-radius: 20px;
   /* background-color: white; */
   overflow: hidden;
-  width: 360px;
+  width: 400px;
 
   img {
     width: 100%;
     margin-bottom: -5px;
   }
   transition: 300ms;
-  border: 5px solid rgba(255, 255, 255, 0.1);
+  /* border: 5px solid rgba(255, 255, 255, 0.1); */
 
   &:hover {
     transform: scale(1.02);
-    border: 5px solid rgba(255, 255, 255, 0.25);
+    /* border: 5px solid rgba(255, 255, 255, 0.25); */
   }
 `;
 
