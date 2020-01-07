@@ -16,7 +16,7 @@ const NavBar: FC<{
   return (
     <>
       <Box>
-        <Link href="/" as="/">
+        <Link href="/" as="/" passHref>
           <A>
             <HomeButton>
               <Logo src="webassembly-logo.svg" alt="WebAssembly Summit Logo" />
@@ -30,16 +30,16 @@ const NavBar: FC<{
         <NavItems>
           {textNavItems.map(({ label, link }) =>
             currentPage && currentPage === label ? (
-              <Link key={link} href={link} as={link}>
-                <ActiveButton key={label}>
-                  <A>{label}</A>
-                </ActiveButton>
+              <Link key={link} href={link} as={link} passHref>
+                <A>
+                  <ActiveButton key={label}>{label}</ActiveButton>
+                </A>
               </Link>
             ) : (
-              <Link key={link} href={link} as={link}>
-                <Button key={label}>
-                  <A>{label}</A>
-                </Button>
+              <Link key={link} href={link} as={link} passHref>
+                <A>
+                  <Button key={label}>{label}</Button>
+                </A>
               </Link>
             )
           )}
@@ -58,10 +58,10 @@ const NavBar: FC<{
       <Popup open={open}>
         {textNavItems.map(({ label, link }) =>
           link ? (
-            <Link key={link} href={link} as={link}>
-              <PopupButton>
-                <A>{label}</A>
-              </PopupButton>
+            <Link key={link} href={link} as={link} passHref>
+              <A>
+                <PopupButton>{label}</PopupButton>
+              </A>
             </Link>
           ) : (
             <PopupButton key={link}>
@@ -109,6 +109,7 @@ const HomeButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  padding: 0 2vw;
   &:hover {
     color: white;
   }
@@ -147,15 +148,11 @@ const ActiveButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
-  padding: 0 3%;
+  padding: 0 3vw;
   height: 60px;
   transition: 150ms;
   border-top: 2px solid white;
-
-  a {
-    color: white;
-  }
+  cursor: pointer;
 `;
 
 const Button = styled.div`
@@ -163,14 +160,13 @@ const Button = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: 0 3%;
+  padding: 0 3vw;
   height: 60px;
   transition: 150ms;
   border-top: 2px solid transparent;
 
   &:hover {
     border-top: 2px solid white;
-    /* text-shadow: 0 0 10px rgba(255, 255, 255, 0.4); */
   }
 `;
 
@@ -194,7 +190,6 @@ const BottomBox = styled.div`
       color: #fff;
     }
  */
-    margin: 10px;
     font-size: 1.2em;
   }
 `;
@@ -224,7 +219,6 @@ const TopBox = styled.div`
     &:visited {
       color: #fff;
     } */
-    margin: 10px;
     font-size: 1.2em;
   }
 `;
@@ -271,10 +265,11 @@ const PopupButton = styled.div`
 `;
 
 const A = styled.a`
-  margin: 0;
   color: rgb(180, 180, 255);
+  margin: 0;
 
   &:hover {
     color: white;
+    cursor: pointer;
   }
 `;

@@ -7,7 +7,7 @@ const title = "About the event";
 
 const AboutPage: FC = () => (
   <>
-    <NavBar title={title} currentPage="About" bottom />
+    <NavBar title={title} currentPage="About" />
     {/* <Header title={title} /> */}
     <AboutContainer>
       <ContentContainer id="faq">
