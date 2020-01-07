@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar";
 
 const LandingPage: FC = () => (
   <View>
-    <NavBar />
+    <NavBar bottom />
     <Container>
       <Hero>
         <Logo src="summit-logo.svg" alt="WebAssembly Summit Logo" />
