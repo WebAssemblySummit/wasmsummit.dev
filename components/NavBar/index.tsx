@@ -87,7 +87,7 @@ const textNavItems: {
   label: string;
   link?: string;
 }[] = [
-  { label: "News", link: "/news" },
+  /* { label: "News", link: "/news" }, */
   { label: "Schedule", link: "/schedule" },
   { label: "Speakers", link: "/speakers" },
   {
@@ -207,7 +207,8 @@ const BottomBox = styled.div`
 const TopBox = styled.div`
   display: flex;
   z-index: 1;
-  background: #1b1d6e;
+  /* background: #1b1d6e; */
+  background: rgb(20, 20, 20);
   align-items: center;
   flex-direction: row;
   justify-content: flex-start;
@@ -216,19 +217,15 @@ const TopBox = styled.div`
   right: 0;
   top: 0;
 
-  box-shadow: inset 0px 5px 20px hsla(256, 91%, 10%, 0.8);
-  border-bottom: 2px solid black;
-
-  @media screen and (max-width: 749px) {
-    border-bottom: 0px solid black;
-    box-shadow: none;
-  }
+  /* box-shadow: inset 0px 5px 20px hsla(256, 91%, 10%, 0.8); */
+  box-shadow: inset 0px 5px 20px hsla(256, 0%, 0%, 0.3);
 
   a {
-    /*    color: #fff;
+    /*     color: #fff;
     &:visited {
       color: #fff;
-    } */
+    }
+ */
     margin: 10px;
     font-size: 1.2em;
   }

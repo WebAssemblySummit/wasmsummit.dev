@@ -64,18 +64,12 @@ const speakers: SpeakerProfile[] = [
       "https://pbs.twimg.com/profile_images/497876628651782146/hrCHz_ym_400x400.jpeg",
     bio:
       "Stuffing my head with code and turning it into Code Cartoons. Also, tinkering with WebAssembly, Rust and a little JavaScript at Mozilla"
-  },
-  {
-    name: "Ashley Williams",
-    picture: "https://avatars3.githubusercontent.com/u/1163554?s=400&v=4",
-    bio:
-      "a mess like this is easily five to ten years ahead of its time @rustlang core. webassembler @cloudflare. @rustwasm WG 👷‍♀️🦀. prev @npmjs, @nodejs, @mozilla."
   }
 ];
 
 const SpeakersPage: FC = () => (
   <>
-    <NavBar title={title} currentPage="Speakers" />
+    <NavBar title={title} currentPage="Schedule" />
     <AboutContainer>
       <Sandbox />
       <ContentContainer id="faq">
@@ -95,7 +89,6 @@ const Speaker: FC<{ profile: SpeakerProfile }> = ({ profile }) => (
   <SectionBody>
     <img src={profile.picture}></img>
     <SectionHeader bold>{profile.name}</SectionHeader>
-    <Bio>{profile.bio}</Bio>
   </SectionBody>
 );
 
@@ -121,8 +114,8 @@ const SectionHeader = styled.div`
   padding: 5px 15px;
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 0, 0.9);
-  /* text-shadow: 2px 4px 5px hsla(237, 0%, 35%, 1); */
+  color: white;
+  text-shadow: 3px 3px 5px hsla(237, 0%, 0%, 0.5);
 `;
 
 const SectionBody = styled.div`
@@ -131,19 +124,19 @@ const SectionBody = styled.div`
 
   color: black;
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
-  box-shadow: 5px 5px 20px hsla(256, 0%, 10%, 1);
-  border-radius: 20px;
+
   /* background-color: white; */
   overflow: hidden;
-  width: 360px;
-  height: 600px;
+  width: 100px;
+  height: 350px;
   img {
     width: 100%;
+    border-radius: 50%;
   }
-  transition: 300ms;
+  transition: 180ms;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
 `;
 

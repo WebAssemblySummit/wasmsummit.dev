@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar";
 
 const LandingPage: FC = () => (
   <View>
-    <NavBar bottom />
+    <NavBar />
     <Container>
       <Hero>
         <Logo src="summit-logo.svg" alt="WebAssembly Summit Logo" />
@@ -38,8 +38,8 @@ const View = styled.div`
   min-height: 100vh;
   background: linear-gradient(
     180deg,
-    hsla(239, 60%, 48%, 0) 10%,
-    hsla(239, 60%, 48%, 1) 100%
+    hsla(239, 60%, 48%, 0) 0%,
+    hsla(239, 60%, 48%, 1) 70%
   );
 `;
 
