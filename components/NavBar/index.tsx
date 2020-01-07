@@ -6,6 +6,7 @@ import { IconType } from "react-icons/lib/cjs";
 import { IoMdMenu } from "react-icons/io";
 
 const NavBar: FC<{
+  color?: string;
   title?: string;
   currentPage?: string;
   bottom?: boolean;
@@ -86,9 +87,9 @@ const textNavItems: {
   label: string;
   link?: string;
 }[] = [
-  /* { label: "News" },
-  { label: "Tickets" }, 
-  { label: "Schedule" },*/
+  { label: "News", link: "/news" },
+  { label: "Schedule", link: "/schedule" },
+  { label: "Speakers", link: "/speakers" },
   {
     label: "About",
     link: "/about"
@@ -119,8 +120,10 @@ const WebAssemblySummit = styled.div`
   text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
   text-align: center;
   letter-spacing: 1px;
-  color: ${(props: { active?: boolean }) =>
-    props.active ? "white" : "rgb(180, 180, 255)"};
+/*   color: ${(props: { active?: boolean }) =>
+  props.active ? "white" : "rgb(180, 180, 255)"};
+ */  color: ${(props: { active?: boolean }) =>
+   props.active ? "white" : "rgb(150, 150, 150)"};
   transition: 150ms;
   padding: 0 10px;
 
@@ -177,7 +180,8 @@ const Button = styled.div`
 const BottomBox = styled.div`
   display: flex;
   z-index: 1;
-  background: #1b1d6e;
+  /* background: #1b1d6e; */
+  background: rgb(20, 20, 20);
   align-items: center;
   flex-direction: row;
   justify-content: flex-start;
@@ -186,7 +190,8 @@ const BottomBox = styled.div`
   right: 0;
   bottom: 0;
 
-  box-shadow: inset 0px 5px 20px hsla(256, 91%, 10%, 0.8);
+  /* box-shadow: inset 0px 5px 20px hsla(256, 91%, 10%, 0.8); */
+  box-shadow: inset 0px 5px 20px hsla(256, 0%, 0%, 0.3);
 
   a {
     /*     color: #fff;
@@ -272,7 +277,8 @@ const PopupButton = styled.div`
 
 const A = styled.a`
   margin: 0;
-  color: rgb(180, 180, 255);
+  /* color: rgb(180, 180, 255); */
+  color: rgb(150, 150, 150);
 
   &:hover {
     color: white;
