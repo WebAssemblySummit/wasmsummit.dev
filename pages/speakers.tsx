@@ -134,6 +134,11 @@ const SectionBody = styled.div`
   img {
     width: 100%;
   }
+  transition: 180ms;
+
+  &:hover {
+    transform: scale(1.03);
+  }
 `;
 
 const Sandbox = styled.div`
