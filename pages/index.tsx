@@ -38,7 +38,7 @@ const View = styled.div`
   min-height: 100vh;
   background: linear-gradient(
     180deg,
-    hsla(239, 60%, 48%, 0) 0%,
+    hsla(239, 60%, 48%, 0) 20%,
     hsla(239, 60%, 48%, 1) 70%
   );
 `;
@@ -58,7 +58,7 @@ const Hero = styled.div`
   grid-template-columns: 1.3fr 1fr;
   align-items: flex-end;
   align-content: center;
-  margin-top: 10vh;
+  margin-top: 12vh;
   margin-bottom: 3vh;
 
   @media (max-width: 768px) {

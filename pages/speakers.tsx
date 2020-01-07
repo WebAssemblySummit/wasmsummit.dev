@@ -11,6 +11,10 @@ type SpeakerProfile = {
   bio?: string;
 };
 
+const wasmPurple = "hsl(257,60%,50%)";
+const wasmMidPurple = "hsl(240,60%,50%)";
+const wasmDarkPurple = "hsl(256,91%,35%)";
+
 const speakers: SpeakerProfile[] = [
   {
     name: "Ashley Williams",
@@ -75,11 +79,7 @@ const speakers: SpeakerProfile[] = [
 
 const SpeakersPage: FC = () => (
   <>
-    <NavBar
-      title={title}
-      currentPage="Speakers"
-      backgroundColor="rgb(20, 20, 20)"
-    />
+    <NavBar title={title} currentPage="Speakers" backgroundColor="#1b1d6e" />
     <AboutContainer>
       <Sandbox />
       <ContentContainer id="faq">
@@ -110,11 +110,13 @@ const A = styled.a`
 const AboutContainer = styled.div`
   /* background-color: rgb(30, 30, 30); */
   margin: 0;
+  padding-top: 20px;
+  padding-bottom: 50px;
 `;
 
 const Bio = styled.div`
-  padding: 15px 20px;
-  background: rgba(0, 0, 0, 0.75);
+  padding: 20px 25px;
+  background: hsl(239, 50%, 25%);
   height: 100%;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.8);
@@ -125,20 +127,20 @@ const SectionHeader = styled.div`
   margin: 0;
   padding: 5px 15px;
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 0, 0.9);
-  /* text-shadow: 2px 4px 5px hsla(237, 0%, 35%, 1); */
+  /* border-bottom: 7px solid rgba(255, 255, 255, 1); */
+  /* background-color: rgba(255, 255, 0, 0.9); */
+  /* background-color: hsl(237, 60%, 48%); */
+  background-color: ${wasmPurple};
+  color: white;
 `;
 
 const SectionBody = styled.div`
   font-size: 1.1em;
   margin: 2.5% 1%;
-
   color: black;
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
-  box-shadow: 5px 5px 20px hsla(256, 0%, 10%, 1);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
-  /* background-color: white; */
   overflow: hidden;
   width: 400px;
 
@@ -163,7 +165,7 @@ const Sandbox = styled.div`
   left: 0;
   right: 0;
 
-  background: rgb(60, 60, 60);
+  background: hsla(237, 0%, 48%, 0.2);
   padding: 25px;
   z-index: -1;
 `;
