@@ -80,8 +80,8 @@ const SpeakersPage: FC = () => (
       <Sandbox />
       <ContentContainer id="faq">
         <Row>
-          {speakers.map(speaker => (
-            <Speaker profile={speaker} />
+          {speakers.map((speaker, index) => (
+            <Speaker key={speaker.name + index} profile={speaker} />
           ))}
         </Row>
       </ContentContainer>
@@ -105,6 +105,7 @@ const A = styled.a`
 
 const AboutContainer = styled.div`
   /* background-color: rgb(30, 30, 30); */
+  margin: 0;
 `;
 
 const Bio = styled.div`
@@ -117,7 +118,7 @@ const Bio = styled.div`
 
 const SectionHeader = styled.div`
   font-size: 1.5em;
-  margin: 0 0px 0 0;
+  margin: 0;
   padding: 5px 15px;
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -127,7 +128,7 @@ const SectionHeader = styled.div`
 
 const SectionBody = styled.div`
   font-size: 1.1em;
-  margin: 2.5% 0%;
+  margin: 2.5% 1%;
 
   color: black;
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
@@ -136,14 +137,17 @@ const SectionBody = styled.div`
   /* background-color: white; */
   overflow: hidden;
   width: 360px;
-  height: 600px;
+
   img {
     width: 100%;
+    margin-bottom: -5px;
   }
   transition: 300ms;
+  border: 5px solid rgba(255, 255, 255, 0.1);
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
+    border: 5px solid rgba(255, 255, 255, 0.25);
   }
 `;
 
