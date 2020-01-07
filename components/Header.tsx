@@ -53,7 +53,7 @@ const Heading = styled.h1`
   font-size: 2em;
   font-weight: 700;
   margin: 0;
-  padding: 3vh 10px 10px 6%;
+  padding: 3vh 10px 3vh 6%;
   text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
   color: rgb(180, 180, 255);
 

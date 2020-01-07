@@ -3,12 +3,12 @@ import styled from "styled-components";
 import Header from "../components/Header";
 import NavBar from "../components/NavBar";
 
-const title = "About WebAssembly Summit";
+const title = "About the event";
 
 const AboutPage: FC = () => (
   <>
-    <NavBar bottom title={title} currentPage="About" />
-    <Header title={title} />
+    <NavBar title={title} currentPage="About" />
+    {/* <Header title={title} /> */}
     <AboutContainer>
       <ContentContainer id="faq">
         <Row>

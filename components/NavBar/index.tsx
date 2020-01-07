@@ -29,33 +29,27 @@ const NavBar: FC<{
         </Link>
         <NavItems>
           {textNavItems.map(({ label, link }) =>
-            link ? (
-              currentPage && currentPage === label ? (
-                <Link key={link} href={link} as={link}>
-                  <ActiveButton key={label}>
-                    <A>{label}</A>
-                  </ActiveButton>
-                </Link>
-              ) : (
-                <Link key={link} href={link} as={link}>
-                  <Button key={label}>
-                    <A>{label}</A>
-                  </Button>
-                </Link>
-              )
+            currentPage && currentPage === label ? (
+              <Link key={link} href={link} as={link}>
+                <ActiveButton key={label}>
+                  <A>{label}</A>
+                </ActiveButton>
+              </Link>
             ) : (
-              <ButtonDisabled key={link}>
-                <A>{label}</A>
-              </ButtonDisabled>
+              <Link key={link} href={link} as={link}>
+                <Button key={label}>
+                  <A>{label}</A>
+                </Button>
+              </Link>
             )
           )}
-          {/* {iconNavItems.map(({ Icon, url }) => (
+          {iconNavItems.map(({ Icon, url }) => (
             <Button key={url}>
-              <a href={url}>
-                <Icon size={24}></Icon>
+              <A href={url}>
+                <Icon size={24} style={{ marginTop: 0 }}></Icon>
               </A>
             </Button>
-          ))} */}
+          ))}
         </NavItems>
         <BurgerButton onClick={() => setOpen(!open)}>
           <IoMdMenu size={35}></IoMdMenu>
@@ -150,10 +144,13 @@ const NavItems = styled.div`
 `;
 
 const ActiveButton = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
-  padding: 20px 2%;
+  padding: 0 3%;
+  height: 60px;
   transition: 150ms;
-  height: 100%;
   border-top: 2px solid white;
 
   a {
@@ -162,22 +159,19 @@ const ActiveButton = styled.div`
 `;
 
 const Button = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
-  padding: 20px 2%;
+  padding: 0 3%;
+  height: 60px;
   transition: 150ms;
-  height: 100%;
   border-top: 2px solid transparent;
 
   &:hover {
     border-top: 2px solid white;
     /* text-shadow: 0 0 10px rgba(255, 255, 255, 0.4); */
   }
-`;
-
-const ButtonDisabled = styled.div`
-  margin: 0 2%;
-  padding: 20px 15px;
-  color: rgba(255, 255, 255, 0.1);
 `;
 
 const BottomBox = styled.div`
@@ -259,7 +253,7 @@ const Popup = styled.div`
   transition: 200ms;
   z-index: 0;
   transform: ${(prop: { open?: boolean }) =>
-    prop.open ? "translateY(0)" : "translateY(100%)"};
+    prop.open ? "translateY(0)" : "translateY(-100%)"};
   background-color: #1b1d6e;
   width: 100%;
   height: 100vh;
