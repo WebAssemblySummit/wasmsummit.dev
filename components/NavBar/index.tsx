@@ -152,6 +152,7 @@ const ActiveButton = styled.div`
   height: 60px;
   transition: 150ms;
   border-top: 2px solid white;
+  color: white;
   cursor: pointer;
 `;
 
