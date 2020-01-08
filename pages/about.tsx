@@ -12,7 +12,7 @@ const AboutPage: FC = () => (
     <AboutContainer>
       <ContentContainer id="faq">
         <Row>
-          <Faq heading="How can I attend?">
+          <Faq heading="How do I get a ticket for the event?">
             <div>
               The application for tickets has already closed. If you had applied
               to participate in the ticket raffle for the event, you will get a
@@ -22,9 +22,7 @@ const AboutPage: FC = () => (
             </div>
           </Faq>
           <Faq heading="Is the event really free?">
-            <div>
-              If you have received a ticket. Attending the event is free
-            </div>
+            <div>Given you have a ticket, attending the event is free.</div>
           </Faq>
           <Faq heading="Is this a community event?">
             <div>
