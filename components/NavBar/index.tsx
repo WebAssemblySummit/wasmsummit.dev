@@ -6,23 +6,24 @@ import { IconType } from "react-icons/lib/cjs";
 import { IoMdMenu } from "react-icons/io";
 
 const NavBar: FC<{
+  backgroundColor?: string;
   title?: string;
   currentPage?: string;
   bottom?: boolean;
-}> = ({ title, currentPage, bottom }) => {
+}> = ({ title, currentPage, bottom, backgroundColor }) => {
   const [open, setOpen] = useState(false);
   const Box = bottom ? BottomBox : TopBox;
 
   return (
     <>
-      <Box>
+      <Box backgroundColor={backgroundColor}>
         <Link href="/" as="/" passHref>
           <A>
             <HomeButton>
               <Logo src="webassembly-logo.svg" alt="WebAssembly Summit Logo" />
               {/* <Header title={title}></Header> */}
               <WebAssemblySummit active={!currentPage}>
-                <span>WebAssembly Summit</span>
+                WebAssembly Summit
               </WebAssemblySummit>
             </HomeButton>
           </A>
@@ -55,7 +56,7 @@ const NavBar: FC<{
           <IoMdMenu size={35}></IoMdMenu>
         </BurgerButton>
       </Box>
-      <Popup open={open}>
+      <Popup open={open} backgroundColor={backgroundColor}>
         {textNavItems.map(({ label, link }) =>
           link ? (
             <Link key={link} href={link} as={link} passHref>
@@ -86,9 +87,9 @@ const textNavItems: {
   label: string;
   link?: string;
 }[] = [
-  /* { label: "News" },
-  { label: "Tickets" }, 
-  { label: "Schedule" },*/
+  /* { label: "News", link: "/news" }, */
+  /* { label: "Schedule", link: "/schedule" }, */
+  /* { label: "Speakers", link: "/speakers" }, */
   {
     label: "About",
     link: "/about"
@@ -120,13 +121,21 @@ const WebAssemblySummit = styled.div`
   text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
   text-align: center;
   letter-spacing: 1px;
+  /*   
   color: ${(props: { active?: boolean }) =>
     props.active ? "white" : "rgb(180, 180, 255)"};
+ */  
+  color: ${(props: { active?: boolean }) =>
+    props.active ? "white" : "rgba(255, 255, 255, 0.75)"};
   transition: 150ms;
   padding: 0 10px;
 
   &:hover {
     color: white;
+  }
+
+  @media screen and (max-width: 749px) {
+    font-size: 0.9em;
   }
 `;
 
@@ -174,7 +183,8 @@ const Button = styled.div`
 const BottomBox = styled.div`
   display: flex;
   z-index: 1;
-  background: #1b1d6e;
+  /* background: #1b1d6e; */
+  background: rgb(20, 20, 20);
   align-items: center;
   flex-direction: row;
   justify-content: flex-start;
@@ -183,7 +193,10 @@ const BottomBox = styled.div`
   right: 0;
   bottom: 0;
 
-  box-shadow: inset 0px 5px 20px hsla(256, 91%, 10%, 0.8);
+  /* box-shadow: inset 0px 5px 20px hsla(256, 91%, 10%, 0.8); */
+  box-shadow: inset 0px 5px 20px hsla(256, 0%, 0%, 0.3);
+  background-color: ${(props?: { open?: boolean; backgroundColor?: string }) =>
+    props && props.backgroundColor ? props.backgroundColor : undefined};
 
   a {
     /*     color: #fff;
@@ -198,7 +211,8 @@ const BottomBox = styled.div`
 const TopBox = styled.div`
   display: flex;
   z-index: 1;
-  background: #1b1d6e;
+  /* background: #1b1d6e; */
+  /* background: rgb(20, 20, 20); */
   align-items: center;
   flex-direction: row;
   justify-content: flex-start;
@@ -207,20 +221,20 @@ const TopBox = styled.div`
   right: 0;
   top: 0;
 
-  box-shadow: inset 0px 5px 20px hsla(256, 91%, 10%, 0.8);
-  border-bottom: 2px solid black;
-
-  @media screen and (max-width: 749px) {
-    border-bottom: 0px solid black;
-    box-shadow: none;
-  }
+  /* box-shadow: inset 0px 5px 20px hsla(256, 91%, 10%, 0.8); */
+  box-shadow: inset 0px 5px 20px hsla(256, 0%, 0%, 0.3);
+  background-color: ${(props?: { open?: boolean; backgroundColor?: string }) =>
+    props && props.backgroundColor ? props.backgroundColor : undefined};
 
   a {
-    /*    color: #fff;
-    &:visited {
-      color: #fff;
-    } */
     font-size: 1.2em;
+    /*     
+    color: #fff;
+    
+    &:visited {
+      color: #fff; 
+    } 
+    */
   }
 `;
 
@@ -247,13 +261,15 @@ const Popup = styled.div`
   bottom: 0;
   transition: 200ms;
   z-index: 0;
-  transform: ${(prop: { open?: boolean }) =>
-    prop.open ? "translateY(0)" : "translateY(-100%)"};
-  background-color: #1b1d6e;
   width: 100%;
   height: 100vh;
   padding-top: 58px;
   font-size: 1.5em;
+
+  transform: ${(props: { open?: boolean; backgroundColor?: string }) =>
+    props.open ? "translateY(0)" : "translateY(-100%)"};
+  background-color: ${(props?: { open?: boolean; backgroundColor?: string }) =>
+    props && props.backgroundColor ? props.backgroundColor : undefined};
 `;
 
 const PopupButton = styled.div`
@@ -266,8 +282,9 @@ const PopupButton = styled.div`
 `;
 
 const A = styled.a`
-  color: rgb(180, 180, 255);
   margin: 0;
+  /* color: rgb(180, 180, 255); */
+  color: rgba(255, 255, 255, 0.75);
 
   &:hover {
     color: white;

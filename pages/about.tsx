@@ -7,7 +7,8 @@ const title = "About the event";
 
 const AboutPage: FC = () => (
   <>
-    <NavBar title={title} currentPage="About" />
+    <DarkLayer></DarkLayer>
+    <NavBar title={title} currentPage="About" backgroundColor="#1b1d6e" />
     {/* <Header title={title} /> */}
     <AboutContainer>
       <ContentContainer id="faq">
@@ -119,7 +120,7 @@ const Faq: FC<{ heading: string; children: ReactNode }> = ({
 );
 
 export const DarkLayer = styled.div`
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: hsla(237, 60%, 48%, 0.6);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -147,7 +148,7 @@ const Question = styled.div`
   padding: 15px 15px;
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
   border-bottom: 3px solid rgba(255, 255, 255, 0.4);
-  text-shadow: 2px 4px 5px hsla(237, 60%, 35%, 1);
+  text-shadow: 2px 4px 5px hsla(237, 80%, 35%, 0.3);
 `;
 
 const Answer = styled.div`
