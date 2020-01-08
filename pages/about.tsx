@@ -108,19 +108,6 @@ const AboutPage: FC = () => (
 
 export default AboutPage;
 
-const Organizer: FC<{
-  image: string;
-  name: string;
-  link: string;
-  handle: string;
-}> = ({ image, name, link, handle }) => (
-  <SingleOrganizer>
-    <img src={image} />
-    <h3>{name}</h3>
-    <a href={link}>{handle}</a>
-  </SingleOrganizer>
-);
-
 const Faq: FC<{ heading: string; children: ReactNode }> = ({
   heading,
   children
@@ -195,20 +182,4 @@ const Row = styled.div`
   columns: auto;
   column-width: 500px;
   column-gap: 50px;
-`;
-
-const SingleOrganizer = styled.div`
-  img {
-    height: 250px;
-    width: 250px;
-    padding: 10px;
-    border: 1px dashed rgba(0, 0, 0, 0.3);
-    object-fit: cover;
-  }
-  h3 {
-    padding: 0px;
-    margin: 0px;
-    margin-top: 10px;
-  }
-  margin: 10px 0px;
 `;
