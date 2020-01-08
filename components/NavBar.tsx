@@ -1,9 +1,15 @@
 import { FC, useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import { FaTwitter /* FaYoutube */ } from "react-icons/fa";
+import {
+  FaTwitter,
+  FaYoutube,
+  FaMapMarkerAlt,
+  FaQuestionCircle
+} from "react-icons/fa";
 import { IconType } from "react-icons/lib/cjs";
 import { IoMdMenu } from "react-icons/io";
+import { GoPerson } from "react-icons/go";
 
 const NavBar: FC<{
   backgroundColor?: string;
@@ -101,12 +107,25 @@ const textNavItems: {
 
 const iconNavItems: { Icon: IconType; url: string }[] = [
   {
+    Icon: FaQuestionCircle,
+    url: "https://twitter.com/search?q=%23WasmSummit&src=typed_query"
+  },
+  {
+    Icon: FaMapMarkerAlt,
+    url: "https://twitter.com/search?q=%23WasmSummit&src=typed_query"
+  },
+  {
+    Icon: GoPerson,
+    url: ""
+  },
+  {
     Icon: FaTwitter,
     url: "https://twitter.com/search?q=%23WasmSummit&src=typed_query"
+  },
+  {
+    Icon: FaYoutube,
+    url: ""
   }
-  /*   {
-    Icon: FaYoutube
-  } */
 ];
 
 const HomeButton = styled.div`
@@ -197,7 +216,7 @@ const BottomBox = styled.div`
   bottom: 0;
 
   /* box-shadow: inset 0px 5px 20px hsla(256, 91%, 10%, 0.8); */
-  box-shadow: inset 0px 5px 20px hsla(256, 0%, 0%, 0.3);
+  box-shadow: inset 0px 5px 20px hsla(256, 0%, 0%, 0.5);
   background-color: ${(props?: { open?: boolean; backgroundColor?: string }) =>
     props && props.backgroundColor ? props.backgroundColor : undefined};
 

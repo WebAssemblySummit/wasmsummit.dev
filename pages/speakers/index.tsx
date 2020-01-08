@@ -15,7 +15,12 @@ export type SpeakerProfile = {
 const SpeakersPage: FC = () => (
   <>
     <Sandbox />
-    <NavBar title={title} currentPage="Speakers" backgroundColor="#1b1d6e" />
+    <NavBar
+      title={title}
+      currentPage="Speakers"
+      backgroundColor="#1b1d6e"
+      bottom
+    />
     <ContentContainer id="faq">
       {speakers.map((speaker, index) => (
         <Speaker key={speaker.name + index} profile={speaker} />
@@ -104,9 +109,9 @@ const Sandbox = styled.div`
 const ContentContainer = styled.div`
   /* background-color: rgb(30, 30, 30); */
   margin: 0;
-  padding-top: 20px;
-  padding-bottom: 50px;
   padding: 25px;
+  padding-bottom: 50px;
+  padding-top: 50px;
   /* display: flex;
   flex-direction: row;
   flex-wrap: wrap;

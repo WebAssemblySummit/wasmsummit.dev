@@ -8,7 +8,12 @@ const title = "About the event";
 const AboutPage: FC = () => (
   <>
     <BackgroundLayer></BackgroundLayer>
-    <NavBar title={title} currentPage="About" backgroundColor="#1b1d6e" />
+    <NavBar
+      title={title}
+      currentPage="About"
+      backgroundColor="#1b1d6e"
+      bottom
+    />
     <Faq />
   </>
 );
@@ -28,7 +33,9 @@ export const BackgroundLayer = styled.div`
 const Faq: FC = () => (
   <FaqBox id="faq">
     {faq.map(({ question, answer }) => (
-      <FaqItem question={question}>{answer}</FaqItem>
+      <FaqItem key={question} question={question}>
+        {answer}
+      </FaqItem>
     ))}
   </FaqBox>
 );

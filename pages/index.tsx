@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar";
 
 const LandingPage: FC = () => (
   <View>
-    <NavBar backgroundColor="#1b1d6e" />
+    <NavBar backgroundColor="#1b1d6e" bottom />
     <Container>
       <Hero>
         <Logo src="summit-logo.svg" alt="WebAssembly Summit Logo" />
