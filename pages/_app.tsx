@@ -29,6 +29,14 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
+    margin: 0;
+    cursor: pointer;
+
+    /* color: rgb(180, 180, 255); */
+    color: rgba(255, 255, 255, 0.8);
+    &:hover {
+      color: white;
+    }
   }
 
   @media only screen and (max-width: 767px) {
