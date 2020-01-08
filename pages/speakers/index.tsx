@@ -1,7 +1,7 @@
 import { FC, ReactNode } from "react";
 import styled from "styled-components";
 import NavBar from "../../components/NavBar";
-import { speakers } from "../../data/speakers";
+import { speakers } from "./data";
 import { wasmPurple } from "../../components/colors";
 
 const title = "About the event";
