@@ -12,6 +12,20 @@ const AboutPage: FC = () => (
     <AboutContainer>
       <ContentContainer id="faq">
         <Row>
+          <Faq heading="How can I attend?">
+            <div>
+              The application for tickets has already closed. If you had applied
+              to participate in the ticket raffle for the event, you will get a
+              notification via e-mail once you got a ticket. Note that there are
+              several waves of invitations depending on when tickets become
+              available.
+            </div>
+          </Faq>
+          <Faq heading="Is the event really free?">
+            <div>
+              If you have received a ticket. Attending the event is free
+            </div>
+          </Faq>
           <Faq heading="Is this a community event?">
             <div>
               Yes, the summit is organised by individual people in the
