@@ -13,12 +13,13 @@ const NavBar: FC<{
 }> = ({ title, currentPage, bottom, backgroundColor }) => {
   const [open, setOpen] = useState(false);
   const Box = bottom ? BottomBox : TopBox;
+  const onClick = () => setOpen(!open);
 
   return (
     <>
       <Box backgroundColor={backgroundColor}>
         <Link href="/" as="/" passHref>
-          <A>
+          <a>
             <HomeButton>
               <Logo src="webassembly-logo.svg" alt="WebAssembly Summit Logo" />
               {/* <Header title={title}></Header> */}
@@ -26,50 +27,50 @@ const NavBar: FC<{
                 WebAssembly Summit
               </WebAssemblySummit>
             </HomeButton>
-          </A>
+          </a>
         </Link>
         <NavItems>
           {textNavItems.map(({ label, link }) =>
             currentPage && currentPage === label ? (
               <Link key={link} href={link} as={link} passHref>
-                <A>
+                <a>
                   <ActiveButton key={label}>{label}</ActiveButton>
-                </A>
+                </a>
               </Link>
             ) : (
               <Link key={link} href={link} as={link} passHref>
-                <A>
+                <a>
                   <Button key={label}>{label}</Button>
-                </A>
+                </a>
               </Link>
             )
           )}
           {iconNavItems.map(({ Icon, url }) => (
-            <Button key={url}>
-              <A href={url}>
+            <a key={url} href={url}>
+              <Button>
                 <Icon size={24} style={{ marginTop: 0 }}></Icon>
-              </A>
-            </Button>
+              </Button>
+            </a>
           ))}
         </NavItems>
-        <A onClick={() => setOpen(!open)}>
-          <BurgerButton>
+        <BurgerButton>
+          <a onClick={onClick}>
             <IoMdMenu size={35}></IoMdMenu>
-          </BurgerButton>
-        </A>
+          </a>
+        </BurgerButton>
       </Box>
       <Popup open={open} backgroundColor={backgroundColor}>
         {textNavItems.map(({ label, link }) =>
           link ? (
             <Link key={link} href={link} as={link} passHref>
-              <A>
+              <a>
                 <PopupButton>{label}</PopupButton>
-              </A>
+              </a>
             </Link>
           ) : (
-            <PopupButton key={link}>
-              <A>{label}</A>
-            </PopupButton>
+            <a>
+              <PopupButton key={link}>{label}</PopupButton>
+            </a>
           )
         )}
       </Popup>
@@ -246,6 +247,7 @@ const BurgerButton = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   padding: 10px 20px;
+  cursor: pointer;
 
   @media screen and (min-width: 750px) {
     display: none;
@@ -281,15 +283,4 @@ const PopupButton = styled.div`
   width: 100%;
   border-top: 2px solid transparent;
   text-align: center;
-`;
-
-const A = styled.a`
-  margin: 0;
-  /* color: rgb(180, 180, 255); */
-  color: rgba(255, 255, 255, 0.75);
-
-  &:hover {
-    color: white;
-    cursor: pointer;
-  }
 `;
