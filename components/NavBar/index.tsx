@@ -52,9 +52,11 @@ const NavBar: FC<{
             </Button>
           ))}
         </NavItems>
-        <BurgerButton onClick={() => setOpen(!open)}>
-          <IoMdMenu size={35}></IoMdMenu>
-        </BurgerButton>
+        <A onClick={() => setOpen(!open)}>
+          <BurgerButton>
+            <IoMdMenu size={35}></IoMdMenu>
+          </BurgerButton>
+        </A>
       </Box>
       <Popup open={open} backgroundColor={backgroundColor}>
         {textNavItems.map(({ label, link }) =>
