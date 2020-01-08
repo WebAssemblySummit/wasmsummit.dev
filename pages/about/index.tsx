@@ -1,7 +1,7 @@
 import { FC, ReactNode } from "react";
 import styled from "styled-components";
-import NavBar from "../components/NavBar";
-import { faq } from "../data/faq";
+import NavBar from "../../components/NavBar";
+import { faq } from "../../data/faq";
 
 const title = "About the event";
 
