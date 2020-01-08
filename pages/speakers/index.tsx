@@ -107,11 +107,11 @@ const ContentContainer = styled.div`
   padding-top: 20px;
   padding-bottom: 50px;
   padding: 25px;
-  /* display: flex;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly; */
-  display: grid;
+  justify-content: space-evenly;
+  /*   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-gap: 1vw;
   grid-row-gap: 70px;
@@ -121,5 +121,5 @@ const ContentContainer = styled.div`
   @media (max-width: 1280px) {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 2vw;
-  }
+  } */
 `;
