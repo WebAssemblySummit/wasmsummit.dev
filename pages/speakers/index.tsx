@@ -14,17 +14,13 @@ export type SpeakerProfile = {
 
 const SpeakersPage: FC = () => (
   <>
+    <Sandbox />
     <NavBar title={title} currentPage="Speakers" backgroundColor="#1b1d6e" />
-    <AboutContainer>
-      <Sandbox />
-      <ContentContainer id="faq">
-        <Row>
-          {speakers.map((speaker, index) => (
-            <Speaker key={speaker.name + index} profile={speaker} />
-          ))}
-        </Row>
-      </ContentContainer>
-    </AboutContainer>
+    <ContentContainer id="faq">
+      {speakers.map((speaker, index) => (
+        <Speaker key={speaker.name + index} profile={speaker} />
+      ))}
+    </ContentContainer>
   </>
 );
 
@@ -37,17 +33,6 @@ const Speaker: FC<{ profile: SpeakerProfile }> = ({ profile }) => (
     <Bio>{profile.bio}</Bio>
   </SectionBody>
 );
-
-const A = styled.a`
-  margin: 0;
-`;
-
-const AboutContainer = styled.div`
-  /* background-color: rgb(30, 30, 30); */
-  margin: 0;
-  padding-top: 20px;
-  padding-bottom: 50px;
-`;
 
 const Bio = styled.div`
   padding: 20px 25px;
@@ -106,12 +91,13 @@ const Sandbox = styled.div`
 `;
 
 const ContentContainer = styled.div`
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 50px;
   padding: 25px;
-`;
-
-const Row = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  /* background-color: rgb(30, 30, 30); */
 `;
