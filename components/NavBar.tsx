@@ -163,11 +163,11 @@ const iconNavItems: {
     label: "About",
     url: "/about"
   },
-  {
+  /* {
     Icon: GoPerson,
     label: "Speakers",
     url: "/speakers"
-  },
+  }, */
   {
     Icon: FaMapMarkerAlt,
     label: "Venue",
@@ -176,7 +176,7 @@ const iconNavItems: {
   },
   {
     Icon: FaDiscord,
-    label: "Discord",
+    label: "Chat",
     url: "https://t.co/d2gFhvbr1t?amp=1",
     external: true
   },
