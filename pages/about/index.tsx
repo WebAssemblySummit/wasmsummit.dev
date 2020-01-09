@@ -3,7 +3,7 @@ import styled from "styled-components";
 import NavBar from "../../components/NavBar";
 import { faq } from "./data";
 
-const title = "About the event";
+const title = "About";
 
 const AboutPage: FC = () => (
   <>
