@@ -2,6 +2,7 @@ import { FC, ReactNode } from "react";
 import styled from "styled-components";
 import NavBar from "../../components/NavBar";
 import { faq } from "./data";
+import { wasmPurple, wasmDarkPurple } from "../../components/colors";
 
 const title = "About the event";
 
@@ -16,7 +17,7 @@ const AboutPage: FC = () => (
 export default AboutPage;
 
 export const BackgroundLayer = styled.div`
-  background-color: hsla(237, 60%, 48%, 0.6);
+  background-color: white; /* hsla(237, 60%, 48%, 0.6); */
   position: fixed;
   top: 0;
   bottom: 0;
@@ -41,14 +42,14 @@ const FaqBox = styled.div`
     props.primary ? "#fff" : "transparent"};
   box-shadow: ${(props: { primary?: boolean }) =>
     props.primary ? "0px 5px 30px rgba(0,0,0,0.01)" : "0px"};
-  color: #fff;
+  color: black;
   border-radius: 5px;
 
   a {
-    color: white;
+    color: ${wasmDarkPurple};
     text-decoration: underline;
     &:visited {
-      color: white;
+      color: ${wasmDarkPurple};
       text-decoration: underline;
     }
   }
@@ -75,16 +76,20 @@ const Question = styled.div`
   margin: 0 25px 0 0;
   padding: 15px 15px;
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
-  border-bottom: 3px solid rgba(255, 255, 255, 0.4);
-  text-shadow: 2px 4px 5px hsla(237, 80%, 35%, 0.3);
+  border-bottom: 8px solid rgb(200, 200, 200);
+  /*   text-shadow: 2px 4px 5px hsla(237, 80%, 35%, 0.3); */
 `;
 
 const Answer = styled.div`
-  font-size: 1.2em;
-  margin: 25px 25px 0 0;
+  font-size: 1.3em;
+  margin: 30px 25px 0 0;
   padding: 0 15px 50px 25px;
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.7);
+  /* text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25); */
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
+
+  @media screen and (max-width: 749px) {
+    fonts-size: 1em;
+  }
 `;
