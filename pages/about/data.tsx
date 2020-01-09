@@ -1,17 +1,15 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
 
-export type FaqItem = {
-  question: string;
-  answer: ReactNode;
-};
-
-export const SponsorLogo = styled.img`
+export const Logo = styled.img`
   width: 175px;
   margin: 20px;
 `;
 
-export const faq: FaqItem[] = [
+export const faq: {
+  question: string;
+  answer: ReactNode;
+}[] = [
   {
     question: "How do I get a ticket for the event?",
     answer: (
@@ -36,12 +34,11 @@ export const faq: FaqItem[] = [
           Yes, the summit is organised by individual people in the WebAssembly
           community, and at the time of writing sponsored by Google and Mozilla.
         </div>
-        <SponsorLogo src="google-logo.svg" alt="Google Logo" />
-        <SponsorLogo src="mozilla-logo.svg" alt="Mozilla Logo" />
+        <Logo src="google-logo.svg" alt="Google Logo" />
+        <Logo src="mozilla-logo.svg" alt="Mozilla Logo" />
       </>
     )
   },
-
   {
     question: "Who are the organizers?",
     answer: (
@@ -58,7 +55,6 @@ export const faq: FaqItem[] = [
       </>
     )
   },
-
   {
     question: "How to contact you?",
     answer: (
@@ -74,7 +70,6 @@ export const faq: FaqItem[] = [
       </>
     )
   },
-
   {
     question: "Are you on Twitter?",
     answer: (
@@ -87,7 +82,6 @@ export const faq: FaqItem[] = [
       </>
     )
   },
-
   {
     question: "Do you have a live chat?",
     answer: (
@@ -121,7 +115,6 @@ export const faq: FaqItem[] = [
       </>
     )
   },
-
   {
     question: "Which hotels can you recommend?",
     answer: (
