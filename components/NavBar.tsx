@@ -5,7 +5,8 @@ import {
   FaTwitter,
   FaYoutube,
   FaMapMarkerAlt,
-  FaQuestionCircle
+  FaQuestionCircle,
+  FaDiscord
 } from "react-icons/fa";
 import { IconType } from "react-icons/lib/cjs";
 import { IoMdMenu } from "react-icons/io";
@@ -105,25 +106,35 @@ const textNavItems: {
   }
 ];
 
-const iconNavItems: { Icon: IconType; url: string }[] = [
+const iconNavItems: { Icon: IconType; label?: string; url: string }[] = [
   {
     Icon: FaQuestionCircle,
+    label: "About",
     url: "https://twitter.com/search?q=%23WasmSummit&src=typed_query"
   },
   {
     Icon: FaMapMarkerAlt,
+    label: "Venue",
     url: "https://twitter.com/search?q=%23WasmSummit&src=typed_query"
   },
   {
     Icon: GoPerson,
+    label: "Speakers",
     url: ""
   },
   {
     Icon: FaTwitter,
+    label: "Twitter",
+    url: "https://twitter.com/search?q=%23WasmSummit&src=typed_query"
+  },
+  {
+    Icon: FaDiscord,
+    label: "Chat",
     url: "https://twitter.com/search?q=%23WasmSummit&src=typed_query"
   },
   {
     Icon: FaYoutube,
+    label: "Videos",
     url: ""
   }
 ];
