@@ -39,21 +39,21 @@ const NavBar: FC<{
         <NavItems>
           {textNavItems.map(({ label, link }) =>
             currentPage && currentPage === label ? (
-              <Link key={link} href={link} as={link} passHref>
+              <Link key={label} href={link} as={link} passHref>
                 <a>
                   <ActiveButton key={label}>{label}</ActiveButton>
                 </a>
               </Link>
             ) : (
-              <Link key={link} href={link} as={link} passHref>
+              <Link key={label} href={link} as={link} passHref>
                 <a>
                   <Button key={label}>{label}</Button>
                 </a>
               </Link>
             )
           )}
-          {iconNavItems.map(({ Icon, url }) => (
-            <a key={url} href={url}>
+          {iconNavItems.map(({ Icon, label, url }) => (
+            <a key={label} href={url}>
               <Button>
                 <Icon size={24} style={{ marginTop: 0 }}></Icon>
               </Button>
