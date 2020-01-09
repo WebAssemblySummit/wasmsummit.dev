@@ -9,7 +9,7 @@ import {
   FaDiscord
 } from "react-icons/fa";
 import { IconType } from "react-icons/lib/cjs";
-import { IoMdMenu } from "react-icons/io";
+import { IoMdMenu, IoMdClose } from "react-icons/io";
 import { GoPerson } from "react-icons/go";
 import Header from "./Header";
 
@@ -38,7 +38,7 @@ const NavBar: FC<{
           </a>
         </Link>
         <NavItems>
-          {textNavItems.map(({ label, link }) =>
+          {/* {textNavItems.map(({ label, link }) =>
             currentPage && currentPage === label ? (
               <Link key={label} href={link} as={link} passHref>
                 <a>
@@ -52,32 +52,77 @@ const NavBar: FC<{
                 </a>
               </Link>
             )
+          )} */}
+          {iconNavItems.map(({ Icon, label, url, external }, index) =>
+            external ? (
+              <a key={url} href={url} target={external && "_blank"}>
+                <Button>
+                  <Icon size={24} style={{ margin: 8 }} />{" "}
+                  <ButtonText>{label}</ButtonText>
+                </Button>
+              </a>
+            ) : currentPage && currentPage === label ? (
+              <Link key={url} href={url} as={url} passHref>
+                <a target={external && "_blank"}>
+                  <ActiveButton>
+                    <Icon size={24} style={{ margin: 8 }} />{" "}
+                    <ButtonText>{label}</ButtonText>
+                  </ActiveButton>
+                </a>
+              </Link>
+            ) : url ? (
+              <Link key={url} href={url} as={url} passHref>
+                <a target={external && "_blank"}>
+                  <Button>
+                    <Icon size={24} style={{ margin: 8 }} />{" "}
+                    <ButtonText>{label}</ButtonText>
+                  </Button>
+                </a>
+              </Link>
+            ) : (
+              <a key={index}>
+                <Button>
+                  <Icon size={24} style={{ margin: 8 }} />{" "}
+                  <ButtonText>{label}</ButtonText>
+                </Button>
+              </a>
+            )
           )}
-          {iconNavItems.map(({ Icon, label, url }) => (
-            <a key={label} href={url}>
-              <Button>
-                <Icon size={24} style={{ marginTop: 0 }}></Icon>
-              </Button>
-            </a>
-          ))}
         </NavItems>
         <BurgerButton>
           <a onClick={onClick}>
-            <IoMdMenu size={35}></IoMdMenu>
+            {open ? (
+              <IoMdClose size={35}></IoMdClose>
+            ) : (
+              <IoMdMenu size={35}></IoMdMenu>
+            )}
           </a>
         </BurgerButton>
       </Box>
       <Popup open={open} backgroundColor={backgroundColor}>
-        {textNavItems.map(({ label, link }) =>
-          link ? (
-            <Link key={link} href={link} as={link} passHref>
+        {iconNavItems.map(({ label, url, Icon, external }, index) =>
+          external ? (
+            <a key={url} href={url}>
+              <PopupButton>
+                <Icon size={30} style={{ margin: 10 }} />
+                <PopupButtonText>{label}</PopupButtonText>
+              </PopupButton>
+            </a>
+          ) : url ? (
+            <Link key={url} href={url} as={url} passHref>
               <a>
-                <PopupButton>{label}</PopupButton>
+                <PopupButton>
+                  <Icon size={30} style={{ margin: 10 }} />
+                  <PopupButtonText>{label}</PopupButtonText>
+                </PopupButton>
               </a>
             </Link>
           ) : (
-            <a>
-              <PopupButton key={link}>{label}</PopupButton>
+            <a key={index}>
+              <PopupButton>
+                <Icon size={30} style={{ margin: 10 }} />
+                <PopupButtonText>{label}</PopupButtonText>
+              </PopupButton>
             </a>
           )
         )}
@@ -107,37 +152,44 @@ const textNavItems: {
   }
 ];
 
-const iconNavItems: { Icon: IconType; label?: string; url: string }[] = [
+const iconNavItems: {
+  Icon: IconType;
+  label?: string;
+  url?: string;
+  external?: boolean;
+}[] = [
   {
     Icon: FaQuestionCircle,
     label: "About",
-    url: "https://twitter.com/search?q=%23WasmSummit&src=typed_query"
-  },
-  {
-    Icon: FaMapMarkerAlt,
-    label: "Venue",
-    url: "https://twitter.com/search?q=%23WasmSummit&src=typed_query"
+    url: "/about"
   },
   {
     Icon: GoPerson,
     label: "Speakers",
-    url: ""
+    url: "/speakers"
+  },
+  {
+    Icon: FaMapMarkerAlt,
+    label: "Venue",
+    url: "https://goo.gl/maps/uvivRUCkjAmC5Jqo6",
+    external: true
+  },
+  {
+    Icon: FaDiscord,
+    label: "Discord",
+    url: "https://t.co/d2gFhvbr1t?amp=1",
+    external: true
   },
   {
     Icon: FaTwitter,
     label: "Twitter",
-    url: "https://twitter.com/search?q=%23WasmSummit&src=typed_query"
-  },
-  {
-    Icon: FaDiscord,
-    label: "Chat",
-    url: "https://twitter.com/search?q=%23WasmSummit&src=typed_query"
-  },
-  {
-    Icon: FaYoutube,
-    label: "Videos",
-    url: ""
+    url: "https://twitter.com/search?q=%23WasmSummit&src=typed_query",
+    external: true
   }
+  /* {
+    Icon: FaYoutube,
+    label: "Youtube"
+  } */
 ];
 
 const HomeButton = styled.div`
@@ -152,24 +204,27 @@ const HomeButton = styled.div`
 
 const WebAssemblySummit = styled.div`
   display: flex;
-  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
   text-align: center;
   letter-spacing: 1px;
+  white-space: nowrap;
   /*   
   color: ${(props: { active?: boolean }) =>
     props.active ? "white" : "rgb(180, 180, 255)"};
  */  
   color: ${(props: { active?: boolean }) =>
-    props.active ? "white" : "rgba(255, 255, 255, 0.75)"};
+    props.active ? "rgba(255, 255, 255, 1)" : "rgba(200, 200, 240, 0.8)"};
   transition: 150ms;
-  padding: 0 10px;
+  padding: 0 5px;
+  font-size: 1em;
+  font-size: 0.95em;
 
   &:hover {
-    color: white;
+    color: rgba(255, 255, 255, 1);
   }
 
   @media screen and (max-width: 749px) {
-    font-size: 0.9em;
+    display: none;
   }
 `;
 
@@ -191,25 +246,52 @@ const ActiveButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 3vw;
+  margin-left: -1;
+  padding: 0 2vw 0 1.5vw;
   height: 60px;
   transition: 150ms;
   border-top: 2px solid white;
   color: white;
   cursor: pointer;
+  font-size: 0.95em;
+`;
+
+const ButtonText = styled.span`
+  color: rgba(220, 220, 255, 1);
+  margin-left: 10px;
+
+  &:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+
+  @media screen and (max-width: 1280px) {
+    display: none;
+  }
+`;
+
+const PopupButtonText = styled.span`
+  color: rgba(220, 220, 255, 1);
+  font-size: 1em;
+
+  &:hover {
+    color: rgba(255, 255, 255, 1);
+  }
 `;
 
 const Button = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
-  padding: 0 3vw;
+  padding: 0 2vw 0 1.5vw;
   height: 60px;
   transition: 150ms;
   border-top: 2px solid transparent;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-size: 0.95em;
 
   &:hover {
+    color: rgba(255, 255, 255, 1);
     border-top: 2px solid white;
   }
 `;
@@ -226,6 +308,8 @@ const BottomBox = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
 
   /* box-shadow: inset 0px 5px 20px hsla(256, 91%, 10%, 0.8); */
   box-shadow: inset 0px 5px 20px hsla(256, 0%, 0%, 0.5);
@@ -239,6 +323,10 @@ const BottomBox = styled.div`
     }
  */
     font-size: 1.2em;
+  }
+
+  @media screen and (max-width: 749px) {
+    box-shadow: none;
   }
 `;
 
@@ -286,32 +374,40 @@ const BurgerButton = styled.div`
 `;
 
 const Popup = styled.div`
+  /* 
   display: flex;
   flex-direction: column;
   align-items: center;
+  */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   position: fixed;
-  top: 0;
+  justify-items: center;
+  align-items: center;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  transition: 200ms;
+  transition: 150ms;
   z-index: 0;
-  width: 100%;
-  height: 100vh;
-  padding-top: 58px;
-  font-size: 1.5em;
+  padding-bottom: 58px;
+  font-size: 1em;
 
   transform: ${(props: { open?: boolean; backgroundColor?: string }) =>
-    props.open ? "translateY(0)" : "translateY(-100%)"};
+    props.open ? "translateY(0)" : "translateY(100%)"};
   background-color: ${(props?: { open?: boolean; backgroundColor?: string }) =>
     props && props.backgroundColor ? props.backgroundColor : undefined};
 `;
 
 const PopupButton = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0;
-  padding: 20px 2%;
+  padding: 30px 2%;
   transition: 150ms;
   width: 100%;
   border-top: 2px solid transparent;
   text-align: center;
+  color: white;
 `;

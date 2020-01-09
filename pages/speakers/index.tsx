@@ -111,7 +111,7 @@ const ContentContainer = styled.div`
   /* background-color: rgb(30, 30, 30); */
   margin: 0;
   padding: 25px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
   padding-top: 50px;
   /* display: flex;
   flex-direction: row;
