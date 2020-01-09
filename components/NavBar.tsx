@@ -11,7 +11,7 @@ import {
 import { IconType } from "react-icons/lib/cjs";
 import { IoMdMenu } from "react-icons/io";
 import { GoPerson } from "react-icons/go";
-import Header from "../Header";
+import Header from "./Header";
 
 const NavBar: FC<{
   backgroundColor?: string;
