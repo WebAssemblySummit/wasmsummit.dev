@@ -17,7 +17,7 @@ const SpeakersPage: FC = () => (
   <>
     <Sandbox />
     <NavBar title={title} currentPage="Speakers" backgroundColor="#1b1d6e" />
-    <ContentContainer id="faq">
+    <ContentContainer id="about">
       {speakers.map((speaker, index) => (
         <Speaker key={speaker.name + index} profile={speaker} />
       ))}
@@ -103,15 +103,10 @@ const Sandbox = styled.div`
 `;
 
 const ContentContainer = styled.div`
-  /* background-color: rgb(30, 30, 30); */
   margin: 0;
   padding-top: 20px;
   padding-bottom: 50px;
   padding: 25px;
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly; */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-gap: 1vw;
