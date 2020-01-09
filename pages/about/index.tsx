@@ -76,9 +76,9 @@ const FaqItem: FC<{ question: string; children: ReactNode }> = ({
 const Question = styled.div`
   font-size: 1.5em;
   margin: 0 25px 0 0;
-  padding: 15px 15px;
+  padding: 25px 15px;
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
-  border-bottom: 8px solid rgb(200, 200, 200);
+  border-bottom: 8px solid rgb(220, 220, 220);
   /*   text-shadow: 2px 4px 5px hsla(237, 80%, 35%, 0.3); */
 `;
 
