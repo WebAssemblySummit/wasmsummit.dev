@@ -1,9 +1,9 @@
 import { FC, ReactNode } from "react";
 import styled from "styled-components";
 import NavBar from "../../components/NavBar";
-import { faq } from "./data";
+import { faq } from "../../data/about";
 
-const title = "About the event";
+const title = "About";
 
 const AboutPage: FC = () => (
   <>

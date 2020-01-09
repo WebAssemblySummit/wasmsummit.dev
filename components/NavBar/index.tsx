@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FaTwitter /* FaYoutube */ } from "react-icons/fa";
 import { IconType } from "react-icons/lib/cjs";
 import { IoMdMenu } from "react-icons/io";
+import Header from "../Header";
 
 const NavBar: FC<{
   backgroundColor?: string;
@@ -22,7 +23,7 @@ const NavBar: FC<{
           <a>
             <HomeButton>
               <Logo src="webassembly-logo.svg" alt="WebAssembly Summit Logo" />
-              {/* <Header title={title}></Header> */}
+              <Header title={title}></Header>
               <WebAssemblySummit active={!currentPage}>
                 WebAssembly Summit
               </WebAssemblySummit>
