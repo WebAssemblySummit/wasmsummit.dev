@@ -22,7 +22,7 @@ const SpeakersPage: FC = () => (
       backgroundColor={navbarBlue}
       bottom
     />
-    <ContentContainer id="faq">
+    <ContentContainer id="about">
       {speakers.map((speaker, index) => (
         <Speaker key={speaker.name + index} profile={speaker} />
       ))}
@@ -108,7 +108,6 @@ const Sandbox = styled.div`
 `;
 
 const ContentContainer = styled.div`
-  /* background-color: rgb(30, 30, 30); */
   margin: 0;
   padding: 25px;
   padding-bottom: 100px;
