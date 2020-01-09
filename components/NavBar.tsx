@@ -223,7 +223,7 @@ const WebAssemblySummit = styled.div`
     color: rgba(255, 255, 255, 1);
   }
 
-  @media screen and (max-width: 749px) {
+  @media screen and (max-width: 1080px) {
     display: none;
   }
 `;
@@ -237,7 +237,7 @@ const NavItems = styled.div`
   margin: 0 15px;
   height: 100%;
 
-  @media screen and (max-width: 749px) {
+  @media screen and (max-width: 374px) {
     display: none;
   }
 `;
@@ -264,7 +264,7 @@ const ButtonText = styled.span`
     color: rgba(255, 255, 255, 1);
   }
 
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 800px) {
     display: none;
   }
 `;
@@ -368,7 +368,7 @@ const BurgerButton = styled.div`
   padding: 10px 20px;
   cursor: pointer;
 
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 375px) {
     display: none;
   }
 `;
