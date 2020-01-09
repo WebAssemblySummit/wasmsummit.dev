@@ -1,4 +1,4 @@
-export type SpeakerProfile = {
+type SpeakerProfile = {
   name: string;
   picture: string;
   bio?: string;

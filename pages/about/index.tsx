@@ -4,7 +4,7 @@ import NavBar from "../../components/NavBar";
 import { faq } from "./data";
 import { wasmPurple, wasmDarkPurple } from "../../components/colors";
 
-const title = "About the event";
+const title = "About";
 
 const AboutPage: FC = () => (
   <>
