@@ -165,11 +165,11 @@ const iconNavItems: {
     label: "About",
     url: "/about"
   },
-  {
+  /*   {
     Icon: GoPerson,
     label: "Speakers",
     url: "/speakers"
-  },
+  }, */
   {
     Icon: FaMapMarkerAlt,
     label: "Venue",
