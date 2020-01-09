@@ -196,7 +196,7 @@ const HomeButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 2vw;
+  padding: 0px 0 0 2vw;
   &:hover {
     color: white;
   }
@@ -215,7 +215,7 @@ const WebAssemblySummit = styled.div`
   color: ${(props: { active?: boolean }) =>
     props.active ? "rgba(255, 255, 255, 1)" : "rgba(200, 200, 240, 0.8)"};
   transition: 150ms;
-  padding: 0 5px;
+  padding: 0 15px;
   font-size: 1em;
   font-size: 0.95em;
 
@@ -234,7 +234,7 @@ const NavItems = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin: 0 15px;
+  margin: 0 5px;
   height: 100%;
 
   @media screen and (max-width: 374px) {
@@ -247,7 +247,7 @@ const ActiveButton = styled.div`
   align-items: center;
   justify-content: center;
   margin-left: -1;
-  padding: 0 2vw 0 1.5vw;
+  padding: 0 2vw 5px 1.5vw;
   height: 60px;
   transition: 150ms;
   border-top: 2px solid white;
@@ -282,7 +282,7 @@ const Button = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 2vw 0 1.5vw;
+  padding: 0 2vw 5px 1.5vw;
   height: 60px;
   transition: 150ms;
   border-top: 2px solid transparent;
@@ -312,7 +312,7 @@ const BottomBox = styled.div`
   overflow-y: hidden;
 
   /* box-shadow: inset 0px 5px 20px hsla(256, 91%, 10%, 0.8); */
-  box-shadow: inset 0px 5px 20px hsla(256, 0%, 0%, 0.5);
+  box-shadow: inset 0px 5px 5px hsla(256, 91%, 10%, 0.4);
   background-color: ${(props?: { open?: boolean; backgroundColor?: string }) =>
     props && props.backgroundColor ? props.backgroundColor : undefined};
 
@@ -326,7 +326,7 @@ const BottomBox = styled.div`
   }
 
   @media screen and (max-width: 749px) {
-    box-shadow: none;
+    box-shadow: inset 0px 5px 10px hsla(256, 91%, 10%, 0.3);
   }
 `;
 

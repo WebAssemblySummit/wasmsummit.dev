@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Header from "../../components/Header";
 import NavBar from "../../components/NavBar";
 import { speakers } from "../../data/speakers";
-import { wasmPurple } from "../../components/colors";
+import { wasmPurple, navbarBlue } from "../../components/colors";
 
 const title = "Speakers";
 
@@ -19,7 +19,7 @@ const SpeakersPage: FC = () => (
     <NavBar
       title={title}
       currentPage="Speakers"
-      backgroundColor="#1b1d6e"
+      backgroundColor={navbarBlue}
       bottom
     />
     <ContentContainer id="faq">
