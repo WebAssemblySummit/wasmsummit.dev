@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaTwitter /* FaYoutube */ } from "react-icons/fa";
 import { IconType } from "react-icons/lib/cjs";
 import { IoMdMenu } from "react-icons/io";
-import Header from "../Header";
+import Header from "./Header";
 
 const NavBar: FC<{
   backgroundColor?: string;
