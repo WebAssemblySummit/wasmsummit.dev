@@ -37,6 +37,7 @@ const NavBar: FC<{
             </HomeButton>
           </a>
         </Link>
+        <LeftSpacer />
         <NavItems>
           {/* {textNavItems.map(({ label, link }) =>
             currentPage && currentPage === label ? (
@@ -89,6 +90,7 @@ const NavBar: FC<{
             )
           )}
         </NavItems>
+        <RightSpacer />
         <BurgerButton>
           <a onClick={onClick}>
             {open ? (
@@ -163,11 +165,11 @@ const iconNavItems: {
     label: "About",
     url: "/about"
   },
-  /* {
+  {
     Icon: GoPerson,
     label: "Speakers",
     url: "/speakers"
-  }, */
+  },
   {
     Icon: FaMapMarkerAlt,
     label: "Venue",
@@ -194,11 +196,20 @@ const iconNavItems: {
 
 const HomeButton = styled.div`
   display: flex;
+  flex: 1;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 0px 0 0 2vw;
   &:hover {
     color: white;
+  }
+
+  @media screen and (max-width: 799px) {
+    padding: 0px 0 0 8vw;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 0px 0 0 15px;
   }
 `;
 
@@ -231,8 +242,9 @@ const WebAssemblySummit = styled.div`
 const NavItems = styled.div`
   display: flex;
   flex: 1;
+  flex-basis: 900px;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
   margin: 0 5px;
   height: 100%;
@@ -327,6 +339,7 @@ const BottomBox = styled.div`
 
   @media screen and (max-width: 749px) {
     box-shadow: inset 0px 5px 10px hsla(256, 91%, 10%, 0.3);
+    justify-content: center;
   }
 `;
 
@@ -410,4 +423,12 @@ const PopupButton = styled.div`
   border-top: 2px solid transparent;
   text-align: center;
   color: white;
+`;
+
+const LeftSpacer = styled.div`
+  flex: 2;
+`;
+
+const RightSpacer = styled.div`
+  flex: 5;
 `;
