@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Header from "../components/Header";
 import NavBar from "../components/NavBar";
 
-const title = "About the event";
+const title = "About";
 
 const AboutPage: FC = () => (
   <>

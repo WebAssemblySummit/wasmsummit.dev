@@ -17,13 +17,13 @@ const Header: FC<Props> = ({ title, transparent }) => (
         {title ? `: ${title}` : ""}
       </title>
     </Head>
-    {title ? (
+    {/* {title ? (
       <Headline>
         <Heading>{title}</Heading>
       </Headline>
     ) : (
       undefined
-    )}
+    )} */}
   </>
 );
 
