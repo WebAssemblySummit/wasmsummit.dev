@@ -27,11 +27,11 @@ export const BackgroundLayer = styled.div`
 
 const Faq: FC = () => (
   <FaqBox id="faq">
-    <ColumnLayout>
-      {faq.map(({ question, answer }) => (
-        <FaqItem question={question}>{answer}</FaqItem>
-      ))}
-    </ColumnLayout>
+    {faq.map(({ question, answer }) => (
+      <FaqItem key={question} question={question}>
+        {answer}
+      </FaqItem>
+    ))}
   </FaqBox>
 );
 
@@ -43,7 +43,9 @@ const FaqBox = styled.div`
     props.primary ? "0px 5px 30px rgba(0,0,0,0.01)" : "0px"};
   color: #fff;
   border-radius: 5px;
-
+  columns: auto;
+  column-width: 500px;
+  column-gap: 50px;
   a {
     color: white;
     text-decoration: underline;
@@ -52,12 +54,6 @@ const FaqBox = styled.div`
       text-decoration: underline;
     }
   }
-`;
-
-const ColumnLayout = styled.div`
-  columns: auto;
-  column-width: 500px;
-  column-gap: 50px;
 `;
 
 const FaqItem: FC<{ question: string; children: ReactNode }> = ({

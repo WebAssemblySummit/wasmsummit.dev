@@ -15,17 +15,13 @@ export type SpeakerProfile = {
 
 const SpeakersPage: FC = () => (
   <>
+    <Sandbox />
     <NavBar title={title} currentPage="Speakers" backgroundColor="#1b1d6e" />
-    <AboutContainer>
-      <Sandbox />
-      <ContentContainer id="faq">
-        <Row>
-          {speakers.map((speaker, index) => (
-            <Speaker key={speaker.name + index} profile={speaker} />
-          ))}
-        </Row>
-      </ContentContainer>
-    </AboutContainer>
+    <ContentContainer id="about">
+      {speakers.map((speaker, index) => (
+        <Speaker key={speaker.name + index} profile={speaker} />
+      ))}
+    </ContentContainer>
   </>
 );
 
@@ -39,22 +35,18 @@ const Speaker: FC<{ profile: SpeakerProfile }> = ({ profile }) => (
   </SectionBody>
 );
 
-const A = styled.a`
-  margin: 0;
-`;
-
-const AboutContainer = styled.div`
-  /* background-color: rgb(30, 30, 30); */
-  margin: 0;
-  padding-top: 20px;
-  padding-bottom: 50px;
-`;
-
 const Bio = styled.div`
   padding: 20px 25px;
   background: hsl(239, 50%, 25%);
-  height: 100%;
+  height: 140px;
   line-height: 1.8;
+
+  @media (max-width: 1280px) {
+    padding: 15px 25px;
+    height: 130px;
+    line-height: 1.6;
+    font-size: 0.9em;
+  }
   color: rgba(255, 255, 255, 0.8);
 `;
 
@@ -91,6 +83,10 @@ const SectionBody = styled.div`
     transform: scale(1.02);
     /* border: 5px solid rgba(255, 255, 255, 0.25); */
   }
+
+  @media (max-width: 1280px) {
+    width: 300px;
+  }
 `;
 
 const Sandbox = styled.div`
@@ -107,12 +103,19 @@ const Sandbox = styled.div`
 `;
 
 const ContentContainer = styled.div`
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 50px;
   padding: 25px;
-`;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 1vw;
+  grid-row-gap: 70px;
+  justify-items: center;
+  align-items: center;
 
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  @media (max-width: 1280px) {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2vw;
+  }
 `;
