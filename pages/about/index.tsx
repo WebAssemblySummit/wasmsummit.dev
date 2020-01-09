@@ -30,14 +30,16 @@ const Faq: FC = () => (
   <FaqBox id="faq">
     <ColumnLayout>
       {faq.map(({ question, answer }) => (
-        <FaqItem question={question}>{answer}</FaqItem>
+        <FaqItem key={question} question={question}>
+          {answer}
+        </FaqItem>
       ))}
     </ColumnLayout>
   </FaqBox>
 );
 
 const FaqBox = styled.div`
-  padding: 7vh 5%;
+  padding: 7vh 4%;
   background-color: ${(props: { primary?: boolean }) =>
     props.primary ? "#fff" : "transparent"};
   box-shadow: ${(props: { primary?: boolean }) =>
@@ -57,8 +59,8 @@ const FaqBox = styled.div`
 
 const ColumnLayout = styled.div`
   columns: auto;
-  column-width: 500px;
-  column-gap: 50px;
+  column-width: 350px;
+  column-gap: 70px;
 `;
 
 const FaqItem: FC<{ question: string; children: ReactNode }> = ({
@@ -81,7 +83,7 @@ const Question = styled.div`
 `;
 
 const Answer = styled.div`
-  font-size: 1.3em;
+  font-size: 1.1em;
   margin: 30px 25px 0 0;
   padding: 0 15px 50px 25px;
   line-height: 1.7;
