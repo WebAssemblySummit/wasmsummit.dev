@@ -1,10 +1,11 @@
 import { FC } from "react";
 import styled from "styled-components";
 import NavBar from "../components/NavBar";
+import { navbarBlue } from "../components/colors";
 
 const LandingPage: FC = () => (
   <View>
-    <NavBar backgroundColor="#1b1d6e" />
+    <NavBar backgroundColor={navbarBlue} bottom />
     <Container>
       <Hero>
         <Logo src="summit-logo.svg" alt="WebAssembly Summit Logo" />
