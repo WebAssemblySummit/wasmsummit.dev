@@ -16,12 +16,7 @@ export type SpeakerProfile = {
 const SpeakersPage: FC = () => (
   <>
     <Background />
-    <NavBar
-      title={title}
-      currentPage="Speakers"
-      backgroundColor={navbarBlue}
-      bottom
-    />
+    <NavBar title={title} backgroundColor={navbarBlue} bottom />
     <Headline>{title}</Headline>
     <Speakers id="speakers">
       {speakers.map((speaker, index) => (
