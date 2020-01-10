@@ -1,8 +1,8 @@
 import { FC, ReactNode } from "react";
 import styled from "styled-components";
+import { navbarBlue } from "../../components/colors";
 import NavBar from "../../components/NavBar";
 import { faq } from "../../data/about";
-import { navbarBlue } from "../../components/colors";
 
 const title = "About";
 
@@ -16,13 +16,15 @@ const AboutPage: FC = () => (
       bottom
     />
     <Faq id="faq">
-      <Headline>Frequently Asked Questions</Headline>
-      {faq.map(({ question, answer }) => (
-        <FaqItem key={question}>
-          <Question>{question}</Question>
-          <Answer>{answer}</Answer>
-        </FaqItem>
-      ))}
+      <Headline>{title}</Headline>
+      <Questions>
+        {faq.map(({ question, answer }) => (
+          <QuestionAnswerPair key={question}>
+            <Question>{question}</Question>
+            <Answer>{answer}</Answer>
+          </QuestionAnswerPair>
+        ))}
+      </Questions>
     </Faq>
   </>
 );
@@ -39,8 +41,27 @@ export const Background = styled.div`
   z-index: -1;
 `;
 
+export const Headline = styled.h1`
+  font-size: 3em;
+  margin-top: 3vh;
+  margin-bottom: 0vh;
+  padding: 15px;
+`;
+
 const Faq = styled.div`
-  padding: 7vh 5%;
+  padding: 3vh 5vw;
+  color: white;
+  a {
+    color: white;
+    text-decoration: underline;
+    &:visited {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+`;
+
+const Questions = styled.div`
   background-color: ${(props: { primary?: boolean }) =>
     props.primary ? "#fff" : "transparent"};
   box-shadow: ${(props: { primary?: boolean }) =>
@@ -60,18 +81,14 @@ const Faq = styled.div`
   }
 `;
 
-const Headline = styled.h1`
-  font-size: 2.5em;
-`;
-
-const FaqItem = styled.div`
+const QuestionAnswerPair = styled.div`
   break-inside: avoid;
 `;
 
 const Question = styled.h2`
   font-size: 1.5em;
   margin: 0 25px 0 0;
-  padding: 15px 15px;
+  padding: 15px;
   font-weight: 700;
   border-bottom: 3px solid rgba(255, 255, 255, 0.4);
   text-shadow: 2px 4px 5px hsla(237, 80%, 35%, 0.3);

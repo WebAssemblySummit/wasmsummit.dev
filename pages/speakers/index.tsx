@@ -22,6 +22,7 @@ const SpeakersPage: FC = () => (
       backgroundColor={navbarBlue}
       bottom
     />
+    <Headline>{title}</Headline>
     <Speakers id="speakers">
       {speakers.map((speaker, index) => (
         <Speaker key={speaker.name + index} profile={speaker} />
@@ -31,6 +32,18 @@ const SpeakersPage: FC = () => (
 );
 
 export default SpeakersPage;
+
+export const Headline = styled.h1`
+  font-size: 2.5em;
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+  padding: 0 0px;
+  margin-left: 4vw;
+  @media screen and (max-width: 663px) {
+    text-align: center;
+    margin-left: 0;
+  }
+`;
 
 const Speaker: FC<{ profile: SpeakerProfile }> = ({ profile }) => (
   <SpeakerCard>
@@ -92,6 +105,14 @@ const SpeakerCard = styled.div`
   @media (max-width: 1280px) {
     width: 300px;
   }
+
+  @media screen and (max-width: 663px) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: 450px) {
+    width: 300px;
+  }
 `;
 
 const Background = styled.div`
@@ -110,8 +131,8 @@ const Background = styled.div`
 const Speakers = styled.div`
   margin: 0;
   padding: 25px;
+  padding-top: 0px;
   padding-bottom: 100px;
-  padding-top: 50px;
   /* display: flex;
   flex-direction: row;
   flex-wrap: wrap;
