@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import {
   FaTwitter,
   FaYoutube,
@@ -17,11 +18,11 @@ import { useScrollDirection, UP } from "../hooks/useScrollDirection";
 const NavBar: FC<{
   backgroundColor?: string;
   title?: string;
-  currentPage?: string;
   bottom?: boolean;
-}> = ({ title, currentPage, bottom, backgroundColor }) => {
+}> = ({ title, bottom, backgroundColor }) => {
   const [open, setOpen] = useState(false);
   const scrollDirection = useScrollDirection();
+  const { pathname } = useRouter();
   const Box = bottom ? BottomBox : TopBox;
   const onClick = () => setOpen(!open);
 
@@ -39,7 +40,7 @@ const NavBar: FC<{
             <HomeButton>
               <Logo src="webassembly-logo.svg" alt="WebAssembly Summit Logo" />
               <Header title={title}></Header>
-              <WebAssemblySummit active={!currentPage}>
+              <WebAssemblySummit active={pathname === "/"}>
                 WebAssembly Summit
               </WebAssemblySummit>
             </HomeButton>
@@ -70,7 +71,7 @@ const NavBar: FC<{
                   <ButtonText>{label}</ButtonText>
                 </Button>
               </a>
-            ) : currentPage && currentPage === label ? (
+            ) : pathname && pathname === url ? (
               <Link key={url} href={url} as={url} passHref>
                 <a target={external && "_blank"}>
                   <ActiveButton>
