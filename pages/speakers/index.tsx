@@ -15,32 +15,32 @@ export type SpeakerProfile = {
 
 const SpeakersPage: FC = () => (
   <>
-    <Sandbox />
+    <Background />
     <NavBar
       title={title}
       currentPage="Speakers"
       backgroundColor={navbarBlue}
       bottom
     />
-    <ContentContainer id="about">
+    <Speakers id="speakers">
       {speakers.map((speaker, index) => (
         <Speaker key={speaker.name + index} profile={speaker} />
       ))}
-    </ContentContainer>
+    </Speakers>
   </>
 );
 
 export default SpeakersPage;
 
 const Speaker: FC<{ profile: SpeakerProfile }> = ({ profile }) => (
-  <SectionBody>
+  <SpeakerCard>
     <img src={profile.picture}></img>
-    <SectionHeader bold>{profile.name}</SectionHeader>
-    <Bio>{profile.bio}</Bio>
-  </SectionBody>
+    <SpeakerName bold>{profile.name}</SpeakerName>
+    <SpeakerSummary>{profile.bio}</SpeakerSummary>
+  </SpeakerCard>
 );
 
-const Bio = styled.div`
+const SpeakerSummary = styled.div`
   padding: 20px 25px;
   background: hsl(239, 50%, 25%);
   height: 140px;
@@ -55,7 +55,7 @@ const Bio = styled.div`
   color: rgba(255, 255, 255, 0.8);
 `;
 
-const SectionHeader = styled.div`
+const SpeakerName = styled.div`
   font-size: 1.5em;
   margin: 0;
   padding: 5px 15px;
@@ -67,7 +67,7 @@ const SectionHeader = styled.div`
   color: white;
 `;
 
-const SectionBody = styled.div`
+const SpeakerCard = styled.div`
   font-size: 1.1em;
   margin: 2.5% 1%;
   color: black;
@@ -94,7 +94,7 @@ const SectionBody = styled.div`
   }
 `;
 
-const Sandbox = styled.div`
+const Background = styled.div`
   display: flex;
   position: fixed;
   top: 0;
@@ -107,7 +107,7 @@ const Sandbox = styled.div`
   z-index: -1;
 `;
 
-const ContentContainer = styled.div`
+const Speakers = styled.div`
   margin: 0;
   padding: 25px;
   padding-bottom: 100px;
