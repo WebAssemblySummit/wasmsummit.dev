@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "url": "/_next/static/Elh1ln_8NLwNuAgTKNXUQ/pages/_app.js",
-    "revision": "fd299ec71adef214a39b"
+    "url": "/_next/static/M8NT-G3Elp18APZUoKYUj/pages/_app.js",
+    "revision": "9c82f6dc0d3a8d89a6fa"
   },
   {
-    "url": "/_next/static/Elh1ln_8NLwNuAgTKNXUQ/pages/_error.js",
-    "revision": "1ac42aea727c3982901e"
+    "url": "/_next/static/M8NT-G3Elp18APZUoKYUj/pages/_error.js",
+    "revision": "2e877b3a4ea55b5c0bbb"
   },
   {
-    "url": "/_next/static/Elh1ln_8NLwNuAgTKNXUQ/pages/about.js",
-    "revision": "f55b1961a5ea06a4b57f"
+    "url": "/_next/static/M8NT-G3Elp18APZUoKYUj/pages/about.js",
+    "revision": "f78f65b33b0c886ee7bb"
   },
   {
-    "url": "/_next/static/Elh1ln_8NLwNuAgTKNXUQ/pages/index.js",
-    "revision": "b3c43cd381f275bf8b81"
+    "url": "/_next/static/M8NT-G3Elp18APZUoKYUj/pages/index.js",
+    "revision": "0a7c34407b0ec934cb78"
   },
   {
-    "url": "/_next/static/Elh1ln_8NLwNuAgTKNXUQ/pages/speakers.js",
-    "revision": "af44ee34ab44bb43b808"
+    "url": "/_next/static/M8NT-G3Elp18APZUoKYUj/pages/speakers.js",
+    "revision": "42547b8267633b5033ff"
   },
   {
     "url": "/_next/static/chunks/commons.e05dc51ce3b615e1d048.js",
