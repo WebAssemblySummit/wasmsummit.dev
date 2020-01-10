@@ -60,7 +60,12 @@ export default class extends App {
       <>
         <Head>
           <meta name="apple-mobile-web-app-capable" content="yes" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          />
+          <meta name="mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="description" content="WebAssembly Summit 2020" />
           <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
           <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -68,7 +73,8 @@ export default class extends App {
             href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap"
             rel="stylesheet"
           />
-          <link rel="manifest" href="./manifest.json"></link>
+          <link rel="manifest" href="./manifest.json" />
+          <link rel="shortcut icon" href="./favicon.ico" />
           <meta name="theme-color" content="hsl(237, 60%, 48%)" />
           {
             // @ts-ignore

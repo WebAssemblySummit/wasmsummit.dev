@@ -11,5 +11,6 @@
   ],
   "theme_color": "hsl(237, 60%, 48%)",
   "background_color": "hsl(237, 60%, 48%)",
-  "display": "standalone"
+  "display": "standalone",
+  "orientation": "portrait"
 }
