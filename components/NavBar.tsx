@@ -12,6 +12,7 @@ import { IconType } from "react-icons/lib/cjs";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import { GoPerson } from "react-icons/go";
 import Header from "./Header";
+import { useScrollDirection, UP } from "../hooks/useScrollDirection";
 
 const NavBar: FC<{
   backgroundColor?: string;
@@ -20,12 +21,19 @@ const NavBar: FC<{
   bottom?: boolean;
 }> = ({ title, currentPage, bottom, backgroundColor }) => {
   const [open, setOpen] = useState(false);
+  const scrollDirection = useScrollDirection();
   const Box = bottom ? BottomBox : TopBox;
   const onClick = () => setOpen(!open);
 
   return (
     <>
-      <Box backgroundColor={backgroundColor}>
+      <Box
+        backgroundColor={backgroundColor}
+        style={{
+          transform: scrollDirection == UP ? "none" : "translateY(100%)",
+          transition: "150ms"
+        }}
+      >
         <Link href="/" as="/" passHref>
           <a>
             <HomeButton>
@@ -343,23 +351,23 @@ const BottomBox = styled.div`
   }
 
   /* iphone X, iPhone XS, iPhone 11 Pro */
-  @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  /*  @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
     padding-bottom: 50px;
-  }
+  } */
 
   /* iphone XR, iPhone 11 */
-  @media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  /*  @media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
     padding-bottom: 50px;
-  }
+  } */
 
   /* iphone XS Max, iPhone 11 Pro max */
-  @media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  /*  @media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
     padding-bottom: 50px;
-  }
+  } */
 
-  @media only screen and (max-height: 414px) and (orientation: landscape) {
+  /*   @media only screen and (max-height: 414px) and (orientation: landscape) {
     display: none;
-  }
+  } */
 `;
 
 const TopBox = styled.div`

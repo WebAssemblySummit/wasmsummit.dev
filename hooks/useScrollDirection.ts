@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 
-const SCROLL_UP = "up";
-const SCROLL_DOWN = "down";
+export const UP = "up";
+export const DOWN = "down";
 
 type ScrollDirection = "up" | "down";
 
 export const useScrollDirection = ({
-  initialDirection,
-  thresholdPixels,
-  off
+  initialDirection = UP,
+  thresholdPixels = 5,
+  off = false
 }: {
   initialDirection?: ScrollDirection;
   thresholdPixels?: number;
@@ -30,7 +30,7 @@ export const useScrollDirection = ({
         return;
       }
 
-      setScrollDir(scrollY > lastScrollY ? SCROLL_DOWN : SCROLL_UP);
+      setScrollDir(scrollY > lastScrollY ? DOWN : UP);
       lastScrollY = scrollY > 0 ? scrollY : 0;
       ticking = false;
     };
