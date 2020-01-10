@@ -16,12 +16,7 @@ export type SpeakerProfile = {
 const SpeakersPage: FC = () => (
   <>
     <Sandbox />
-    <NavBar
-      title={title}
-      currentPage="Speakers"
-      backgroundColor={navbarBlue}
-      bottom
-    />
+    <NavBar title={title} backgroundColor={navbarBlue} bottom />
     <ContentContainer id="about">
       {speakers.map((speaker, index) => (
         <Speaker key={speaker.name + index} profile={speaker} />

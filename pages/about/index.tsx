@@ -9,12 +9,7 @@ const title = "About";
 const AboutPage: FC = () => (
   <>
     <BackgroundLayer></BackgroundLayer>
-    <NavBar
-      title={title}
-      currentPage="About"
-      backgroundColor={navbarBlue}
-      bottom
-    />
+    <NavBar title={title} backgroundColor={navbarBlue} bottom />
     <Faq />
   </>
 );
