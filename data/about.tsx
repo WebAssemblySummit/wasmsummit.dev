@@ -61,7 +61,7 @@ export const faq: {
       <>
         If you need to get in contact with the organizers for whatever reason,
         please send an email to{" "}
-        <a href="mailto:wasm-summit-2020@chromium.org">
+        <a href="mailto:wasm-summit-2020@chromium.org" rel="noreferrer">
           wasm-summit-2020@chromium.org
         </a>
         . <br />

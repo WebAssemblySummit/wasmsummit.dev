@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Header from "../../components/Header";
 import NavBar from "../../components/NavBar";
 import { speakers } from "../../data/speakers";
-import { wasmPurple } from "../../components/colors";
+import { wasmPurple, navbarBlue } from "../../components/colors";
 
 const title = "Speakers";
 
@@ -16,7 +16,12 @@ export type SpeakerProfile = {
 const SpeakersPage: FC = () => (
   <>
     <Sandbox />
-    <NavBar title={title} currentPage="Speakers" backgroundColor="#1b1d6e" />
+    <NavBar
+      title={title}
+      currentPage="Speakers"
+      backgroundColor={navbarBlue}
+      bottom
+    />
     <ContentContainer id="about">
       {speakers.map((speaker, index) => (
         <Speaker key={speaker.name + index} profile={speaker} />
@@ -104,9 +109,13 @@ const Sandbox = styled.div`
 
 const ContentContainer = styled.div`
   margin: 0;
-  padding-top: 20px;
-  padding-bottom: 50px;
   padding: 25px;
+  padding-bottom: 100px;
+  padding-top: 50px;
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly; */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-gap: 1vw;

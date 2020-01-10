@@ -2,13 +2,19 @@ import { FC, ReactNode } from "react";
 import styled from "styled-components";
 import NavBar from "../../components/NavBar";
 import { faq } from "../../data/about";
+import { navbarBlue } from "../../components/colors";
 
 const title = "About";
 
 const AboutPage: FC = () => (
   <>
     <BackgroundLayer></BackgroundLayer>
-    <NavBar title={title} currentPage="About" backgroundColor="#1b1d6e" />
+    <NavBar
+      title={title}
+      currentPage="About"
+      backgroundColor={navbarBlue}
+      bottom
+    />
     <Faq />
   </>
 );
