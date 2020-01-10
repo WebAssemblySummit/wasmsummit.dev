@@ -208,7 +208,7 @@ export default class extends App {
             rel="stylesheet"
           />
           <link rel="manifest" href="./manifest.json" />
-          <link rel="shortcut icon" href="./favicon.ico" />
+          <link rel="shortcut icon" href="./favicon-196.ico" />
           <meta name="theme-color" content="hsl(237, 60%, 48%)" />
           {
             // @ts-ignore
