@@ -103,6 +103,16 @@ export default class extends App {
 
           <link
             rel="apple-touch-startup-image"
+            href="./apple-splash-1668-2388.png"
+            media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: portrait)"
+          />
+          <link
+            rel="apple-touch-startup-image"
+            href="./apple-splash-2388-1668.png"
+            media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape)"
+          />
+          <link
+            rel="apple-touch-startup-image"
             href="./apple-splash-2048-2732.png"
             media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
           />
