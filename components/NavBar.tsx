@@ -24,8 +24,6 @@ const NavBar: FC<{
   const Box = bottom ? BottomBox : TopBox;
   const onClick = () => setOpen(!open);
 
-  console.log("pathname", pathname);
-
   return (
     <>
       <Box backgroundColor={backgroundColor}>
