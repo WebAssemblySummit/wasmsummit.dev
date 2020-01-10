@@ -65,7 +65,7 @@ const NavBar: FC<{
               </a>
             ) : pathname && pathname === url ? (
               <Link key={url} href={url} as={url} passHref>
-                <a target={external && "_blank"}>
+                <a target={external && "_blank"} rel="noreferrer">
                   <ActiveButton>
                     <Icon size={24} style={{ margin: 8 }} />{" "}
                     <ButtonText>{label}</ButtonText>
