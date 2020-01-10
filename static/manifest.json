@@ -1,6 +1,6 @@
 {
   "name": "WebAssembly Summit",
-  "short_name": "Summit",
+  "short_name": "WebAssembly",
   "start_url": "index.html?utm_source=homescreen",
   "scope": "./",
   "icons": [
