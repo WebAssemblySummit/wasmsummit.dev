@@ -68,6 +68,8 @@ export default class extends App {
             href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap"
             rel="stylesheet"
           />
+          <link rel="manifest" href="./manifest.json"></link>
+          <meta name="theme-color" content="hsl(237, 60%, 48%)" />
           {
             // @ts-ignore
             this.props.styleTags

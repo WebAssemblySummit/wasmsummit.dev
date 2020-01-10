@@ -1,11 +1,11 @@
 {
   "name": "WebAssembly Summit",
-  "short_name": "WebAssembly",
+  "short_name": "Wasm Summit",
   "start_url": "index.html?utm_source=homescreen",
   "scope": "./",
   "icons": [
     {
-      "src": "./webassembly-logo.png",
+      "src": "./webassembly-logo.svg",
       "sizes": "512x512"
     }
   ],
