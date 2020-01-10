@@ -356,6 +356,10 @@ const BottomBox = styled.div`
   @media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
     padding-bottom: 50px;
   }
+
+  @media only screen and (max-height: 414px) and (orientation: landscape) {
+    display: none;
+  }
 `;
 
 const TopBox = styled.div`
