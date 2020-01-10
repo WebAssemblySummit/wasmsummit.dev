@@ -32,7 +32,7 @@ jobs:
       - name: Static export of the prerendered HTML
         run: yarn export
       - name: Setup Github page deployment
-        run: touch ./out/.nojekyll && touch out/CNAME && echo "webassembly-summit.org" >> ./out/CNAME
+        run: touch ./out/.nojekyll && touch out/CNAME && echo "webassembly.eu" >> ./out/CNAME
       - name: Deploy to Github Pages
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
