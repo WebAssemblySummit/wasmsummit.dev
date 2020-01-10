@@ -188,7 +188,7 @@ const iconNavItems: {
   {
     Icon: FaDiscord,
     label: "Chat",
-    url: "https://t.co/d2gFhvbr1t?amp=1",
+    url: "http://discordapp.com/invite/nEFErF8",
     external: true
   },
   {
