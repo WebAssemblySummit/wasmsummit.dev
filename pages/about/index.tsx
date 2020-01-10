@@ -8,20 +8,28 @@ const title = "About";
 
 const AboutPage: FC = () => (
   <>
-    <BackgroundLayer></BackgroundLayer>
+    <Background />
     <NavBar
       title={title}
       currentPage="About"
       backgroundColor={navbarBlue}
       bottom
     />
-    <Faq />
+    <Faq id="faq">
+      <Headline>Frequently Asked Questions</Headline>
+      {faq.map(({ question, answer }) => (
+        <FaqItem key={question}>
+          <Question>{question}</Question>
+          <Answer>{answer}</Answer>
+        </FaqItem>
+      ))}
+    </Faq>
   </>
 );
 
 export default AboutPage;
 
-export const BackgroundLayer = styled.div`
+export const Background = styled.div`
   background-color: hsla(237, 60%, 48%, 0.6);
   position: fixed;
   top: 0;
@@ -31,17 +39,7 @@ export const BackgroundLayer = styled.div`
   z-index: -1;
 `;
 
-const Faq: FC = () => (
-  <FaqBox id="faq">
-    {faq.map(({ question, answer }) => (
-      <FaqItem key={question} question={question}>
-        {answer}
-      </FaqItem>
-    ))}
-  </FaqBox>
-);
-
-const FaqBox = styled.div`
+const Faq = styled.div`
   padding: 7vh 5%;
   background-color: ${(props: { primary?: boolean }) =>
     props.primary ? "#fff" : "transparent"};
@@ -62,21 +60,19 @@ const FaqBox = styled.div`
   }
 `;
 
-const FaqItem: FC<{ question: string; children: ReactNode }> = ({
-  question: heading,
-  children
-}) => (
-  <div style={{ breakInside: "avoid" }}>
-    <Question bold>{heading}</Question>
-    <Answer>{children}</Answer>
-  </div>
-);
+const Headline = styled.h1`
+  font-size: 2.5em;
+`;
 
-const Question = styled.div`
+const FaqItem = styled.div`
+  break-inside: avoid;
+`;
+
+const Question = styled.h2`
   font-size: 1.5em;
   margin: 0 25px 0 0;
   padding: 15px 15px;
-  font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
+  font-weight: 700;
   border-bottom: 3px solid rgba(255, 255, 255, 0.4);
   text-shadow: 2px 4px 5px hsla(237, 80%, 35%, 0.3);
 `;
