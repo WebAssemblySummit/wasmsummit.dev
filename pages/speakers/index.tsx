@@ -34,7 +34,7 @@ export default SpeakersPage;
 
 const Speaker: FC<{ profile: SpeakerProfile }> = ({ profile }) => (
   <SectionBody>
-    <img src={profile.picture}></img>
+    <img src={profile.picture} alt={`picture of ${profile.name}`}></img>
     <SectionHeader bold>{profile.name}</SectionHeader>
     <Bio>{profile.bio}</Bio>
   </SectionBody>
