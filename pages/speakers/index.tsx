@@ -47,7 +47,7 @@ export const Headline = styled.h1`
 
 const Speaker: FC<{ profile: SpeakerProfile }> = ({ profile }) => (
   <SpeakerCard>
-    <img src={profile.picture}></img>
+    <img src={profile.picture} alt={`picture of ${profile.name}`}></img>
     <SpeakerName bold>{profile.name}</SpeakerName>
     <SpeakerSummary>{profile.bio}</SpeakerSummary>
   </SpeakerCard>
