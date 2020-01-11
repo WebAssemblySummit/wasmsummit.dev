@@ -36,12 +36,19 @@ const LandingPage: FC = () => (
 export default LandingPage;
 
 const View = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
   background: linear-gradient(
     180deg,
     hsla(239, 60%, 48%, 0) 20%,
     hsla(239, 60%, 48%, 1) 70%
   );
+
+  @media screen and (orientation: portrait) {
+    align-items: flex-start;
+  }
 `;
 
 const Container = styled.div`
@@ -49,48 +56,49 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   padding: 0;
   margin: 0;
+
+  @media screen and (orientation: portrait) {
+    justify-content: center;
+    align-items: flex-start;
+  }
 `;
 
 const Hero = styled.div`
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   align-items: flex-end;
   align-content: center;
-  margin-top: 12vh;
-  margin-bottom: 3vh;
 
-  @media (max-width: 768px) {
+  @media (orientation: portrait) {
     grid-template-columns: 1fr;
-    justify-content: center;
     align-items: center;
-
-    margin-top: 1vh;
-    margin-bottom: 1vh;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
   }
 `;
 
 export const Logo = styled.img`
   max-width: 100%;
-  margin-left: auto;
-  flex-grow: 1;
-  flex-basis: 900px;
-  width: 900px;
-  flex-shrink: 1;
 
-  @media (max-width: 768px) {
+  flex-grow: 1;
+  flex-basis: 1280px;
+  flex-shrink: 1;
+  width: 1280px;
+  @media (orientation: portrait) {
+    max-width: 100vw;
     margin-bottom: 10px;
+    max-height: 45vh;
   }
 `;
 
 const Title = styled.div`
   padding-right: 10%;
-  margin: 0 0 3vh 0;
+  margin: 0 0 5vh 0;
 
-  @media (max-width: 768px) {
-    padding: 0 10%;
+  @media (orientation: portrait) {
+    padding: 0 12.5vw;
   }
 `;
 
@@ -108,16 +116,12 @@ const Headline = styled.h1`
     font-size: 3rem;
   }
 
-  @media (max-width: 768px) {
-    font-size: 3.5rem;
+  @media (max-width: 1024px) {
+    font-size: 2.5rem;
   }
 
-  @media (max-width: 768px) {
-    font-size: 3.5rem;
-  }
-
-  @media (max-width: 450px) {
-    font-size: 2.2rem;
+  @media (max-width: 700px) {
+    font-size: 2rem;
   }
 `;
 
@@ -128,36 +132,65 @@ const Subheadline = styled.h3`
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.75);
   text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: 700px) {
+    font-size: 1rem;
+  }
 `;
 
 const Highlight = styled.span`
   font-size: 1.6rem;
   color: white;
 
-  @media (max-width: 450px) {
-    font-size: 1.4rem;
+  @media (max-width: 700px) {
+    font-size: 1.2rem;
   }
 `;
 
-const Oneliner = styled.p`
+const Oneliner = styled.div`
   font-size: 1.3rem;
   color: rgba(255, 255, 255, 0.75);
   text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
   text-align: left;
-  margin: 3vh auto;
-  padding: 0 10%;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  margin-top: 3vw;
   line-height: 1.6;
   max-width: 768px;
 
+  @media (min-width: 1800px) {
+    font-size: 1.5rem;
+  }
+
+  @media (orientation: portrait) {
+    font-size: 1.2rem;
+    padding-left: 12.5vw;
+    padding-right: 12.5vw;
+    /* padding: 0 12.5vw; */
+  }
+
   @media (max-width: 450px) {
-    font-size: 1.3rem;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 1024px) and (orientation: portrait) {
+    margin-top: 0;
   }
 `;
 
 const OnelinerHighlight = styled.span`
   font-size: 1.4rem;
   color: white;
-  @media (max-width: 450px) {
+
+  @media (min-width: 1800px) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 900px) {
     font-size: 1.3rem;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 1.1rem;
   }
 `;
