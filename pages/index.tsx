@@ -70,12 +70,16 @@ const Hero = styled.div`
   grid-template-columns: 1.5fr 1fr;
   align-items: flex-end;
   align-content: center;
+  margin-left: 5vw;
+  margin-right: 5vw;
 
   @media (orientation: portrait) {
     grid-template-columns: 1fr;
     align-items: center;
     margin-top: 5vh;
     margin-bottom: 3vh;
+    margin-left: 0;
+    margin-right: 0;
   }
 `;
 
@@ -93,8 +97,7 @@ export const Logo = styled.img`
 `;
 
 const Title = styled.div`
-  padding-right: 10%;
-  margin: 0 0 5vh 0;
+  margin: 0 0 4vh 0;
 
   @media (orientation: portrait) {
     padding: 0 12.5vw;
@@ -153,7 +156,7 @@ const Oneliner = styled.div`
   text-align: left;
   padding-left: 5vw;
   padding-right: 5vw;
-  margin-top: 3vw;
+  margin-top: 1vw;
   line-height: 1.6;
   max-width: 768px;
 

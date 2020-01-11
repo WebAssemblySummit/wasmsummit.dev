@@ -329,6 +329,7 @@ const BottomBox = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
+  padding-bottom: 5px;
   overflow-x: scroll;
   overflow-y: hidden;
 
