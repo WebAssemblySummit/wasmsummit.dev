@@ -81,7 +81,7 @@ const Hero = styled.div`
 
 export const Logo = styled.img`
   max-width: 100%;
-
+  max-height: 650px;
   flex-grow: 1;
   flex-basis: 1280px;
   flex-shrink: 1;
