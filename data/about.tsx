@@ -11,7 +11,7 @@ export const faq: {
   answer: ReactNode;
 }[] = [
   {
-    question: "How do I get a ticket for the event?",
+    question: "How can I get a ticket?",
     answer: (
       <>
         The application for tickets has already closed. If you had applied to
@@ -23,8 +23,14 @@ export const faq: {
   },
 
   {
-    question: "Is the event really free?",
-    answer: <>Given you have a ticket, attending the event is free.</>
+    question: "How much does it cost?",
+    answer: (
+      <>
+        Given you have a ticket, attending the event itself is free. At this
+        point in time, we do not cover travel expenses or offer scholarships. If
+        that should change we will announce it.
+      </>
+    )
   },
   {
     question: "Is this a community event?",
@@ -40,7 +46,7 @@ export const faq: {
     )
   },
   {
-    question: "Who are the organizers?",
+    question: "Who is organizing this?",
     answer: (
       <>
         The organizers are (in alphabetical order):
@@ -56,7 +62,7 @@ export const faq: {
     )
   },
   {
-    question: "How to contact you?",
+    question: "How do I contact you?",
     answer: (
       <>
         If you need to get in contact with the organizers for whatever reason,
@@ -71,7 +77,7 @@ export const faq: {
     )
   },
   {
-    question: "Are you on Twitter?",
+    question: "How do I find you on Twitter?",
     answer: (
       <>
         The official hashtag of the conference is{" "}
@@ -116,7 +122,7 @@ export const faq: {
     )
   },
   {
-    question: "Which hotels can you recommend?",
+    question: "Which hotels do you recommend?",
     answer: (
       <>
         Hotels can be expensive in Mountain View.{" "}
@@ -128,7 +134,7 @@ export const faq: {
     )
   },
   {
-    question: "What is your Code of Conduct?",
+    question: "Do you have a code of conduct?",
     answer: (
       <>
         WebAssembly Summit is intended an inclusive conference for everyone and
