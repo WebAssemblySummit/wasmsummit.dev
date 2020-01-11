@@ -1,39 +1,39 @@
 self.__precacheManifest = [
   {
-    "url": "/_next/static/chunks/commons.d6d5b3002218857bd837.js",
-    "revision": "9ebac78f4712413d06b3"
+    "url": "/_next/static/IjezX0tjuGsIlLUVv4SXk/pages/_app.js",
+    "revision": "7ed093883290cebd46d2"
   },
   {
-    "url": "/_next/static/runtime/main-15caa9fe1828da364d0d.js",
-    "revision": "5e9f6aadf6967495432d"
+    "url": "/_next/static/IjezX0tjuGsIlLUVv4SXk/pages/_error.js",
+    "revision": "0519c3e388c43de4cf3a"
   },
   {
-    "url": "/_next/static/runtime/polyfills-a591b2980a0968e30eae.js",
-    "revision": "144cce4cb848103d568c"
+    "url": "/_next/static/IjezX0tjuGsIlLUVv4SXk/pages/about.js",
+    "revision": "3de867529aaaf06128da"
+  },
+  {
+    "url": "/_next/static/IjezX0tjuGsIlLUVv4SXk/pages/index.js",
+    "revision": "dece561cd4df60daf64d"
+  },
+  {
+    "url": "/_next/static/IjezX0tjuGsIlLUVv4SXk/pages/speakers.js",
+    "revision": "964c08afd8bdb52bb3d0"
+  },
+  {
+    "url": "/_next/static/chunks/commons.49f1e5d71c1602fcbf48.js",
+    "revision": "d313a5904349ac0c8d03"
+  },
+  {
+    "url": "/_next/static/runtime/main-962c924ba20192369e3c.js",
+    "revision": "9691117e7b0e10fd4bf1"
+  },
+  {
+    "url": "/_next/static/runtime/polyfills-9433c270ab87f235f594.js",
+    "revision": "ff825f8a83a858e84897"
   },
   {
     "url": "/_next/static/runtime/webpack-08f7b238829422e3b9b2.js",
     "revision": "fc489b339eb65f8713fe"
-  },
-  {
-    "url": "/_next/static/tF0MxcAfsN8QU9x5cI9_f/pages/_app.js",
-    "revision": "3fab363e0d408728394c"
-  },
-  {
-    "url": "/_next/static/tF0MxcAfsN8QU9x5cI9_f/pages/_error.js",
-    "revision": "b6aa8eac1f1539f9417f"
-  },
-  {
-    "url": "/_next/static/tF0MxcAfsN8QU9x5cI9_f/pages/about.js",
-    "revision": "0a9fc4f657ef9294722e"
-  },
-  {
-    "url": "/_next/static/tF0MxcAfsN8QU9x5cI9_f/pages/index.js",
-    "revision": "36bfb966706fcfd9dbff"
-  },
-  {
-    "url": "/_next/static/tF0MxcAfsN8QU9x5cI9_f/pages/speakers.js",
-    "revision": "52fca3586568bc2c39ed"
   }
 ];
 
