@@ -100,7 +100,21 @@ export default class extends App {
           />
 
           <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+          />
 
+          <link
+            rel="apple-touch-startup-image"
+            href="./apple-splash-1668-2388.png"
+            media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: portrait)"
+          />
+          <link
+            rel="apple-touch-startup-image"
+            href="./apple-splash-2388-1668.png"
+            media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape)"
+          />
           <link
             rel="apple-touch-startup-image"
             href="./apple-splash-2048-2732.png"
