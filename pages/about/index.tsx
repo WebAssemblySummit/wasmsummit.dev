@@ -44,7 +44,7 @@ export const Headline = styled.h1`
 `;
 
 const Faq = styled.div`
-  padding: 3vh 5vw;
+  padding: 3vh 9vw;
   color: white;
   a {
     color: white;
@@ -65,7 +65,7 @@ const Questions = styled.div`
   border-radius: 5px;
   columns: auto;
   column-width: 500px;
-  column-gap: 50px;
+  column-gap: 5vw;
   a {
     color: white;
     text-decoration: underline;
