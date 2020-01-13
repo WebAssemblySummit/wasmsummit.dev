@@ -1,8 +1,8 @@
 import { FC, ReactNode } from "react";
 import styled from "styled-components";
-import { navbarBlue } from "../../components/colors";
-import NavBar from "../../components/NavBar";
-import { faq } from "../../data/about";
+import { navbarBlue } from "../components/colors";
+import NavBar from "../components/NavBar";
+import { faq } from "../data/about";
 
 const title = "About";
 

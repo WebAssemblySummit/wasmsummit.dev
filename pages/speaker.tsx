@@ -1,11 +1,11 @@
 import { FC, ReactNode } from "react";
 import styled from "styled-components";
-import Header from "../../components/Header";
-import NavBar from "../../components/NavBar";
-import { speakers } from "../../data/speakers";
-import { wasmPurple, navbarBlue } from "../../components/colors";
+import Header from "../components/Header";
+import NavBar from "../components/NavBar";
+import { speakers } from "../data/speakers";
+import { wasmPurple, navbarBlue } from "../components/colors";
 
-const title = "Speakers";
+const title = "Speaker";
 
 export type SpeakerProfile = {
   name: string;
@@ -13,7 +13,7 @@ export type SpeakerProfile = {
   bio?: string;
 };
 
-const SpeakersPage: FC = () => (
+const SpeakerPage: FC = () => (
   <>
     <Background />
     <NavBar title={title} backgroundColor={navbarBlue} bottom />
@@ -26,7 +26,7 @@ const SpeakersPage: FC = () => (
   </>
 );
 
-export default SpeakersPage;
+export default SpeakerPage;
 
 export const Headline = styled.h1`
   font-size: 2.5em;
