@@ -15,7 +15,7 @@ const SpeakerPage: FC = () => {
       <Background />
       <NavBar title={title} backgroundColor={navbarBlue} bottom />
       <Headline>{title}</Headline>
-      {speaker && <SpeakerCard key={speaker.name} profile={speaker} />}
+      {speaker && <SpeakerCard key={speaker.name} {...speaker} />}
     </>
   );
 };

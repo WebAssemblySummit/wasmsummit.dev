@@ -1,10 +1,15 @@
-type SpeakerProfile = {
+export type Speaker = {
   name: string;
-  picture: string;
+  picture?: string;
   bio?: string;
+  company?: string;
+  website?: string;
+  twitter?: string;
+  github?: string;
+  talkId?: string;
 };
 
-export const speakers: { [id: string]: SpeakerProfile } = {
+export const speakers: { [id: string]: Speaker } = {
   "1": {
     name: "Ashley Williams",
     picture: "https://avatars3.githubusercontent.com/u/1163554?s=400&v=4",

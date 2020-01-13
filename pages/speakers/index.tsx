@@ -12,7 +12,7 @@ const SpeakersPage: FC = () => (
     <Headline>{title}</Headline>
     <Speakers id="speakers">
       {Object.keys(speakers).map((id, index) => (
-        <SpeakerCard key={speakers[id].name + index} profile={speakers[id]} />
+        <SpeakerCard key={speakers[id].name + index} {...speakers[id]} />
       ))}
     </Speakers>
   </>

@@ -4,15 +4,15 @@ import { wasmPurple } from "./colors";
 
 export type SpeakerProfile = {
   name: string;
-  picture: string;
+  picture?: string;
   bio?: string;
 };
 
-const SpeakerCard: FC<{ profile: SpeakerProfile }> = ({ profile }) => (
+const SpeakerCard: FC<SpeakerProfile> = ({ name, picture, bio }) => (
   <Card>
-    <img src={profile.picture} alt={`picture of ${profile.name}`}></img>
-    <SpeakerName bold>{profile.name}</SpeakerName>
-    <SpeakerSummary>{profile.bio}</SpeakerSummary>
+    <img src={picture} alt={`picture of ${name}`}></img>
+    <SpeakerName bold>{name}</SpeakerName>
+    <SpeakerSummary>{bio}</SpeakerSummary>
   </Card>
 );
 
