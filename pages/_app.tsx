@@ -2,6 +2,19 @@ import App from "next/app";
 import Head from "next/head";
 import { createGlobalStyle } from "styled-components";
 
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function() {
+    navigator.serviceWorker.getRegistrations().then(registrations => {
+      for (let registration of registrations) {
+        registration.unregister().then(bool => {
+          console.log("unregister: ", bool);
+        });
+      }
+      window.location.reload();
+    });
+  });
+}
+
 // pages/_app.tsx
 const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap');
