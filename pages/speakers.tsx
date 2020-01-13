@@ -19,8 +19,8 @@ const SpeakersPage: FC = () => (
     <NavBar title={title} backgroundColor={navbarBlue} bottom />
     <Headline>{title}</Headline>
     <Speakers id="speakers">
-      {speakers.map((speaker, index) => (
-        <Speaker key={speaker.name + index} profile={speaker} />
+      {Object.keys(speakers).map((id, index) => (
+        <Speaker key={speakers[id].name + index} profile={speakers[id]} />
       ))}
     </Speakers>
   </>

@@ -40,8 +40,8 @@ export const faq: {
           Yes, the summit is organised by individual people in the WebAssembly
           community, and at the time of writing sponsored by Google and Mozilla.
         </div>
-        <Logo src="google-logo.svg" alt="Google Logo" />
-        <Logo src="mozilla-logo.svg" alt="Mozilla Logo" />
+        <Logo src="/google-logo.svg" alt="Google Logo" />
+        <Logo src="/mozilla-logo.svg" alt="Mozilla Logo" />
       </>
     )
   },

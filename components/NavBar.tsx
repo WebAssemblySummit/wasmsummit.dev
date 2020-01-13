@@ -38,7 +38,7 @@ const NavBar: FC<{
         <Link href="/" as="/" passHref>
           <a>
             <HomeButton>
-              <Logo src="webassembly-logo.svg" alt="WebAssembly Summit Logo" />
+              <Logo src="/webassembly-logo.svg" alt="WebAssembly Summit Logo" />
               <Header title={title}></Header>
               <WebAssemblySummit active={pathname === "/"}>
                 WebAssembly Summit

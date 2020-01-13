@@ -1,9 +1,9 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import styled from "styled-components";
-import Header from "../components/Header";
-import NavBar from "../components/NavBar";
-import { speakers } from "../data/speakers";
-import { wasmPurple, navbarBlue } from "../components/colors";
+import NavBar from "../../components/NavBar";
+import { speakers } from "../../data/speakers";
+import { wasmPurple, navbarBlue } from "../../components/colors";
+import { useRouter } from "next/router";
 
 const title = "Speaker";
 
@@ -13,18 +13,19 @@ export type SpeakerProfile = {
   bio?: string;
 };
 
-const SpeakerPage: FC = () => (
-  <>
-    <Background />
-    <NavBar title={title} backgroundColor={navbarBlue} bottom />
-    <Headline>{title}</Headline>
-    <Speakers id="speakers">
-      {speakers.map((speaker, index) => (
-        <Speaker key={speaker.name + index} profile={speaker} />
-      ))}
-    </Speakers>
-  </>
-);
+const SpeakerPage: FC = () => {
+  const { query } = useRouter();
+  const id = Array.isArray(query.id) ? query.id[0] : query.id;
+  const speaker = speakers[id];
+  return (
+    <>
+      <Background />
+      <NavBar title={title} backgroundColor={navbarBlue} bottom />
+      <Headline>{title}</Headline>
+      {speaker && <Speaker key={speaker.name} profile={speaker} />}
+    </>
+  );
+};
 
 export default SpeakerPage;
 

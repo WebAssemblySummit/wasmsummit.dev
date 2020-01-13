@@ -8,7 +8,7 @@ const LandingPage: FC = () => (
     <NavBar backgroundColor={navbarBlue} bottom />
     <Container>
       <Hero>
-        <Logo src="summit-logo.svg" alt="WebAssembly Summit Logo" />
+        <Logo src="/summit-logo.svg" alt="WebAssembly Summit Logo" />
         <Title>
           <Headline>
             WebAssembly
