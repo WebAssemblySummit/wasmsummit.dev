@@ -40,7 +40,7 @@ export const Headline = styled.h1`
   font-size: 3em;
   margin-top: 3vh;
   margin-bottom: 0vh;
-  padding: 15px;
+  padding: 10px;
 `;
 
 const Faq = styled.div`
