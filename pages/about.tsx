@@ -1,7 +1,6 @@
 import { FC, ReactNode } from "react";
 import styled from "styled-components";
-import { navbarBlue } from "../components/colors";
-import NavBar from "../components/NavBar";
+import { NavBar, navbarBlue } from "../components";
 import { faq } from "../data/about";
 
 const title = "About";
@@ -46,6 +45,7 @@ export const Headline = styled.h1`
 const Faq = styled.div`
   padding: 3vh 9vw;
   color: white;
+
   a {
     color: white;
     text-decoration: underline;
@@ -66,6 +66,7 @@ const Questions = styled.div`
   columns: auto;
   column-width: 500px;
   column-gap: 5vw;
+
   a {
     color: white;
     text-decoration: underline;

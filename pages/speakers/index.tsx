@@ -1,9 +1,7 @@
 import { FC } from "react";
 import styled from "styled-components";
-import NavBar from "../../components/NavBar";
+import { NavBar, navbarBlue, SpeakerCard } from "../../components";
 import { speakers } from "../../data/speakers";
-import { navbarBlue } from "../../components/colors";
-import SpeakerCard from "../../components/SpeakerCard";
 
 const title = "Speakers";
 
@@ -28,6 +26,7 @@ export const Headline = styled.h1`
   margin-bottom: 2vh;
   padding: 0 0px;
   margin-left: 4vw;
+
   @media screen and (max-width: 663px) {
     text-align: center;
     margin-left: 0;
@@ -41,7 +40,6 @@ const Background = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-
   background: hsla(237, 0%, 48%, 0.2);
   padding: 25px;
   z-index: -1;
