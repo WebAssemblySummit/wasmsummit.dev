@@ -7,7 +7,7 @@ type ScrollDirection = "up" | "down";
 
 export const useScrollDirection = ({
   initialDirection = UP,
-  thresholdPixels = 5,
+  thresholdPixels = 10,
   off = false
 }: {
   initialDirection?: ScrollDirection;
