@@ -208,17 +208,21 @@ const HomeButton = styled.div`
   flex: 1;
   align-items: center;
   justify-content: center;
-  padding: 0px 0 0 2vw;
+  padding-left: 2vw;
   &:hover {
     color: white;
   }
 
   @media screen and (max-width: 799px) {
-    padding: 0px 0 0 8vw;
+    padding-left: 8vw;
   }
 
   @media screen and (max-width: 500px) {
-    padding: 0px 0 0 15px;
+    padding-left: 15px;
+  }
+
+  @media screen and (display-mode: standalone) {
+    padding-bottom: 10px;
   }
 `;
 
@@ -275,6 +279,10 @@ const ActiveButton = styled.div`
   color: white;
   cursor: pointer;
   font-size: 0.95em;
+
+  @media screen and (display-mode: standalone) {
+    padding-bottom: 10px;
+  }
 `;
 
 const ButtonText = styled.span`
@@ -315,6 +323,10 @@ const Button = styled.div`
     color: rgba(255, 255, 255, 1);
     border-top: 2px solid white;
   }
+
+  @media screen and (display-mode: standalone) {
+    padding-bottom: 10px;
+  }
 `;
 
 const BottomBox = styled.div`
@@ -329,7 +341,6 @@ const BottomBox = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  padding-bottom: 5px;
   overflow-x: scroll;
   overflow-y: hidden;
 
