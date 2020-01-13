@@ -7,7 +7,7 @@ export const SpeakerSummary = styled.div`
   background: hsl(239, 50%, 25%);
   height: 160px;
   line-height: 1.8;
-  font-size: 0.75em;
+  font-size: 0.8em;
 
   p {
     color: rgba(255, 255, 255, 0.5);
