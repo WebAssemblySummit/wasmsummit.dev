@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "url": "/_next/static/IjezX0tjuGsIlLUVv4SXk/pages/_app.js",
-    "revision": "7ed093883290cebd46d2"
+    "url": "/_next/static/A7R1JesSEJY05njLBgBkc/pages/_app.js",
+    "revision": "fdc56a857995cd6edb91"
   },
   {
-    "url": "/_next/static/IjezX0tjuGsIlLUVv4SXk/pages/_error.js",
-    "revision": "0519c3e388c43de4cf3a"
+    "url": "/_next/static/A7R1JesSEJY05njLBgBkc/pages/_error.js",
+    "revision": "59b4b1aa5aee6dab3e8c"
   },
   {
-    "url": "/_next/static/IjezX0tjuGsIlLUVv4SXk/pages/about.js",
-    "revision": "3de867529aaaf06128da"
+    "url": "/_next/static/A7R1JesSEJY05njLBgBkc/pages/about.js",
+    "revision": "1c54c19217b642634d1b"
   },
   {
-    "url": "/_next/static/IjezX0tjuGsIlLUVv4SXk/pages/index.js",
-    "revision": "dece561cd4df60daf64d"
+    "url": "/_next/static/A7R1JesSEJY05njLBgBkc/pages/index.js",
+    "revision": "f8fdaae841c464077e0b"
   },
   {
-    "url": "/_next/static/IjezX0tjuGsIlLUVv4SXk/pages/speakers.js",
-    "revision": "964c08afd8bdb52bb3d0"
+    "url": "/_next/static/A7R1JesSEJY05njLBgBkc/pages/speakers.js",
+    "revision": "522842a4ceb7bff76c7d"
   },
   {
     "url": "/_next/static/chunks/commons.49f1e5d71c1602fcbf48.js",
