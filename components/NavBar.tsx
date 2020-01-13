@@ -343,23 +343,17 @@ const BottomBox = styled.div`
   bottom: 0;
   overflow-x: scroll;
   overflow-y: hidden;
-
-  /* box-shadow: inset 0px 5px 20px hsla(256, 91%, 10%, 0.8); */
-  box-shadow: inset 0px 5px 5px hsla(256, 91%, 10%, 0.4);
+  box-shadow: inset 0px 5px 5px hsla(256, 91%, 10%, 0.35);
   background-color: ${(props?: { open?: boolean; backgroundColor?: string }) =>
     props && props.backgroundColor ? props.backgroundColor : undefined};
 
   a {
-    /*     color: #fff;
-    &:visited {
-      color: #fff;
-    }
- */
     font-size: 1.2em;
   }
 
   @media screen and (max-width: 749px) {
-    box-shadow: inset 0px 5px 10px hsla(256, 91%, 10%, 0.3);
+    /* box-shadow: none; */
+    box-shadow: inset 0px 5px 5px hsla(256, 91%, 10%, 0.2);
     justify-content: center;
   }
 
@@ -395,21 +389,12 @@ const TopBox = styled.div`
   left: 0;
   right: 0;
   top: 0;
-
-  /* box-shadow: inset 0px 5px 20px hsla(256, 91%, 10%, 0.8); */
   box-shadow: inset 0px 5px 20px hsla(256, 0%, 0%, 0.3);
   background-color: ${(props?: { open?: boolean; backgroundColor?: string }) =>
     props && props.backgroundColor ? props.backgroundColor : undefined};
 
   a {
     font-size: 1.2em;
-    /*     
-    color: #fff;
-    
-    &:visited {
-      color: #fff; 
-    } 
-    */
   }
 `;
 
@@ -427,11 +412,6 @@ const BurgerButton = styled.div`
 `;
 
 const Popup = styled.div`
-  /* 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   position: fixed;
