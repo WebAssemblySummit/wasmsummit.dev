@@ -3,33 +3,34 @@ import styled from "styled-components";
 import { wasmPurple } from "./colors";
 
 export const SpeakerSummary = styled.div`
-  padding: 20px 25px;
+  padding: 15px 30px 30px 30px;
   background: hsl(239, 50%, 25%);
   height: 160px;
   line-height: 1.8;
-  font-size: 0.8em;
+  font-size: 0.78em;
 
   p {
     color: rgba(255, 255, 255, 0.5);
     margin: 0;
     margin-bottom: 5px;
     font-weight: normal;
-    font-size: 1.3em;
+    font-size: 1.4em;
     padding: 0;
   }
 
   @media (max-width: 1280px) {
     padding: 15px 25px;
-    height: 140px;
+    height: 170px;
     line-height: 1.6;
   }
   color: rgba(255, 255, 255, 0.8);
 `;
 
 export const Company = styled.span`
-  font-size: 0.9em;
-  margin-left: 5px;
-  color: hsl(239, 71%, 20%);
+  color: white;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
 `;
 
 export const SpeakerName = styled.div`
@@ -45,7 +46,7 @@ export const SpeakerName = styled.div`
   background-color: ${wasmPurple};
 
   @media (max-width: 500px) {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 `;
 
@@ -72,7 +73,7 @@ const SpeakerCard = styled.div`
   }
 
   @media (max-width: 1280px) {
-    width: 290px;
+    width: 310px;
   }
 
   @media screen and (max-width: 663px) {
@@ -80,7 +81,7 @@ const SpeakerCard = styled.div`
   }
 
   @media screen and (max-width: 450px) {
-    width: 290px;
+    width: 310px;
   }
 `;
 
@@ -90,7 +91,7 @@ export const Title = styled.h2`
   font-weight: bold;
   margin: 0px 0;
   padding: 0;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
 
   @media screen and (max-width: 1024px) {
     font-size: 1.5em;

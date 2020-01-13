@@ -35,15 +35,17 @@ const SpeakersPage: FC = () => (
                   src={speaker.picture}
                   alt={`picture of ${speaker.name}`}
                 ></img>
-                <SpeakerName bold>
-                  {speaker.name}{" "}
+                <SpeakerName>
+                  <strong>{speaker.name}</strong>{" "}
                   {speaker.company && <Company>{speaker.company}</Company>}
                 </SpeakerName>
                 <SpeakerSummary>
                   {talk && (
                     <>
                       <p>
-                        {time.start} - {time.end}
+                        {time.start &&
+                          time.end &&
+                          `${time.start} - ${time.end}`}
                       </p>
                       <Title>{talk.title}</Title>
                       {/* {talk.subtitle && <Subtitle>{talk.subtitle}</Subtitle>} */}

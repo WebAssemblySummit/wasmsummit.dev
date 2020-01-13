@@ -37,15 +37,17 @@ const SpeakerPage: FC = () => {
                   src={speaker.picture}
                   alt={`picture of ${speaker.name}`}
                 ></img>
-                <SpeakerName bold>
-                  {speaker.name}{" "}
+                <SpeakerName>
+                  <strong>{speaker.name}</strong>{" "}
                   {speaker.company && <Company>{speaker.company}</Company>}
                 </SpeakerName>
                 <SpeakerSummary>
                   {talk && (
                     <>
                       <p>
-                        {time.start} - {time.end}
+                        {time.start &&
+                          time.end &&
+                          `${time.start} - ${time.end}`}
                       </p>
                       {/* <p>{speaker.company}</p> */}
                       <Title>{talk.title}</Title>
@@ -63,9 +65,9 @@ const SpeakerPage: FC = () => {
             )}
           </SpeakerBox>
           <Section>
-            <Headline>{talk.title}</Headline>
-            {speaker.name && <SectionHeading>{speaker.name}</SectionHeading>}
+            {speaker.name && <SectionHeading>{talk.title}</SectionHeading>}
             <SectionSubHeading>
+              {speaker.name},{" "}
               {talk.time &&
                 talk.time.start &&
                 talk.time.end &&
@@ -119,12 +121,6 @@ const SpeakerBox = styled.div`
     /* display: none; */
     margin-top: 3vh;
   }
-`;
-
-const TimeLinks = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 `;
 
 export const PageTitle = styled.h1`
