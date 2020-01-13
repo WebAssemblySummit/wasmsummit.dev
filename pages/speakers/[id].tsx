@@ -100,7 +100,7 @@ const Background = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: hsla(237, 0%, 48%, 0.1);
+  background-color: hsla(237, 0%, 48%, 0.15);
   padding: 25px;
   z-index: -1;
 `;
