@@ -20,7 +20,7 @@ const SpeakersPage: FC = () => (
   <>
     <Background />
     <NavBar title={title} backgroundColor={navbarBlue} bottom />
-    <Headline>{title}</Headline>
+    {/* <Headline>{title}</Headline> */}
     <Speakers id="speakers">
       {Object.keys(speakers).map((id, index) => {
         const speaker = speakers[id] || {};
@@ -87,7 +87,7 @@ const Background = styled.div`
 
 const Speakers = styled.div`
   padding: 25px;
-  padding-top: 0px;
+  padding-top: 6vh;
   padding-bottom: 100px;
   /* display: flex;
   flex-direction: row;
