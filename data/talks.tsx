@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 export type Talk = {
   speakerId?: string;
-  title?: string;
+  title?: ReactNode;
   time?: {
     start?: string;
     end?: string;
@@ -45,6 +45,39 @@ export const talks: { [id: string]: Talk } = {
           In true JSConf EU tradition, this talk itself is going be an exciting
           announcement. You should come if you want to be there for the
           beginning of a new era of the Internet.
+        </p>
+      </>
+    )
+  },
+  "2": {
+    speakerId: "2",
+    title: (
+      <>
+        WebAssembly nanoprocesses: <br />
+        Making WebAssembly outside-the-browser secure by default
+      </>
+    ),
+    time: {
+      start: "11.15 am",
+      end: "12.00 am"
+    },
+    abstract: (
+      <>
+        <p>
+          In early November, we announced the formation of the Bytecode
+          Alliance, a new industry partnership working on WebAssembly outside
+          the browser. We have a vision of a WebAssembly ecosystem that is
+          secure by default, fixing cracks in today’s software foundations. And
+          based on advances rapidly emerging in the WebAssembly community, we
+          believe we can make this vision real.
+        </p>
+        <p>
+          I'll talk about one of these advances—an emerging pattern of usage
+          that we've started calling a WebAssembly nanoprocess, which give you
+          most of the benefits of a process, but with much less overhead and
+          much faster communication. With this, we think we can make
+          massively-modular code reuse—like you see in npm, crates, and
+          PyPI—secure by default.
         </p>
       </>
     )
