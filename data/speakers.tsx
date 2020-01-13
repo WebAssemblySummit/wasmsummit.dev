@@ -37,7 +37,7 @@ export const speakers: { [id: string]: Speaker } = {
       "https://pbs.twimg.com/profile_images/1203822491032018945/4p9RN-fk_400x400.jpg",
     bio:
       "Web Advocate @Google. Internetrovert 🏳️‍🌈 Craving simplicity, finding it nowhere. https://keybase.io/surma",
-    talkId: "1"
+    talkId: "3"
   },
   "4": {
     name: "Ashley Williams",
@@ -63,7 +63,7 @@ export const speakers: { [id: string]: Speaker } = {
       "https://pbs.twimg.com/profile_images/1203822491032018945/4p9RN-fk_400x400.jpg",
     bio:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem maxime ratione earum dolor. Qui vero maiores quisquam, quia sed ratione esse quos sint corporis culpa, voluptate veritatis, tenetur animi? Id.",
-    talkId: "1"
+    talkId: "3"
   },
   "7": {
     name: "Ashley Williams",

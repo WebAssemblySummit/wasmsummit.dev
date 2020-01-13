@@ -53,8 +53,8 @@ export const talks: { [id: string]: Talk } = {
     speakerId: "2",
     title: (
       <>
-        WebAssembly nanoprocesses: <br />
-        Making WebAssembly outside-the-browser secure by default
+        WebAssembly nanoprocesses: Making WebAssembly outside-the-browser secure
+        by default
       </>
     ),
     time: {
@@ -81,5 +81,25 @@ export const talks: { [id: string]: Talk } = {
         </p>
       </>
     )
+  },
+  "3": {
+    speakerId: "3",
+    title: "Polyglot WebAssembly",
+    time: {
+      start: "12.15 am",
+      end: "1.00 pm"
+    },
+    abstract: (
+      <>
+        <p>
+          The number of languages with WebAssembly support is growing. And you
+          don't have to choose just one. You can use each of them for what they
+          are good at. You can sprinkle in some C, C++, Rust, AssemblyScript
+          (and more) as enhancements for your everyday-JS.
+        </p>
+      </>
+    )
   }
 };
+
+"";

@@ -7,7 +7,8 @@ import {
   SpeakerCard,
   SpeakerName,
   SpeakerSummary,
-  Title
+  Title,
+  Company
 } from "../../components";
 import { speakers, Speaker } from "../../data/speakers";
 import { talks, Talk } from "../../data/talks";
@@ -36,22 +37,24 @@ const SpeakerPage: FC = () => {
                   src={speaker.picture}
                   alt={`picture of ${speaker.name}`}
                 ></img>
-                <SpeakerName bold>{speaker.name}</SpeakerName>
+                <SpeakerName bold>
+                  {speaker.name}{" "}
+                  {speaker.company && <Company>{speaker.company}</Company>}
+                </SpeakerName>
                 <SpeakerSummary>
                   {talk && (
                     <>
+                      <p>
+                        {time.start} - {time.end}
+                      </p>
+                      {/* <p>{speaker.company}</p> */}
                       <Title>{talk.title}</Title>
-                      <TimeLinks>
-                        <Time>
-                          {time.start} - {time.end}{" "}
-                        </Time>
-                        {/*  <Icon>
+                      {/*  <Icon>
                           <FaGithub size={32}></FaGithub>
                         </Icon>
                         <Icon>
                           <FaTwitter size={32}></FaTwitter>
                         </Icon> */}
-                      </TimeLinks>
                       <p></p>
                     </>
                   )}
@@ -107,10 +110,10 @@ const Background = styled.div`
 const SpeakerBox = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 1.5vh;
+  margin-top: 0vh;
   margin-bottom: 2vh;
   margin-right: 0;
-  padding-top: 15px;
+  padding-top: 0;
 
   @media screen and (max-width: 450px) {
     /* display: none; */
@@ -139,7 +142,7 @@ export const PageTitle = styled.h1`
 `;
 
 export const Headline = styled.h2`
-  font-size: 2.5em;
+  font-size: 2em;
   margin-top: 3vh;
   margin-bottom: 0vh;
   padding: 0 15px;
@@ -174,7 +177,6 @@ const Columns = styled.div`
   box-shadow: ${(props: { primary?: boolean }) =>
     props.primary ? "0px 5px 30px rgba(0,0,0,0.01)" : "0px"};
   color: #fff;
-  border-radius: 5px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -199,7 +201,7 @@ const Section = styled.div`
 `;
 
 const SectionHeading = styled.h2`
-  font-size: 2em;
+  font-size: 1.8em;
   margin: 0 25px 0 0;
   padding: 15px;
   font-weight: 700;

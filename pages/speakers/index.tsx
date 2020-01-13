@@ -6,7 +6,8 @@ import {
   SpeakerCard,
   SpeakerName,
   SpeakerSummary,
-  Title
+  Title,
+  Company
 } from "../../components";
 import { speakers } from "../../data/speakers";
 import { talks } from "../../data/talks";
@@ -34,14 +35,16 @@ const SpeakersPage: FC = () => (
                   src={speaker.picture}
                   alt={`picture of ${speaker.name}`}
                 ></img>
-                <SpeakerName bold>{speaker.name}</SpeakerName>
+                <SpeakerName bold>
+                  {speaker.name}{" "}
+                  {speaker.company && <Company>{speaker.company}</Company>}
+                </SpeakerName>
                 <SpeakerSummary>
                   {talk && (
                     <>
                       <p>
                         {time.start} - {time.end}
                       </p>
-                      {/* <p>{speaker.company}</p> */}
                       <Title>{talk.title}</Title>
                       {/* {talk.subtitle && <Subtitle>{talk.subtitle}</Subtitle>} */}
                       {/* <Icon>

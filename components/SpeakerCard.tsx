@@ -12,9 +12,9 @@ export const SpeakerSummary = styled.div`
   p {
     color: rgba(255, 255, 255, 0.5);
     margin: 0;
-    margin-bottom: 0px;
-    font-weight: bold;
-    font-size: 1.5em;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-size: 1.3em;
     padding: 0;
   }
 
@@ -26,22 +26,31 @@ export const SpeakerSummary = styled.div`
   color: rgba(255, 255, 255, 0.8);
 `;
 
+export const Company = styled.span`
+  font-size: 0.9em;
+  margin-left: 5px;
+  color: hsl(239, 71%, 20%);
+`;
+
 export const SpeakerName = styled.div`
-  font-size: 1.5em;
+  font-size: 1.4em;
   color: white;
   margin: 0;
-  padding: 0;
   margin: 0;
-  padding: 5px 15px;
+  padding: 8px 15px;
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
   /* border-bottom: 7px solid rgba(255, 255, 255, 1); */
   /* background-color: rgba(255, 255, 0, 0.9); */
   /* background-color: hsl(237, 60%, 48%); */
   background-color: ${wasmPurple};
+
+  @media (max-width: 500px) {
+    font-size: 1.1em;
+  }
 `;
 
 const SpeakerCard = styled.div`
-  font-size: 1.1em;
+  font-size: 1em;
   margin: 2.5% 1%;
   color: black;
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
@@ -77,7 +86,7 @@ const SpeakerCard = styled.div`
 
 export const Title = styled.h2`
   font-size: 1.8em;
-  line-height: 1.2;
+  line-height: 1.4;
   font-weight: bold;
   margin: 0px 0;
   padding: 0;
