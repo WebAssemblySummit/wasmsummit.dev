@@ -1,8 +1,7 @@
 import { FC, ReactNode } from "react";
 import styled from "styled-components";
-import { navbarBlue } from "../../components/colors";
-import NavBar from "../../components/NavBar";
-import { faq } from "../../data/about";
+import { NavBar, navbarBlue } from "../components";
+import { faq } from "../data/about";
 
 const title = "About";
 
@@ -27,7 +26,7 @@ const AboutPage: FC = () => (
 export default AboutPage;
 
 export const Background = styled.div`
-  background-color: hsla(237, 60%, 48%, 0.6);
+  background-color: hsla(237, 0%, 48%, 0.15);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -46,6 +45,7 @@ export const Headline = styled.h1`
 const Faq = styled.div`
   padding: 3vh 9vw;
   color: white;
+
   a {
     color: white;
     text-decoration: underline;

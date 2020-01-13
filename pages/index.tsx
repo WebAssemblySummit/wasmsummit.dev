@@ -1,14 +1,13 @@
 import { FC } from "react";
 import styled from "styled-components";
-import NavBar from "../components/NavBar";
-import { navbarBlue } from "../components/colors";
+import { NavBar, navbarBlue } from "../components";
 
 const LandingPage: FC = () => (
   <View>
     <NavBar backgroundColor={navbarBlue} bottom />
     <Container>
       <Hero>
-        <Logo src="summit-logo.svg" alt="WebAssembly Summit Logo" />
+        <Logo src="/summit-logo.svg" alt="WebAssembly Summit Logo" />
         <Title>
           <Headline>
             WebAssembly
@@ -78,6 +77,7 @@ export const Logo = styled.img`
   flex-basis: 1280px;
   flex-shrink: 1;
   width: 1280px;
+  
   @media (orientation: portrait) {
     max-width: 100vw;
     max-height: 45vh;
