@@ -53,7 +53,30 @@ const GlobalStyles = createGlobalStyle`
  
 `;
 
+let count = 0;
+
 export default class extends App {
+  componentDidMount() {
+    if (
+      typeof window !== "undefined" &&
+      typeof window.navigator !== "undefined"
+    ) {
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function() {
+          navigator.serviceWorker.getRegistrations().then(registrations => {
+            for (let registration of registrations) {
+              registration.unregister().then(bool => {
+                console.log("unregister: ", bool);
+                ++count;
+              });
+            }
+            if (count > 0) window.location.reload();
+          });
+        });
+      }
+    }
+  }
+
   render() {
     const { Component, pageProps } = this.props;
     return (
