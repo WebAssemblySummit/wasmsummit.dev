@@ -106,9 +106,9 @@ export const faq: {
       <>
         {" "}
         The official chat channel of the conference is the{" "}
-        <a href="http://discordapp.com/invite/nEFErF8">#summit</a> channel on
-        the WebAssembly Discord. Here you can exchange with the organizers or
-        other attendees before, during or after the conference.
+        <a href="https://discord.gg/nsYZMZw">#summit</a> channel on the
+        WebAssembly Discord. Here you can exchange with the organizers or other
+        attendees before, during or after the conference.
       </>
     )
   },
