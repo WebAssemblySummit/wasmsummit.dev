@@ -1,5 +1,5 @@
 export type Speaker = {
-  name: string;
+  name?: string;
   picture?: string;
   bio?: string;
   company?: string;
@@ -14,7 +14,8 @@ export const speakers: { [id: string]: Speaker } = {
     name: "Ashley Williams",
     picture: "https://avatars3.githubusercontent.com/u/1163554?s=400&v=4",
     bio:
-      "a mess like this is easily five to ten years ahead of its time @rustlang core. webassembler @cloudflare. @rustwasm WG 👷‍♀️🦀. prev @npmjs, @nodejs, @mozilla."
+      "a mess like this is easily five to ten years ahead of its time @rustlang core. webassembler @cloudflare. @rustwasm WG 👷‍♀️🦀. prev @npmjs, @nodejs, @mozilla.",
+    talkId: "1"
   },
   "2": {
     name: "Lin Clark",

@@ -11,9 +11,16 @@ const SpeakersPage: FC = () => (
     <NavBar title={title} backgroundColor={navbarBlue} bottom />
     <Headline>{title}</Headline>
     <Speakers id="speakers">
-      {Object.keys(speakers).map((id, index) => (
-        <SpeakerCard key={speakers[id].name + index} {...speakers[id]} />
-      ))}
+      {Object.keys(speakers).map((id, index) => {
+        const speaker = speakers[id] || {};
+        return (
+          <SpeakerCard
+            key={speaker.name + index}
+            name={speaker.name}
+            {...speaker}
+          />
+        );
+      })}
     </Speakers>
   </>
 );
@@ -21,7 +28,7 @@ const SpeakersPage: FC = () => (
 export default SpeakersPage;
 
 export const Headline = styled.h1`
-  font-size: 2.5em;
+  font-size: 3em;
   margin-top: 3vh;
   margin-bottom: 2vh;
   padding: 0 0px;
