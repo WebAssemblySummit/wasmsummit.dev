@@ -61,16 +61,15 @@ const SpeakersPage: FC = () => (
 export default SpeakersPage;
 
 export const Headline = styled.h1`
-  font-size: 3em;
+  font-size: 2.3em;
   margin-top: 3vh;
-  margin-bottom: 0vh;
+  margin-bottom: 1vh;
   padding: 0;
-  margin-left: 75px;
+  margin-left: 40px;
 
-  @media screen and (max-width: 663px) {
-    font-size: 2.5em;
-    /* text-align: center; */
-    margin-left: 50px;
+  @media screen and (max-width: 1280px) {
+    font-size: 1.7em;
+    margin-left: 25px;
   }
 `;
 
