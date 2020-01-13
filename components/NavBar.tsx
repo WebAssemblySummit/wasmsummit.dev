@@ -208,17 +208,21 @@ const HomeButton = styled.div`
   flex: 1;
   align-items: center;
   justify-content: center;
-  padding: 0px 0 0 2vw;
+  padding-left: 2vw;
   &:hover {
     color: white;
   }
 
   @media screen and (max-width: 799px) {
-    padding: 0px 0 0 8vw;
+    padding-left: 8vw;
   }
 
   @media screen and (max-width: 500px) {
-    padding: 0px 0 0 15px;
+    padding-left: 15px;
+  }
+
+  @media screen and (display-mode: standalone) {
+    padding-bottom: 10px;
   }
 `;
 
@@ -275,6 +279,10 @@ const ActiveButton = styled.div`
   color: white;
   cursor: pointer;
   font-size: 0.95em;
+
+  @media screen and (display-mode: standalone) {
+    padding-bottom: 10px;
+  }
 `;
 
 const ButtonText = styled.span`
@@ -315,6 +323,10 @@ const Button = styled.div`
     color: rgba(255, 255, 255, 1);
     border-top: 2px solid white;
   }
+
+  @media screen and (display-mode: standalone) {
+    padding-bottom: 10px;
+  }
 `;
 
 const BottomBox = styled.div`
@@ -329,26 +341,19 @@ const BottomBox = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  padding-bottom: 5px;
   overflow-x: scroll;
   overflow-y: hidden;
-
-  /* box-shadow: inset 0px 5px 20px hsla(256, 91%, 10%, 0.8); */
-  box-shadow: inset 0px 5px 5px hsla(256, 91%, 10%, 0.4);
+  box-shadow: inset 0px 5px 5px hsla(256, 91%, 10%, 0.35);
   background-color: ${(props?: { open?: boolean; backgroundColor?: string }) =>
     props && props.backgroundColor ? props.backgroundColor : undefined};
 
   a {
-    /*     color: #fff;
-    &:visited {
-      color: #fff;
-    }
- */
     font-size: 1.2em;
   }
 
   @media screen and (max-width: 749px) {
-    box-shadow: inset 0px 5px 10px hsla(256, 91%, 10%, 0.3);
+    /* box-shadow: none; */
+    box-shadow: inset 0px 5px 5px hsla(256, 91%, 10%, 0.2);
     justify-content: center;
   }
 
@@ -384,21 +389,12 @@ const TopBox = styled.div`
   left: 0;
   right: 0;
   top: 0;
-
-  /* box-shadow: inset 0px 5px 20px hsla(256, 91%, 10%, 0.8); */
   box-shadow: inset 0px 5px 20px hsla(256, 0%, 0%, 0.3);
   background-color: ${(props?: { open?: boolean; backgroundColor?: string }) =>
     props && props.backgroundColor ? props.backgroundColor : undefined};
 
   a {
     font-size: 1.2em;
-    /*     
-    color: #fff;
-    
-    &:visited {
-      color: #fff; 
-    } 
-    */
   }
 `;
 
@@ -416,11 +412,6 @@ const BurgerButton = styled.div`
 `;
 
 const Popup = styled.div`
-  /* 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   position: fixed;

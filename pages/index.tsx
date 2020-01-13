@@ -38,16 +38,12 @@ const View = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 65px);
   background: linear-gradient(
     180deg,
     hsla(239, 60%, 48%, 0) 20%,
     hsla(239, 60%, 48%, 1) 70%
   );
-
-  @media screen and (orientation: portrait) {
-    align-items: flex-start;
-  }
 `;
 
 const Container = styled.div`
@@ -57,11 +53,6 @@ const Container = styled.div`
   align-items: center;
   padding: 0;
   margin: 0;
-
-  @media screen and (orientation: portrait) {
-    justify-content: center;
-    align-items: flex-start;
-  }
 `;
 
 const Hero = styled.div`
@@ -75,8 +66,6 @@ const Hero = styled.div`
   @media (orientation: portrait) {
     grid-template-columns: 1fr;
     align-items: center;
-    margin-top: 5vh;
-    margin-bottom: 3vh;
     margin-left: 0;
     margin-right: 0;
   }
@@ -91,13 +80,12 @@ export const Logo = styled.img`
   
   @media (orientation: portrait) {
     max-width: 100vw;
-    margin-bottom: 10px;
     max-height: 45vh;
   }
 `;
 
 const Title = styled.div`
-  margin: 0 0 4vh 0;
+  margin: 0 0 3.5vh 0;
 
   @media (orientation: portrait) {
     padding: 0 12.5vw;
