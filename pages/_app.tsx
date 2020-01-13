@@ -62,7 +62,6 @@ export default class extends App {
       typeof window.navigator !== "undefined"
     ) {
       if ("serviceWorker" in navigator) {
-        console.log("navigator: ", navigator);
         window.addEventListener("load", function() {
           navigator.serviceWorker.getRegistrations().then(registrations => {
             for (let registration of registrations) {
