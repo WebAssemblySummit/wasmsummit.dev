@@ -22,37 +22,39 @@ const SpeakersPage: FC = () => (
     <NavBar title={title} backgroundColor={navbarBlue} bottom />
     {/* <Headline>{title}</Headline> */}
     <Speakers id="speakers">
-      {Object.keys(speakers).map((id, index) => {
+      {Object.keys(speakers).map(id => {
         const speaker = speakers[id] || {};
         const talk = talks[speaker.talkId] || {};
         const time = talk.time || {};
         return (
-          <Link key={id} href={`/speakers/${id}`} as={`/speakers/${id}`}>
-            <SpeakerCard>
-              <img
-                src={speaker.picture}
-                alt={`picture of ${speaker.name}`}
-              ></img>
-              <SpeakerName bold>{speaker.name}</SpeakerName>
-              <SpeakerSummary>
-                {talk && (
-                  <>
-                    <p>
-                      {time.start} - {time.end}
-                    </p>
-                    {/* <p>{speaker.company}</p> */}
-                    <Title>{talk.title}</Title>
-                    {/* {talk.subtitle && <Subtitle>{talk.subtitle}</Subtitle>} */}
-                    {/* <Icon>
+          <Link key={id} href="/speakers/[id]" as={`/speakers/${id}`}>
+            <a>
+              <SpeakerCard>
+                <img
+                  src={speaker.picture}
+                  alt={`picture of ${speaker.name}`}
+                ></img>
+                <SpeakerName bold>{speaker.name}</SpeakerName>
+                <SpeakerSummary>
+                  {talk && (
+                    <>
+                      <p>
+                        {time.start} - {time.end}
+                      </p>
+                      {/* <p>{speaker.company}</p> */}
+                      <Title>{talk.title}</Title>
+                      {/* {talk.subtitle && <Subtitle>{talk.subtitle}</Subtitle>} */}
+                      {/* <Icon>
                     <FaGithub size={32}></FaGithub>
                     </Icon>
                     <Icon>
                       <FaTwitter size={32}></FaTwitter>
                     </Icon> */}
-                  </>
-                )}
-              </SpeakerSummary>
-            </SpeakerCard>
+                    </>
+                  )}
+                </SpeakerSummary>
+              </SpeakerCard>
+            </a>
           </Link>
         );
       })}

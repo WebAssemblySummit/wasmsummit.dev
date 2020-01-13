@@ -8,11 +8,10 @@ import {
   SpeakerName,
   SpeakerSummary,
   Title
-} from "../components";
-import { speakers, Speaker } from "../data/speakers";
-import { talks, Talk } from "../data/talks";
+} from "../../components";
+import { speakers, Speaker } from "../../data/speakers";
+import { talks, Talk } from "../../data/talks";
 import { FaTwitter, FaGithub } from "react-icons/fa";
-/* import { FaGithub, FaTwitter } from "react-icons/fa"; */
 
 const title = "Speaker";
 
