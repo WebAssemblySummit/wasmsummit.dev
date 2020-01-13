@@ -1,9 +1,9 @@
 import { FC, ReactNode } from "react";
 import styled from "styled-components";
-import Header from "../components/Header";
-import NavBar from "../components/NavBar";
-import { speakers } from "../data/speakers";
-import { wasmPurple, navbarBlue } from "../components/colors";
+import Header from "../../components/Header";
+import NavBar from "../../components/NavBar";
+import { speakers } from "../../data/speakers";
+import { wasmPurple, navbarBlue } from "../../components/colors";
 
 const title = "Speakers";
 
