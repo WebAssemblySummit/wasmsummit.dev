@@ -11,6 +11,16 @@ export const faq: {
   answer: ReactNode;
 }[] = [
   {
+    question: "How much does it cost?",
+    answer: (
+      <>
+        Given you have a ticket, attending the event itself is free. At this
+        point in time, we do not cover travel expenses or offer scholarships. If
+        that should change we will announce it.
+      </>
+    )
+  },
+  {
     question: "How can I get a ticket?",
     answer: (
       <>
@@ -21,14 +31,16 @@ export const faq: {
       </>
     )
   },
-
   {
-    question: "How much does it cost?",
+    question: "Can I transfer my ticket to someone else?",
     answer: (
       <>
-        Given you have a ticket, attending the event itself is free. At this
-        point in time, we do not cover travel expenses or offer scholarships. If
-        that should change we will announce it.
+        If you got a ticket but want to transfer it to a person that is more
+        suitable to attend please send us an email to{" "}
+        <a href="mailto:wasm-summit-2020@chromium.org" rel="noreferrer">
+          wasm-summit-2020@chromium.org
+        </a>{" "}
+        with the new attendee's name and email and we will transfer the ticket.
       </>
     )
   },
