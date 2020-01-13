@@ -40,4 +40,4 @@ jobs:
           BASE_BRANCH: dev
           BRANCH: master
           FOLDER: out
-          CLEAN: true
+          CLEAN: false
