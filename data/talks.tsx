@@ -4,8 +4,8 @@ export type Talk = {
   speakerId?: string;
   title?: string;
   time?: {
-    start: Date;
-    end: Date;
+    start?: string;
+    end?: string;
   };
   abstract?: ReactNode;
 };
@@ -15,8 +15,8 @@ export const talks: { [id: string]: Talk } = {
     speakerId: "1",
     title: "Javascript's Journey to the Edge",
     time: {
-      start: new Date(),
-      end: new Date()
+      start: "10.15 am",
+      end: "11.00 am"
     },
     abstract: (
       <>

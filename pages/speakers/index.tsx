@@ -1,7 +1,18 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { NavBar, navbarBlue, SpeakerCard } from "../../components";
+import {
+  NavBar,
+  navbarBlue,
+  SpeakerCard,
+  SpeakerName,
+  SpeakerSummary,
+  Title
+} from "../../components";
 import { speakers } from "../../data/speakers";
+import { talks } from "../../data/talks";
+import { FaTwitter, FaGithub } from "react-icons/fa";
+import { Icon } from "./[id]";
+import Link from "next/link";
 
 const title = "Speakers";
 
@@ -13,12 +24,34 @@ const SpeakersPage: FC = () => (
     <Speakers id="speakers">
       {Object.keys(speakers).map((id, index) => {
         const speaker = speakers[id] || {};
+        const talk = talks[speaker.talkId] || {};
+        const time = talk.time || {};
         return (
-          <SpeakerCard
-            key={speaker.name + index}
-            name={speaker.name}
-            {...speaker}
-          />
+          <Link key={id} href={`/speakers/${id}`} as={`/speakers/${id}`}>
+            <SpeakerCard>
+              <img
+                src={speaker.picture}
+                alt={`picture of ${speaker.name}`}
+              ></img>
+              <SpeakerName bold>{speaker.name}</SpeakerName>
+              <SpeakerSummary>
+                {talk && (
+                  <>
+                    <p>
+                      {time.start} - {time.end}
+                    </p>
+                    <Title>{talk.title}</Title>
+                    {/* <Icon>
+                    <FaGithub size={32}></FaGithub>
+                  </Icon>
+                  <Icon>
+                    <FaTwitter size={32}></FaTwitter>
+                  </Icon> */}
+                  </>
+                )}
+              </SpeakerSummary>
+            </SpeakerCard>
+          </Link>
         );
       })}
     </Speakers>
@@ -30,13 +63,14 @@ export default SpeakersPage;
 export const Headline = styled.h1`
   font-size: 3em;
   margin-top: 3vh;
-  margin-bottom: 2vh;
-  padding: 0 0px;
-  margin-left: 4vw;
+  margin-bottom: 0vh;
+  padding: 0;
+  margin-left: 75px;
 
   @media screen and (max-width: 663px) {
-    text-align: center;
-    margin-left: 0;
+    font-size: 2.5em;
+    /* text-align: center; */
+    margin-left: 50px;
   }
 `;
 
@@ -53,7 +87,6 @@ const Background = styled.div`
 `;
 
 const Speakers = styled.div`
-  margin: 0;
   padding: 25px;
   padding-top: 0px;
   padding-bottom: 100px;

@@ -1,9 +1,18 @@
 import { FC } from "react";
 import { useRouter } from "next/router";
 import styled from "styled-components";
-import { NavBar, navbarBlue, SpeakerCard } from "../../components";
+import {
+  NavBar,
+  navbarBlue,
+  SpeakerCard,
+  SpeakerName,
+  SpeakerSummary,
+  Title
+} from "../../components";
 import { speakers, Speaker } from "../../data/speakers";
 import { talks, Talk } from "../../data/talks";
+import { FaTwitter, FaGithub } from "react-icons/fa";
+/* import { FaGithub, FaTwitter } from "react-icons/fa"; */
 
 const title = "Speaker";
 
@@ -12,21 +21,58 @@ const SpeakerPage: FC = () => {
   const id = Array.isArray(query.id) ? query.id[0] : query.id;
   const speaker: Speaker = speakers[id] || {};
   const talk: Talk = speaker.talkId ? talks[speaker.talkId] : {};
+  const time = talk.time || {};
 
   return (
     <>
       <Background />
       <NavBar title={title} backgroundColor={navbarBlue} bottom />
       <Content>
-        <Headline>{speaker.name}</Headline>
+        {/* <PageTitle>{title}</PageTitle> */}
         <Columns>
+          <SpeakerBox>
+            {speaker.name && (
+              <SpeakerCard>
+                <img
+                  src={speaker.picture}
+                  alt={`picture of ${speaker.name}`}
+                ></img>
+                <SpeakerName bold>{speaker.name}</SpeakerName>
+                <SpeakerSummary>
+                  {talk && (
+                    <>
+                      <Title>{talk.title}</Title>
+                      <TimeLinks>
+                        <Time>
+                          {time.start} - {time.end}{" "}
+                        </Time>
+                        {/*  <Icon>
+                          <FaGithub size={32}></FaGithub>
+                        </Icon>
+                        <Icon>
+                          <FaTwitter size={32}></FaTwitter>
+                        </Icon> */}
+                      </TimeLinks>
+                      <p></p>
+                    </>
+                  )}
+                </SpeakerSummary>
+              </SpeakerCard>
+            )}
+          </SpeakerBox>
           <Section>
-            <SectionHeading>{talk.title}</SectionHeading>
+            <Headline>{talk.title}</Headline>
+            {speaker.name && <SectionHeading>{speaker.name}</SectionHeading>}
+            <SectionSubHeading>
+              {talk.time &&
+                talk.time.start &&
+                talk.time.end &&
+                `${talk.time && talk.time.start} - ${talk.time &&
+                  talk.time.end}`}
+            </SectionSubHeading>
+
             <SectionContent>{talk.abstract}</SectionContent>
           </Section>
-          {speaker.name && (
-            <SpeakerCard key={name} name={speaker.name} {...speaker} />
-          )}
         </Columns>
       </Content>
     </>
@@ -34,6 +80,18 @@ const SpeakerPage: FC = () => {
 };
 
 export default SpeakerPage;
+
+export const Icon = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 10px;
+  color: rgba(255, 255, 255, 0.8);
+`;
+
+const Time = styled.div``;
 
 const Background = styled.div`
   display: flex;
@@ -47,16 +105,58 @@ const Background = styled.div`
   z-index: -1;
 `;
 
-export const Headline = styled.h1`
-  font-size: 3em;
+const SpeakerBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5vh;
+  margin-bottom: 2vh;
+  margin-right: 0;
+  padding-top: 15px;
+
+  @media screen and (max-width: 450px) {
+    margin-top: 3vh;
+  }
+`;
+
+const TimeLinks = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const PageTitle = styled.h1`
+  font-size: 1.6em;
+  margin-top: 3vh;
+  margin-bottom: -3vh;
+  padding: 0;
+  margin-left: 30px;
+  color: rgb(150, 150, 200);
+
+  @media screen and (max-width: 663px) {
+    font-size: 1.5em;
+    /* text-align: center; */
+  }
+`;
+
+export const Headline = styled.h2`
+  font-size: 2.5em;
   margin-top: 3vh;
   margin-bottom: 0vh;
-  padding: 15px;
+  padding: 0 15px;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 2em;
+  }
 `;
 
 const Content = styled.div`
-  padding: 1vh 3vw;
+  display: flex;
+  flex-direction: row;
+  padding: 3vh 3vw;
   color: white;
+  min-height: calc(100vh - 65px);
+  align-items: center;
+  justify-content: center;
 
   a {
     color: white;
@@ -76,10 +176,9 @@ const Columns = styled.div`
   color: #fff;
   border-radius: 5px;
   display: flex;
-  width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
 
   a {
@@ -95,21 +194,34 @@ const Columns = styled.div`
 const Section = styled.div`
   break-inside: avoid;
   flex: 1;
-  margin: 3vh 3vw;
+  margin: 0vh 3vw;
+  max-width: 1024px;
 `;
 
 const SectionHeading = styled.h2`
-  font-size: 1.5em;
+  font-size: 2em;
   margin: 0 25px 0 0;
   padding: 15px;
   font-weight: 700;
   border-bottom: 3px solid rgba(255, 255, 255, 0.4);
   text-shadow: 2px 4px 5px hsla(237, 80%, 35%, 0.3);
+
+  @media screen and (max-width: 1024px) {
+    font-size: 1.5em;
+  }
+`;
+
+const SectionSubHeading = styled.p`
+  font-size: 1.3em;
+  margin: 0 25px 0 0;
+  padding: 15px;
+  font-weight: 700;
+  text-shadow: 2px 4px 5px hsla(237, 80%, 35%, 0.3);
 `;
 
 const SectionContent = styled.div`
   font-size: 1.2em;
-  margin: 25px 25px 0 0;
+  margin: 0 0px 0 0;
   padding: 0 15px 50px 25px;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.9);

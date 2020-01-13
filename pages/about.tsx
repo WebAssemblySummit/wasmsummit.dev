@@ -26,7 +26,7 @@ const AboutPage: FC = () => (
 export default AboutPage;
 
 export const Background = styled.div`
-  background-color: hsla(237, 60%, 48%, 0.6);
+  background-color: hsla(237, 0%, 48%, 0.2);
   position: fixed;
   top: 0;
   bottom: 0;
