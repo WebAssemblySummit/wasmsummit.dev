@@ -3,16 +3,18 @@ import styled from "styled-components";
 import { wasmPurple } from "./colors";
 
 export const SpeakerSummary = styled.div`
-  padding: 20px 30px;
+  padding: 20px 25px;
   background: hsl(239, 50%, 25%);
   height: 160px;
   line-height: 1.8;
-  font-size: 0.9em;
+  font-size: 0.75em;
 
   p {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.5);
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 1.5em;
     padding: 0;
   }
 
@@ -20,13 +22,15 @@ export const SpeakerSummary = styled.div`
     padding: 15px 25px;
     height: 140px;
     line-height: 1.6;
-    font-size: 0.8em;
   }
   color: rgba(255, 255, 255, 0.8);
 `;
 
-export const SpeakerName = styled.h2`
+export const SpeakerName = styled.div`
   font-size: 1.5em;
+  color: white;
+  margin: 0;
+  padding: 0;
   margin: 0;
   padding: 5px 15px;
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
@@ -34,7 +38,6 @@ export const SpeakerName = styled.h2`
   /* background-color: rgba(255, 255, 0, 0.9); */
   /* background-color: hsl(237, 60%, 48%); */
   background-color: ${wasmPurple};
-  color: white;
 `;
 
 const SpeakerCard = styled.div`
@@ -72,11 +75,24 @@ const SpeakerCard = styled.div`
   }
 `;
 
-export const Title = styled.div`
-  font-size: 1.7em;
+export const Title = styled.h2`
+  font-size: 1.8em;
   line-height: 1.2;
   font-weight: bold;
-  margin: 15px 0;
+  margin: 0px 0;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.8);
+
+  @media screen and (max-width: 1024px) {
+    font-size: 1.5em;
+  }
+`;
+
+export const Subtitle = styled.div`
+  font-size: 1.5em;
+  line-height: 1.2;
+  font-weight: bold;
+  margin: 5px 0;
   padding: 0;
   color: rgba(255, 255, 255, 0.9);
 

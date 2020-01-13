@@ -10,8 +10,8 @@ import {
 } from "../../components";
 import { speakers } from "../../data/speakers";
 import { talks } from "../../data/talks";
-import { FaTwitter, FaGithub } from "react-icons/fa";
-import { Icon } from "./[id]";
+/* import { FaTwitter, FaGithub } from "react-icons/fa"; */
+/* import { Icon } from "./[id]"; */
 import Link from "next/link";
 
 const title = "Speakers";
@@ -40,13 +40,15 @@ const SpeakersPage: FC = () => (
                     <p>
                       {time.start} - {time.end}
                     </p>
+                    {/* <p>{speaker.company}</p> */}
                     <Title>{talk.title}</Title>
+                    {/* {talk.subtitle && <Subtitle>{talk.subtitle}</Subtitle>} */}
                     {/* <Icon>
                     <FaGithub size={32}></FaGithub>
-                  </Icon>
-                  <Icon>
-                    <FaTwitter size={32}></FaTwitter>
-                  </Icon> */}
+                    </Icon>
+                    <Icon>
+                      <FaTwitter size={32}></FaTwitter>
+                    </Icon> */}
                   </>
                 )}
               </SpeakerSummary>
