@@ -2,19 +2,6 @@ import App from "next/app";
 import Head from "next/head";
 import { createGlobalStyle } from "styled-components";
 
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function() {
-    navigator.serviceWorker.getRegistrations().then(registrations => {
-      for (let registration of registrations) {
-        registration.unregister().then(bool => {
-          console.log("unregister: ", bool);
-        });
-      }
-      window.location.reload();
-    });
-  });
-}
-
 // pages/_app.tsx
 const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap');
@@ -66,7 +53,31 @@ const GlobalStyles = createGlobalStyle`
  
 `;
 
+let count = 0;
+
 export default class extends App {
+  componentDidMount() {
+    if (
+      typeof window !== "undefined" &&
+      typeof window.navigator !== "undefined"
+    ) {
+      if ("serviceWorker" in navigator) {
+        console.log("navigator: ", navigator);
+        window.addEventListener("load", function() {
+          navigator.serviceWorker.getRegistrations().then(registrations => {
+            for (let registration of registrations) {
+              registration.unregister().then(bool => {
+                console.log("unregister: ", bool);
+                ++count;
+              });
+            }
+            if (count > 0) window.location.reload();
+          });
+        });
+      }
+    }
+  }
+
   render() {
     const { Component, pageProps } = this.props;
     return (
