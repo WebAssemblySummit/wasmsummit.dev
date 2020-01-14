@@ -54,20 +54,22 @@ const SpeakerPage: FC = () => {
                     {time.start && time.end && `${time.start} - ${time.end}`}
                   </p>
                   <Title>{talk.title}</Title>
-                  {speaker.website && (
-                    <Links>
-                      <Icon>
-                        <LinkIcon size={32}></LinkIcon>
-                      </Icon>
-                    </Links>
-                  )}
                 </SpeakerSummary>
               </SpeakerCard>
             </a>
           )}
         </SpeakerBox>
         <Section>
-          <Headline>{speaker.name}</Headline>
+          <Headline>
+            {speaker.name}{" "}
+            {speaker.website && (
+              <a href={speaker.website} target="_blank">
+                <Icon>
+                  <LinkIcon size={25}></LinkIcon>
+                </Icon>
+              </a>
+            )}
+          </Headline>
           <SpeakerNameHeadline>{talk.title}</SpeakerNameHeadline>
           {talk.time && talk.time.start && talk.time.end && (
             <SectionHeading>
@@ -76,34 +78,26 @@ const SpeakerPage: FC = () => {
                 talk.time.end}`}
             </SectionHeading>
           )}
+
           <SectionContent>{talk.abstract}</SectionContent>
           <SpeakerBottomBox>
             {speaker.name && (
-              <a href={speaker.website} target="_blank">
-                <SpeakerCard>
-                  <img
-                    src={speaker.picture}
-                    alt={`picture of ${speaker.name}`}
-                  ></img>
-                  <SpeakerName>
-                    <strong>{speaker.name}</strong>{" "}
-                    {speaker.company && <Company>{speaker.company}</Company>}
-                  </SpeakerName>
-                  <SpeakerSummary>
-                    <p>
-                      {time.start && time.end && `${time.start} - ${time.end}`}
-                    </p>
-                    <Title>{talk.title}</Title>
-                    {speaker.website && (
-                      <Links>
-                        <Icon>
-                          <LinkIcon size={32}></LinkIcon>
-                        </Icon>
-                      </Links>
-                    )}
-                  </SpeakerSummary>
-                </SpeakerCard>
-              </a>
+              <SpeakerCard>
+                <img
+                  src={speaker.picture}
+                  alt={`picture of ${speaker.name}`}
+                ></img>
+                <SpeakerName>
+                  <strong>{speaker.name}</strong>{" "}
+                  {speaker.company && <Company>{speaker.company}</Company>}
+                </SpeakerName>
+                <SpeakerSummary>
+                  <p>
+                    {time.start && time.end && `${time.start} - ${time.end}`}
+                  </p>
+                  <Title>{talk.title}</Title>
+                </SpeakerSummary>
+              </SpeakerCard>
             )}
           </SpeakerBottomBox>
         </Section>
@@ -118,12 +112,18 @@ const Links = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  margin-left: 5px;
 `;
 
-export const Icon = styled.div`
-  padding: 0 10px;
-  color: rgba(255, 255, 255, 0.8);
+export const Icon = styled.span`
+  padding: 5px 10px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: 150ms;
+
+  &:hover {
+    color: white;
+  }
 `;
 
 const Time = styled.div``;
@@ -143,7 +143,7 @@ const Background = styled.div`
 const SpeakerBox = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 4vh 3vw 0vh 3vw;
+  margin: 5vh 3vw 0vh 3vw;
   align-items: center;
 
   @media screen and (max-width: 1000px) {
@@ -154,7 +154,7 @@ const SpeakerBox = styled.div`
 const SpeakerBottomBox = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 25px 15px;
+  margin: 0 15px;
   align-items: flex-start;
 
   @media screen and (min-width: 999px) {
@@ -235,7 +235,7 @@ const SectionSubHeading = styled.p`
 
 const SectionContent = styled.div`
   font-size: 1.3em;
-  margin: 5vh 15px 0vh 15px;
+  margin: 5vh 15px 3vh 15px;
   /*   padding: 0 15px 50px 25px;
  */
   line-height: 1.8;
@@ -286,7 +286,7 @@ export const SpeakerSummary = styled.div`
   justify-content: center;
   padding: 15px 30px 30px 30px;
   background: hsl(239, 50%, 25%);
-  height: 150px;
+  height: 130px;
   line-height: 1.8;
   font-size: 1em;
 
@@ -301,7 +301,7 @@ export const SpeakerSummary = styled.div`
 
   @media (max-width: 1280px) {
     padding: 15px 25px;
-    height: 160px;
+    height: 130px;
     line-height: 1.6;
   }
   color: rgba(255, 255, 255, 0.8);

@@ -41,7 +41,7 @@ export const SpeakerName = styled.div`
   color: white;
   margin: 0;
   margin: 0;
-  padding: 8px 15px;
+  padding: 10px 15px;
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
   /* border-bottom: 7px solid rgba(255, 255, 255, 1); */
   /* background-color: rgba(255, 255, 0, 0.9); */
@@ -89,13 +89,13 @@ const SpeakerCard = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 1.4em;
+  font-size: 1.27em;
   line-height: 1.4;
-  font-weight: bold;
+  font-weight: normal;
   margin: 0px 0;
   padding: 0;
   flex: 1;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 1);
 
   @media screen and (max-width: 1024px) {
     font-size: 1.4em;
