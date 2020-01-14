@@ -119,10 +119,6 @@ const SpeakerBox = styled.div`
   margin-right: 0;
   padding-top: 0;
 
-  a {
-    text-decoration: none;
-  }
-
   @media screen and (max-width: 450px) {
     /* display: none; */
     margin-top: 3vh;
@@ -162,15 +158,6 @@ const Content = styled.div`
   min-height: calc(100vh - 65px);
   align-items: center;
   justify-content: center;
-
-  a {
-    color: white;
-    text-decoration: underline;
-    &:visited {
-      color: white;
-      text-decoration: underline;
-    }
-  }
 `;
 
 const Columns = styled.div`
@@ -184,15 +171,6 @@ const Columns = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-
-  a {
-    color: white;
-    text-decoration: underline;
-    &:visited {
-      color: white;
-      text-decoration: underline;
-    }
-  }
 `;
 
 const Section = styled.div`
