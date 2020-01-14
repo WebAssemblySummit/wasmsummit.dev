@@ -77,6 +77,35 @@ const SpeakerPage: FC = () => {
             </SectionHeading>
           )}
           <SectionContent>{talk.abstract}</SectionContent>
+          <SpeakerBottomBox>
+            {speaker.name && (
+              <a href={speaker.website} target="_blank">
+                <SpeakerCard>
+                  <img
+                    src={speaker.picture}
+                    alt={`picture of ${speaker.name}`}
+                  ></img>
+                  <SpeakerName>
+                    <strong>{speaker.name}</strong>{" "}
+                    {speaker.company && <Company>{speaker.company}</Company>}
+                  </SpeakerName>
+                  <SpeakerSummary>
+                    <p>
+                      {time.start && time.end && `${time.start} - ${time.end}`}
+                    </p>
+                    <Title>{talk.title}</Title>
+                    {speaker.website && (
+                      <Links>
+                        <Icon>
+                          <LinkIcon size={32}></LinkIcon>
+                        </Icon>
+                      </Links>
+                    )}
+                  </SpeakerSummary>
+                </SpeakerCard>
+              </a>
+            )}
+          </SpeakerBottomBox>
         </Section>
       </Content>
     </>
@@ -117,7 +146,18 @@ const SpeakerBox = styled.div`
   margin: 4vh 3vw 0vh 3vw;
   align-items: center;
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+`;
+
+const SpeakerBottomBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 25px 15px;
+  align-items: flex-start;
+
+  @media screen and (min-width: 999px) {
     display: none;
   }
 `;
@@ -169,6 +209,7 @@ const Section = styled.div`
   break-inside: avoid;
   flex: 2;
   max-width: 1024px;
+  min-width: 350px;
 `;
 
 const SectionHeading = styled.h2`
