@@ -7,14 +7,14 @@ export const SpeakerSummary = styled.div`
   background: hsl(239, 50%, 25%);
   height: 140px;
   line-height: 1.8;
-  font-size: 0.78em;
+  font-size: 1em;
 
   p {
     color: rgba(255, 255, 255, 0.5);
     margin: 0;
     margin-bottom: 5px;
     font-weight: normal;
-    font-size: 1.4em;
+    font-size: 1.8em;
     padding: 0;
   }
 
@@ -86,7 +86,7 @@ const SpeakerCard = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 1.6em;
+  font-size: 1.5em;
   line-height: 1.4;
   font-weight: bold;
   margin: 0px 0;

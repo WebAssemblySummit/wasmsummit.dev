@@ -6,6 +6,7 @@ import {
   navbarBlue,
   SpeakerCard,
   SpeakerName,
+  SpeakerSummary,
   Title,
   Company
 } from "../../components";
@@ -51,6 +52,10 @@ const SpeakerPage: FC = () => {
                     {speaker.company && <Company>{speaker.company}</Company>}
                   </SpeakerName>
                   <SpeakerSummary>
+                    <p>
+                      {time.start && time.end && `${time.start} - ${time.end}`}
+                    </p>
+                    <Title>{talk.title}</Title>
                     {speaker.website && (
                       <>
                         <Links>
@@ -66,15 +71,13 @@ const SpeakerPage: FC = () => {
             )}
           </SpeakerBox>
           <Section>
-            {speaker.name && <SectionHeading>{talk.title}</SectionHeading>}
-            <SectionSubHeading>
-              {talk.time &&
-                talk.time.start &&
-                talk.time.end &&
-                `${talk.time && talk.time.start} - ${talk.time &&
+            {talk.time && talk.time.start && talk.time.end && (
+              <SectionHeading>
+                {" "}
+                {`${talk.time && talk.time.start} - ${talk.time &&
                   talk.time.end}`}
-            </SectionSubHeading>
-
+              </SectionHeading>
+            )}
             <SectionContent>{talk.abstract}</SectionContent>
           </Section>
         </Columns>
@@ -113,11 +116,13 @@ const Background = styled.div`
 
 const SpeakerBox = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: column;
   margin-top: 0vh;
   margin-bottom: 2vh;
   margin-right: 0;
   padding-top: 0;
+  align-items: flex-end;
 
   @media screen and (max-width: 450px) {
     /* display: none; */
@@ -153,7 +158,7 @@ export const Headline = styled.h2`
 const Content = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 3vh 3vw;
+  padding: 1vh 3vw;
   color: white;
   min-height: calc(100vh - 65px);
   align-items: center;
@@ -175,8 +180,7 @@ const Columns = styled.div`
 
 const Section = styled.div`
   break-inside: avoid;
-  flex: 1;
-  margin: 1vh 3vw 0vh 3vw;
+  flex: 2;
   max-width: 1024px;
 `;
 
@@ -202,19 +206,20 @@ const SectionSubHeading = styled.p`
 `;
 
 const SectionContent = styled.div`
-  font-size: 1.2em;
-  margin: 0 0px 0 0;
-  padding: 0 15px 50px 25px;
+  font-size: 1.3em;
+  margin: 5vh 3vw 0vh 3vw;
+  /*   padding: 0 15px 50px 25px;
+ */
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
 `;
 
-export const SpeakerSummary = styled.div`
+/* export const SpeakerSummary = styled.div`
   padding: 15px 30px 30px 30px;
   background: hsl(239, 50%, 25%);
-  height: 40px;
+  height: 130px;
   line-height: 1.8;
   font-size: 0.78em;
   display: flex;
@@ -232,8 +237,8 @@ export const SpeakerSummary = styled.div`
 
   @media (max-width: 1280px) {
     padding: 15px 25px;
-    height: 50px;
+    height: 140px;
     line-height: 1.6;
   }
   color: rgba(255, 255, 255, 0.8);
-`;
+`; */
