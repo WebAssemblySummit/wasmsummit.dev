@@ -6,12 +6,13 @@ import {
   SpeakerCard,
   SpeakerName,
   SpeakerSummary,
-  Title
+  Title,
+  Company
 } from "../../components";
 import { speakers } from "../../data/speakers";
 import { talks } from "../../data/talks";
-import { FaTwitter, FaGithub } from "react-icons/fa";
-import { Icon } from "./[id]";
+/* import { FaTwitter, FaGithub } from "react-icons/fa"; */
+/* import { Icon } from "./[id]"; */
 import Link from "next/link";
 
 const title = "Speakers";
@@ -22,35 +23,43 @@ const SpeakersPage: FC = () => (
     <NavBar title={title} backgroundColor={navbarBlue} bottom />
     {/* <Headline>{title}</Headline> */}
     <Speakers id="speakers">
-      {Object.keys(speakers).map((id, index) => {
+      {Object.keys(speakers).map(id => {
         const speaker = speakers[id] || {};
         const talk = talks[speaker.talkId] || {};
         const time = talk.time || {};
         return (
-          <Link key={id} href={`/speakers/${id}`} as={`/speakers/${id}`}>
-            <SpeakerCard>
-              <img
-                src={speaker.picture}
-                alt={`picture of ${speaker.name}`}
-              ></img>
-              <SpeakerName bold>{speaker.name}</SpeakerName>
-              <SpeakerSummary>
-                {talk && (
-                  <>
-                    <p>
-                      {time.start} - {time.end}
-                    </p>
-                    <Title>{talk.title}</Title>
-                    {/* <Icon>
+          <Link key={id} href="/speakers/[id]" as={`/speakers/${id}`}>
+            <a>
+              <SpeakerCard>
+                <img
+                  src={speaker.picture}
+                  alt={`picture of ${speaker.name}`}
+                ></img>
+                <SpeakerName>
+                  <strong>{speaker.name}</strong>{" "}
+                  {speaker.company && <Company>{speaker.company}</Company>}
+                </SpeakerName>
+                <SpeakerSummary>
+                  {talk && (
+                    <>
+                      <p>
+                        {time.start &&
+                          time.end &&
+                          `${time.start} - ${time.end}`}
+                      </p>
+                      <Title>{talk.title}</Title>
+                      {/* {talk.subtitle && <Subtitle>{talk.subtitle}</Subtitle>} */}
+                      {/* <Icon>
                     <FaGithub size={32}></FaGithub>
-                  </Icon>
-                  <Icon>
-                    <FaTwitter size={32}></FaTwitter>
-                  </Icon> */}
-                  </>
-                )}
-              </SpeakerSummary>
-            </SpeakerCard>
+                    </Icon>
+                    <Icon>
+                      <FaTwitter size={32}></FaTwitter>
+                    </Icon> */}
+                    </>
+                  )}
+                </SpeakerSummary>
+              </SpeakerCard>
+            </a>
           </Link>
         );
       })}
@@ -63,7 +72,7 @@ export default SpeakersPage;
 export const Headline = styled.h1`
   font-size: 2.3em;
   margin-top: 3vh;
-  margin-bottom: 1vh;
+  margin-bottom: -3vh;
   padding: 0;
   margin-left: 40px;
 

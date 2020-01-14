@@ -3,42 +3,55 @@ import styled from "styled-components";
 import { wasmPurple } from "./colors";
 
 export const SpeakerSummary = styled.div`
-  padding: 20px 30px;
+  padding: 15px 30px 30px 30px;
   background: hsl(239, 50%, 25%);
-  height: 160px;
+  height: 140px;
   line-height: 1.8;
-  font-size: 0.9em;
+  font-size: 0.78em;
 
   p {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.5);
     margin: 0;
     margin-bottom: 5px;
+    font-weight: normal;
+    font-size: 1.4em;
     padding: 0;
   }
 
   @media (max-width: 1280px) {
     padding: 15px 25px;
-    height: 140px;
+    height: 150px;
     line-height: 1.6;
-    font-size: 0.8em;
   }
   color: rgba(255, 255, 255, 0.8);
 `;
 
-export const SpeakerName = styled.h2`
-  font-size: 1.5em;
+export const Company = styled.span`
+  color: white;
+  font-size: 1em;
   margin: 0;
-  padding: 5px 15px;
+  padding: 0;
+`;
+
+export const SpeakerName = styled.div`
+  font-size: 1.4em;
+  color: white;
+  margin: 0;
+  margin: 0;
+  padding: 8px 15px;
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
   /* border-bottom: 7px solid rgba(255, 255, 255, 1); */
   /* background-color: rgba(255, 255, 0, 0.9); */
   /* background-color: hsl(237, 60%, 48%); */
   background-color: ${wasmPurple};
-  color: white;
+
+  @media (max-width: 500px) {
+    font-size: 1.2em;
+  }
 `;
 
 const SpeakerCard = styled.div`
-  font-size: 1.1em;
+  font-size: 1em;
   margin: 2.5% 1%;
   color: black;
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
@@ -60,7 +73,7 @@ const SpeakerCard = styled.div`
   }
 
   @media (max-width: 1280px) {
-    width: 290px;
+    width: 310px;
   }
 
   @media screen and (max-width: 663px) {
@@ -68,15 +81,28 @@ const SpeakerCard = styled.div`
   }
 
   @media screen and (max-width: 450px) {
-    width: 290px;
+    width: 310px;
   }
 `;
 
-export const Title = styled.div`
-  font-size: 1.7em;
+export const Title = styled.h2`
+  font-size: 1.6em;
+  line-height: 1.4;
+  font-weight: bold;
+  margin: 0px 0;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.85);
+
+  @media screen and (max-width: 1024px) {
+    font-size: 1.5em;
+  }
+`;
+
+export const Subtitle = styled.div`
+  font-size: 1.5em;
   line-height: 1.2;
   font-weight: bold;
-  margin: 15px 0;
+  margin: 5px 0;
   padding: 0;
   color: rgba(255, 255, 255, 0.9);
 
