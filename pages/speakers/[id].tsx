@@ -57,13 +57,11 @@ const SpeakerPage: FC = () => {
                     </p>
                     <Title>{talk.title}</Title>
                     {speaker.website && (
-                      <>
-                        <Links>
-                          <Icon>
-                            <LinkIcon size={32}></LinkIcon>
-                          </Icon>
-                        </Links>
-                      </>
+                      <Links>
+                        <Icon>
+                          <LinkIcon size={32}></LinkIcon>
+                        </Icon>
+                      </Links>
                     )}
                   </SpeakerSummary>
                 </SpeakerCard>

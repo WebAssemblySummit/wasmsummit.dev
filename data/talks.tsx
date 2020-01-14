@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import styled from "styled-components";
 
 const SmallFont = styled.span`
-  font-size: 0.85em;
+  font-size: 0.8em;
 `;
 export type Talk = {
   speakerId?: string;

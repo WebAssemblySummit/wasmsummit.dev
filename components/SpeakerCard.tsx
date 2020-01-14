@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { wasmPurple } from "./colors";
 
 export const SpeakerSummary = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 15px 30px 30px 30px;
   background: hsl(239, 50%, 25%);
   height: 140px;
@@ -91,6 +94,7 @@ export const Title = styled.h2`
   font-weight: bold;
   margin: 0px 0;
   padding: 0;
+  flex: 1;
   color: rgba(255, 255, 255, 0.85);
 
   @media screen and (max-width: 1024px) {
