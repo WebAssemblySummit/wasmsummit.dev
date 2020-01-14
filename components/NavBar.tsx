@@ -7,7 +7,8 @@ import {
   FaYoutube,
   FaMapMarkerAlt,
   FaQuestionCircle,
-  FaDiscord
+  FaDiscord,
+  FaRegCalendarAlt
 } from "react-icons/fa";
 import { IconType } from "react-icons/lib/cjs";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
@@ -155,7 +156,7 @@ const textNavItems: {
   link?: string;
 }[] = [
   /* { label: "News", link: "/news" }, */
-  /* { label: "Schedule", link: "/schedule" }, */
+  { label: "Schedule", link: "/schedule" },
   /* { label: "Speakers", link: "/speakers" }, */
   {
     label: "About",
@@ -169,6 +170,11 @@ const iconNavItems: {
   url?: string;
   external?: boolean;
 }[] = [
+  {
+    Icon: FaRegCalendarAlt,
+    label: "Schedule",
+    url: "/schedule"
+  },
   {
     Icon: FaQuestionCircle,
     label: "About",
