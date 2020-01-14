@@ -50,10 +50,10 @@ const SpeakerPage: FC = () => {
                   {speaker.company && <Company>{speaker.company}</Company>}
                 </SpeakerName>
                 <SpeakerSummary>
-                  <p>
+                  {/* <p>
                     {time.start && time.end && `${time.start} - ${time.end}`}
                   </p>
-                  <Title>{talk.title}</Title>
+                  <Title>{talk.title}</Title> */}
                 </SpeakerSummary>
               </SpeakerCard>
             </a>
@@ -92,10 +92,10 @@ const SpeakerPage: FC = () => {
                   {speaker.company && <Company>{speaker.company}</Company>}
                 </SpeakerName>
                 <SpeakerSummary>
-                  <p>
+                  {/* <p>
                     {time.start && time.end && `${time.start} - ${time.end}`}
                   </p>
-                  <Title>{talk.title}</Title>
+                  <Title>{talk.title}</Title> */}
                 </SpeakerSummary>
               </SpeakerCard>
             )}
