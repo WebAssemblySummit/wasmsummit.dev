@@ -6,13 +6,12 @@ import {
   navbarBlue,
   SpeakerCard,
   SpeakerName,
-  SpeakerSummary,
   Title,
   Company
 } from "../../components";
 import { speakers, Speaker } from "../../data/speakers";
 import { talks, Talk } from "../../data/talks";
-import { FaTwitter, FaGithub } from "react-icons/fa";
+import { FaTwitter, FaGithub, FaLink } from "react-icons/fa";
 
 const title = "Speaker";
 
@@ -23,6 +22,15 @@ const SpeakerPage: FC = () => {
   const talk: Talk = speaker.talkId ? talks[speaker.talkId] : {};
   const time = talk.time || {};
 
+  let LinkIcon = FaLink;
+  if (speaker.website) {
+    if (speaker.website.includes("twitter")) {
+      LinkIcon = FaTwitter;
+    } else if (speaker.website.includes("github")) {
+      LinkIcon = FaGithub;
+    }
+  }
+
   return (
     <>
       <Background />
@@ -32,42 +40,34 @@ const SpeakerPage: FC = () => {
         <Columns>
           <SpeakerBox>
             {speaker.name && (
-              <SpeakerCard>
-                <img
-                  src={speaker.picture}
-                  alt={`picture of ${speaker.name}`}
-                ></img>
-                <SpeakerName>
-                  <strong>{speaker.name}</strong>{" "}
-                  {speaker.company && <Company>{speaker.company}</Company>}
-                </SpeakerName>
-                <SpeakerSummary>
-                  {talk && (
-                    <>
-                      <p>
-                        {time.start &&
-                          time.end &&
-                          `${time.start} - ${time.end}`}
-                      </p>
-                      {/* <p>{speaker.company}</p> */}
-                      <Title>{talk.title}</Title>
-                      {/*  <Icon>
-                          <FaGithub size={32}></FaGithub>
-                        </Icon>
-                        <Icon>
-                          <FaTwitter size={32}></FaTwitter>
-                        </Icon> */}
-                      <p></p>
-                    </>
-                  )}
-                </SpeakerSummary>
-              </SpeakerCard>
+              <a href={speaker.website} target="_blank">
+                <SpeakerCard>
+                  <img
+                    src={speaker.picture}
+                    alt={`picture of ${speaker.name}`}
+                  ></img>
+                  <SpeakerName>
+                    <strong>{speaker.name}</strong>{" "}
+                    {speaker.company && <Company>{speaker.company}</Company>}
+                  </SpeakerName>
+                  <SpeakerSummary>
+                    {speaker.website && (
+                      <>
+                        <Links>
+                          <Icon>
+                            <LinkIcon size={32}></LinkIcon>
+                          </Icon>
+                        </Links>
+                      </>
+                    )}
+                  </SpeakerSummary>
+                </SpeakerCard>
+              </a>
             )}
           </SpeakerBox>
           <Section>
             {speaker.name && <SectionHeading>{talk.title}</SectionHeading>}
             <SectionSubHeading>
-              {speaker.name},{" "}
               {talk.time &&
                 talk.time.start &&
                 talk.time.end &&
@@ -85,12 +85,14 @@ const SpeakerPage: FC = () => {
 
 export default SpeakerPage;
 
-export const Icon = styled.div`
+const Links = styled.div`
   display: flex;
   flex-direction: row;
-  flex: 1;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
+`;
+
+export const Icon = styled.div`
   padding: 0 10px;
   color: rgba(255, 255, 255, 0.8);
 `;
@@ -116,6 +118,10 @@ const SpeakerBox = styled.div`
   margin-bottom: 2vh;
   margin-right: 0;
   padding-top: 0;
+
+  a {
+    text-decoration: none;
+  }
 
   @media screen and (max-width: 450px) {
     /* display: none; */
@@ -192,7 +198,7 @@ const Columns = styled.div`
 const Section = styled.div`
   break-inside: avoid;
   flex: 1;
-  margin: 0vh 3vw;
+  margin: 1vh 3vw 0vh 3vw;
   max-width: 1024px;
 `;
 
@@ -225,4 +231,31 @@ const SectionContent = styled.div`
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
+`;
+
+export const SpeakerSummary = styled.div`
+  padding: 15px 30px 30px 30px;
+  background: hsl(239, 50%, 25%);
+  height: 40px;
+  line-height: 1.8;
+  font-size: 0.78em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  p {
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-size: 1.4em;
+    padding: 0;
+  }
+
+  @media (max-width: 1280px) {
+    padding: 15px 25px;
+    height: 50px;
+    line-height: 1.6;
+  }
+  color: rgba(255, 255, 255, 0.8);
 `;

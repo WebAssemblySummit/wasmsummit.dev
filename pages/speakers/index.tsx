@@ -72,7 +72,7 @@ export default SpeakersPage;
 export const Headline = styled.h1`
   font-size: 2.3em;
   margin-top: 3vh;
-  margin-bottom: 1vh;
+  margin-bottom: -3vh;
   padding: 0;
   margin-left: 40px;
 

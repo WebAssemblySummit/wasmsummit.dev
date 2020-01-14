@@ -26,6 +26,7 @@ export const speakers: { [id: string]: Speaker } = {
     company: "Mozilla",
     picture:
       "https://pbs.twimg.com/profile_images/497876628651782146/hrCHz_ym_400x400.jpeg",
+    website: "https://twitter.com/linclark",
     bio:
       "Stuffing my head with code and turning it into Code Cartoons. Also, tinkering with WebAssembly, Rust and a little JavaScript at Mozilla",
     talkId: "2"

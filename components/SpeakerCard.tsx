@@ -5,7 +5,7 @@ import { wasmPurple } from "./colors";
 export const SpeakerSummary = styled.div`
   padding: 15px 30px 30px 30px;
   background: hsl(239, 50%, 25%);
-  height: 160px;
+  height: 140px;
   line-height: 1.8;
   font-size: 0.78em;
 
@@ -20,7 +20,7 @@ export const SpeakerSummary = styled.div`
 
   @media (max-width: 1280px) {
     padding: 15px 25px;
-    height: 170px;
+    height: 150px;
     line-height: 1.6;
   }
   color: rgba(255, 255, 255, 0.8);
@@ -86,7 +86,7 @@ const SpeakerCard = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 1.8em;
+  font-size: 1.6em;
   line-height: 1.4;
   font-weight: bold;
   margin: 0px 0;
