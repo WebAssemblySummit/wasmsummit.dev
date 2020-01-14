@@ -49,6 +49,7 @@ export const speakers: { [id: string]: Speaker } = {
   },
   "6": {
     name: "Johnathan Beri",
+    company: "Wasm SF",
     picture:
       "/johnathan-beri.jpeg",
     website: "https://twitter.com/beriberikix",
