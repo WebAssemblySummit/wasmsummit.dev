@@ -6,7 +6,6 @@ import {
   navbarBlue,
   SpeakerCard,
   SpeakerName,
-  SpeakerSummary,
   Title,
   Company
 } from "../../components";
@@ -38,47 +37,47 @@ const SpeakerPage: FC = () => {
       <NavBar title={title} backgroundColor={navbarBlue} bottom />
       <Content>
         {/* <PageTitle>{title}</PageTitle> */}
-        <Columns>
-          <SpeakerBox>
-            {speaker.name && (
-              <a href={speaker.website} target="_blank">
-                <SpeakerCard>
-                  <img
-                    src={speaker.picture}
-                    alt={`picture of ${speaker.name}`}
-                  ></img>
-                  <SpeakerName>
-                    <strong>{speaker.name}</strong>{" "}
-                    {speaker.company && <Company>{speaker.company}</Company>}
-                  </SpeakerName>
-                  <SpeakerSummary>
-                    <p>
-                      {time.start && time.end && `${time.start} - ${time.end}`}
-                    </p>
-                    <Title>{talk.title}</Title>
-                    {speaker.website && (
-                      <Links>
-                        <Icon>
-                          <LinkIcon size={32}></LinkIcon>
-                        </Icon>
-                      </Links>
-                    )}
-                  </SpeakerSummary>
-                </SpeakerCard>
-              </a>
-            )}
-          </SpeakerBox>
-          <Section>
-            {talk.time && talk.time.start && talk.time.end && (
-              <SectionHeading>
-                {" "}
-                {`${talk.time && talk.time.start} - ${talk.time &&
-                  talk.time.end}`}
-              </SectionHeading>
-            )}
-            <SectionContent>{talk.abstract}</SectionContent>
-          </Section>
-        </Columns>
+        <SpeakerBox>
+          {speaker.name && (
+            <a href={speaker.website} target="_blank">
+              <SpeakerCard>
+                <img
+                  src={speaker.picture}
+                  alt={`picture of ${speaker.name}`}
+                ></img>
+                <SpeakerName>
+                  <strong>{speaker.name}</strong>{" "}
+                  {speaker.company && <Company>{speaker.company}</Company>}
+                </SpeakerName>
+                <SpeakerSummary>
+                  <p>
+                    {time.start && time.end && `${time.start} - ${time.end}`}
+                  </p>
+                  <Title>{talk.title}</Title>
+                  {speaker.website && (
+                    <Links>
+                      <Icon>
+                        <LinkIcon size={32}></LinkIcon>
+                      </Icon>
+                    </Links>
+                  )}
+                </SpeakerSummary>
+              </SpeakerCard>
+            </a>
+          )}
+        </SpeakerBox>
+        <Section>
+          <Headline>{speaker.name}</Headline>
+          <SpeakerNameHeadline>{talk.title}</SpeakerNameHeadline>
+          {talk.time && talk.time.start && talk.time.end && (
+            <SectionHeading>
+              {" "}
+              {`${talk.time && talk.time.start} - ${talk.time &&
+                talk.time.end}`}
+            </SectionHeading>
+          )}
+          <SectionContent>{talk.abstract}</SectionContent>
+        </Section>
       </Content>
     </>
   );
@@ -114,17 +113,12 @@ const Background = styled.div`
 
 const SpeakerBox = styled.div`
   display: flex;
-  flex: 1;
   flex-direction: column;
-  margin-top: 0vh;
-  margin-bottom: 2vh;
-  margin-right: 0;
-  padding-top: 0;
-  align-items: flex-end;
+  margin: 4vh 3vw 0vh 3vw;
+  align-items: center;
 
   @media screen and (max-width: 450px) {
-    /* display: none; */
-    margin-top: 3vh;
+    display: none;
   }
 `;
 
@@ -144,6 +138,8 @@ export const PageTitle = styled.h1`
 
 export const Headline = styled.h2`
   font-size: 2em;
+  margin: 0;
+
   margin-top: 3vh;
   margin-bottom: 0vh;
   padding: 0 15px;
@@ -156,27 +152,20 @@ export const Headline = styled.h2`
 const Content = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   padding: 1vh 3vw;
   color: white;
   min-height: calc(100vh - 65px);
-  align-items: center;
-  justify-content: center;
-`;
-
-const Columns = styled.div`
-  background-color: ${(props: { primary?: boolean }) =>
-    props.primary ? "#fff" : "transparent"};
-  box-shadow: ${(props: { primary?: boolean }) =>
-    props.primary ? "0px 5px 30px rgba(0,0,0,0.01)" : "0px"};
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: flex-start;
+  justify-content: center;
+
+  @media screen and (orientation: portrait) {
+    flex-direction: row;
+  }
 `;
 
 const Section = styled.div`
+  margin-top: 3vh;
   break-inside: avoid;
   flex: 2;
   max-width: 1024px;
@@ -205,7 +194,7 @@ const SectionSubHeading = styled.p`
 
 const SectionContent = styled.div`
   font-size: 1.3em;
-  margin: 5vh 3vw 0vh 3vw;
+  margin: 5vh 15px 0vh 15px;
   /*   padding: 0 15px 50px 25px;
  */
   line-height: 1.8;
@@ -240,3 +229,39 @@ const SectionContent = styled.div`
   }
   color: rgba(255, 255, 255, 0.8);
 `; */
+
+const SpeakerNameHeadline = styled.h2`
+  font-size: 1.5em;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  font-weight: 700;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.4);
+  text-shadow: 2px 4px 5px hsla(237, 80%, 35%, 0.3);
+`;
+
+export const SpeakerSummary = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px 30px 30px 30px;
+  background: hsl(239, 50%, 25%);
+  height: 150px;
+  line-height: 1.8;
+  font-size: 1em;
+
+  p {
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-size: 1.8em;
+    padding: 0;
+  }
+
+  @media (max-width: 1280px) {
+    padding: 15px 25px;
+    height: 160px;
+    line-height: 1.6;
+  }
+  color: rgba(255, 255, 255, 0.8);
+`;

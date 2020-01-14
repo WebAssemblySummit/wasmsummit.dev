@@ -27,12 +27,8 @@ export const talks: { [id: string]: Talk } = {
   },
   "3": {
     speakerId: "3",
-    title: (
-      <SmallFont>
-        Why the #wasmsummit Website isn't written in Wasm, and what that means
-        for the future of Wasm
-      </SmallFont>
-    ),
+    title:
+      "Why the #wasmsummit Website isn't written in Wasm, and what that means for the future of Wasm",
     abstract: (
       <>
         <p>
