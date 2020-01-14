@@ -156,7 +156,7 @@ const textNavItems: {
 }[] = [
   /* { label: "News", link: "/news" }, */
   /* { label: "Schedule", link: "/schedule" }, */
-  /* { label: "Speakers", link: "/speakers" }, */
+    { label: "Speakers", link: "/speakers" },
   {
     label: "About",
     link: "/about"
@@ -174,11 +174,11 @@ const iconNavItems: {
     label: "About",
     url: "/about"
   },
-  /*   {
+  {
     Icon: GoPerson,
     label: "Speakers",
     url: "/speakers"
-  }, */
+  },
   {
     Icon: FaMapMarkerAlt,
     label: "Venue",
