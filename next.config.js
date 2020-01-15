@@ -1,4 +1,8 @@
-module.exports = {
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true"
+});
+
+module.exports = withBundleAnalyzer({
   exportTrailingSlash: true,
   exportPathMap: async function() {
     const paths = {
@@ -16,4 +20,4 @@ module.exports = {
 
     return paths;
   }
-};
+});
