@@ -14,7 +14,7 @@ type mockScheduleItem = {
 const scheduleItems: mockScheduleItem[] = [
   {
     time: "8:00am",
-    title: "breakfast"
+    title: "Breakfast"
   },
   {
     time: "9:15am",
