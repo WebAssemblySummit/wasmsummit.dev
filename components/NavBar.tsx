@@ -65,7 +65,12 @@ const NavBar: FC<{
           )} */}
           {iconNavItems.map(({ Icon, label, url, external }, index) =>
             external ? (
-              <a key={url} href={url} target={external && "_blank"}>
+              <a
+                key={url}
+                href={url}
+                target={external && "_blank"}
+                rel="noreferrer"
+              >
                 <Button>
                   <Icon size={24} style={{ margin: 8 }} />{" "}
                   <ButtonText>{label}</ButtonText>
@@ -73,7 +78,7 @@ const NavBar: FC<{
               </a>
             ) : pathname && pathname === url ? (
               <Link key={url} href={url} as={url} passHref>
-                <a target={external && "_blank"} rel="noreferrer">
+                <a>
                   <ActiveButton>
                     <Icon size={24} style={{ margin: 8 }} />{" "}
                     <ButtonText>{label}</ButtonText>
@@ -82,7 +87,7 @@ const NavBar: FC<{
               </Link>
             ) : url ? (
               <Link key={url} href={url} as={url} passHref>
-                <a target={external && "_blank"}>
+                <a>
                   <Button>
                     <Icon size={24} style={{ margin: 8 }} />{" "}
                     <ButtonText>{label}</ButtonText>
@@ -156,7 +161,7 @@ const textNavItems: {
 }[] = [
   /* { label: "News", link: "/news" }, */
   /* { label: "Schedule", link: "/schedule" }, */
-    { label: "Speakers", link: "/speakers" },
+  { label: "Speakers", link: "/speakers" },
   {
     label: "About",
     link: "/about"
