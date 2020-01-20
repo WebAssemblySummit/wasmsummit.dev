@@ -11,84 +11,68 @@ export type Speaker = {
 
 export const speakers: { [id: string]: Speaker } = {
   "1": {
-    name: "Ashley Williams",
-    picture: "https://avatars3.githubusercontent.com/u/1163554?s=400&v=4",
-    bio:
-      "a mess like this is easily five to ten years ahead of its time @rustlang core. webassembler @cloudflare. @rustwasm WG 👷‍♀️🦀. prev @npmjs, @nodejs, @mozilla.",
-    company: "Cloudflare",
-    website: "https://twitter.com/ag_dubs",
-    twitter: "https://twitter.com/ag_dubs",
-    github: "https://github.com/ashleygwilliams",
+    name: "Lin Clark",
+    picture: "/lin-clark.jpg",
+    company: "Mozilla",
+    website: "https://twitter.com/linclark",
     talkId: "1"
   },
   "2": {
-    name: "Lin Clark",
-    company: "Mozilla",
+    name: "Alon Zakai",
+    company: "Google",
     picture:
-      "https://pbs.twimg.com/profile_images/497876628651782146/hrCHz_ym_400x400.jpeg",
-    website: "https://twitter.com/linclark",
-    bio:
-      "Stuffing my head with code and turning it into Code Cartoons. Also, tinkering with WebAssembly, Rust and a little JavaScript at Mozilla",
+      "/alon-zakai.jpeg",
+    website: "https://twitter.com/kripken",
     talkId: "2"
   },
   "3": {
-    name: "Surma",
-    company: "Google",
+    name: "Ashley Williams",
+    company: "Cloudflare",
     picture:
-      "https://pbs.twimg.com/profile_images/1203822491032018945/4p9RN-fk_400x400.jpg",
-    bio:
-      "Web Advocate @Google. Internetrovert 🏳️‍🌈 Craving simplicity, finding it nowhere. https://keybase.io/surma",
+      "/ashley-williams.jpg",
+    website: "https://twitter.com/ag_dubs",
     talkId: "3"
   },
   "4": {
-    name: "Ashley Williams",
-    company: "Cloudflare",
-    picture: "https://avatars3.githubusercontent.com/u/1163554?s=400&v=4",
-    bio:
-      "a mess like this is easily five to ten years ahead of its time @rustlang core. webassembler @cloudflare. @rustwasm WG 👷‍♀️🦀. prev @npmjs, @nodejs, @mozilla.",
-    talkId: "1"
+    name: "Tadeu Zagallo",
+    company: "Apple",
+    picture: "/tadeu-zagallo.jpg",
+    website: "https://twitter.com/tadeuzagallo",
+    talkId: "4"
   },
   "5": {
-    name: "Lin Clark",
-    company: "Mozilla",
+    name: "Peter Salomonsen",
     picture:
-      "https://pbs.twimg.com/profile_images/497876628651782146/hrCHz_ym_400x400.jpeg",
-    bio:
-      "Stuffing my head with code and turning it into Code Cartoons. Also, tinkering with WebAssembly, Rust and a little JavaScript at Mozilla",
-    talkId: "2"
+      "/peter-salomonsen.jpg",
+    website: "https://twitter.com/salomonsen_p",
+    talkId: "5"
   },
   "6": {
-    name: "Surma",
-    company: "Google",
+    name: "Johnathan Beri",
+    company: "Wasm SF",
     picture:
-      "https://pbs.twimg.com/profile_images/1203822491032018945/4p9RN-fk_400x400.jpg",
-    bio:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem maxime ratione earum dolor. Qui vero maiores quisquam, quia sed ratione esse quos sint corporis culpa, voluptate veritatis, tenetur animi? Id.",
-    talkId: "3"
+      "/johnathan-beri.jpeg",
+    website: "https://twitter.com/beriberikix",
+    talkId: "6"
   },
   "7": {
-    name: "Ashley Williams",
-    company: "Cloudflare",
-    picture: "https://avatars3.githubusercontent.com/u/1163554?s=400&v=4",
-    bio:
-      "a mess like this is easily five to ten years ahead of its time @rustlang core. webassembler @cloudflare. @rustwasm WG 👷‍♀️🦀. prev @npmjs, @nodejs, @mozilla.",
-    talkId: "1"
+    name: "Kevin Hoffman",
+    picture: "/kevin-hoffman.jpeg",
+    website: "https://twitter.com/kevinhoffman",
+    talkId: "7"
   },
   "8": {
-    name: "Lin Clark",
-    company: "Mozilla",
+    name: "Brion Vibber",
     picture:
-      "https://pbs.twimg.com/profile_images/497876628651782146/hrCHz_ym_400x400.jpeg",
-    bio:
-      "Stuffing my head with code and turning it into Code Cartoons. Also, tinkering with WebAssembly, Rust and a little JavaScript at Mozilla",
-    talkId: "2"
+      "/brion-vibber.jpg",
+    website: "https://twitter.com/brionv",
+    talkId: "8"
   },
   "9": {
-    name: "Ashley Williams",
-    company: "Cloudflare",
-    picture: "https://avatars3.githubusercontent.com/u/1163554?s=400&v=4",
-    bio:
-      "a mess like this is easily five to ten years ahead of its time @rustlang core. webassembler @cloudflare. @rustwasm WG 👷‍♀️🦀. prev @npmjs, @nodejs, @mozilla",
-    talkId: "1"
+    name: "Ben Smith",
+    company: "Google",
+    picture: "/ben-smith.jpg",
+    website: "https://twitter.com/binjimint",
+    talkId: "9"
   }
 };

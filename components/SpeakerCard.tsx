@@ -7,14 +7,14 @@ export const SpeakerSummary = styled.div`
   background: hsl(239, 50%, 25%);
   height: 140px;
   line-height: 1.8;
-  font-size: 0.78em;
+  font-size: 1em;
 
   p {
     color: rgba(255, 255, 255, 0.5);
     margin: 0;
     margin-bottom: 5px;
     font-weight: normal;
-    font-size: 1.4em;
+    font-size: 1.8em;
     padding: 0;
   }
 
@@ -38,7 +38,7 @@ export const SpeakerName = styled.div`
   color: white;
   margin: 0;
   margin: 0;
-  padding: 8px 15px;
+  padding: 10px 15px;
   font-weight: ${(props: { bold?: boolean }) => (props.bold ? 700 : "normal")};
   /* border-bottom: 7px solid rgba(255, 255, 255, 1); */
   /* background-color: rgba(255, 255, 0, 0.9); */
@@ -86,15 +86,23 @@ const SpeakerCard = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 1.6em;
+  font-size: 1.5em;
   line-height: 1.4;
-  font-weight: bold;
+  font-weight: normal;
   margin: 0px 0;
   padding: 0;
   color: rgba(255, 255, 255, 0.85);
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1280px) {
+    font-size: 1.27em;
+  }
+
+  @media screen and (max-width: 663px) {
     font-size: 1.5em;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 1.27em;
   }
 `;
 

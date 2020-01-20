@@ -22,7 +22,6 @@ const LandingPage: FC = () => (
           </Subheadline>
         </Title>
       </Hero>
-
       <Oneliner>
         A <OnelinerHighlight>one day, single track</OnelinerHighlight>,
         conference about <OnelinerHighlight>all things</OnelinerHighlight>{" "}
@@ -77,7 +76,7 @@ export const Logo = styled.img`
   flex-basis: 1280px;
   flex-shrink: 1;
   width: 1280px;
-  
+
   @media (orientation: portrait) {
     max-width: 100vw;
     max-height: 45vh;

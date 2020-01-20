@@ -13,92 +13,81 @@ export type Talk = {
 export const talks: { [id: string]: Talk } = {
   "1": {
     speakerId: "1",
-    title: "Javascript's Journey to the Edge",
-    time: {
-      start: "10.15 am",
-      end: "11.00 am"
-    },
-    abstract: (
-      <>
-        <p>
-          In September of 2008, Google’s Chromium Project released V8, a
-          JavaScript engine, as part of a browser optimization wave that
-          heralded the era of JavaScript browser applications that we both love,
-          and love to hate. Less than a year later, in 2009, Ryan Dahl announced
-          (at this very conference!) a way to run the V8 browser environment
-          outside of the browser- Node.js, a platform that held the promise of
-          unifying web application development, where both client and server
-          side development could happen in the same language - JavaScript.
-        </p>
-        <p>
-          A decade later, V8, JavaScript, and its new buddy WebAssembly, have
-          expanded to lands charted only a few years after Node.js debuted-
-          known (confusingly) as the “Edge”. In this talk, we’ll introduce what
-          the “Edge” is and why we are excited for it to revolutionize
-          computation on the web. We’ll explore how this adventurous JavaScript
-          engine, V8, is so well suited to tasks previously limited to Virtual
-          Machines, Containers, or even simply Operating Systems. Finally, we’ll
-          talk about security, Spectre, and ask ourselves the age old question,
-          “You can do it, but should you?”.
-        </p>
-        <p>
-          In true JSConf EU tradition, this talk itself is going be an exciting
-          announcement. You should come if you want to be there for the
-          beginning of a new era of the Internet.
-        </p>
-      </>
-    )
+    title: "Opening Keynote"
   },
   "2": {
     speakerId: "2",
-    title: (
-      <>
-        WebAssembly nanoprocesses: Making WebAssembly outside-the-browser secure
-        by default
-      </>
-    ),
-    time: {
-      start: "11.15 am",
-      end: "12.00 am"
-    },
+    title: "Shipping Tiny WebAssembly Builds",
+    abstract:
+      "Code size matters in many places, especially (but not only!) on the Web. This talk will present current best practices in generating small WebAssembly builds when using popular toolchains like LLVM, Emscripten, Rust, Go, and AssemblyScript."
+  },
+  "3": {
+    speakerId: "3",
+    title:
+      "Why the #wasmsummit Website isn't written in Wasm, and what that means for the future of Wasm",
     abstract: (
       <>
         <p>
-          In early November, we announced the formation of the Bytecode
-          Alliance, a new industry partnership working on WebAssembly outside
-          the browser. We have a vision of a WebAssembly ecosystem that is
-          secure by default, fixing cracks in today’s software foundations. And
-          based on advances rapidly emerging in the WebAssembly community, we
-          believe we can make this vision real.
+          WebAssembly is not here to kill JavaScript. In fact, to be successful,
+          it *must not*. But let me back up.
         </p>
+
         <p>
-          I'll talk about one of these advances—an emerging pattern of usage
-          that we've started calling a WebAssembly nanoprocess, which give you
-          most of the benefits of a process, but with much less overhead and
-          much faster communication. With this, we think we can make
-          massively-modular code reuse—like you see in npm, crates, and
-          PyPI—secure by default.
+          WebAssembly is an exciting new technology that has the ambition to
+          change how and what we program for not only the web, but everywhere.
+          In the case of the web platform, WebAssembly's promise has led many to
+          declare that WebAssembly's entrance means the death of JavaScript.
+          This belief is not only reactionary, but deeply short-sighted, and
+          likely to threaten the successful wide-spread adoption of WebAssembly.
+        </p>
+
+        <p>
+          In this talk, we'll use the WebAssembly Summit website to discuss the
+          uses and misuses of WebAssembly on the web. We'll explore the
+          historical and material conditions of the web, past and present, to
+          understand *how* and *why* the web changes and what its current
+          trajectory is. With this understanding, we'll explore how WebAssembly
+          can navigate this unique moment and discuss the practical implications
+          of the specification's growth and better tooling as WebAssembly
+          searches for its place in the web platform and beyond.
         </p>
       </>
     )
   },
-  "3": {
-    speakerId: "3",
-    title: "Polyglot WebAssembly",
-    time: {
-      start: "12.15 am",
-      end: "1.00 pm"
-    },
-    abstract: (
-      <>
-        <p>
-          The number of languages with WebAssembly support is growing. And you
-          don't have to choose just one. You can use each of them for what they
-          are good at. You can sprinkle in some C, C++, Rust, AssemblyScript
-          (and more) as enhancements for your everyday-JS.
-        </p>
-      </>
-    )
+  "4": {
+    speakerId: "4",
+    title: "JavaScriptCore's new WebAssembly interpreter",
+    abstract:
+      "In this talk, we will look at JavaScriptCore's newest WebAssembly tier, the Low Level Interpreter (LLInt). With the addition of the interpreter, JavaScriptCore now uses three tiers to execute WebAssembly: LLInt, BBQ and OMG. Because of the new interpreter, WebAssembly programs executing in JavaScriptCore now start up 3x faster. Because of the three-tiered approach, we were able to achieve this while maintaining the same throughput performance."
+  },
+  "5": {
+    speakerId: "5",
+    title: "WebAssembly Music",
+    abstract:
+      "Been playing with computer music since the 80s from the tracker era to modern soft synths and DAWs, and even writing some myself. Recently as WebAssembly  came along with excellent performance, and AudioWorklet technology in  providing low latency audio, it's finally possible to use the web for serious music production. As a programmer I like to use a programming language for expressing the music, and also for synthesizing the instruments. I compose my music in Javascript and create my instruments in AssemblyScript which is compiled to WebAssembly. It's all running in the browser. You can write the music in a live coding-environment, and you can play and record the instruments with a midi-keyboard."
+  },
+  "6": {
+    speakerId: "6",
+    title:
+      "Making it easier to make Things: WebAssembly and the Internet of Things",
+    abstract:
+      "WebAssembly is moving beyond the browser - but is it ready for IoT apps and tiny embedded devices? Yes...ish. In this talk, learn about the state of running Wasm on embedded devices (as low as 512kb of RAM & 64 MHz) and what's left to solve. Also learn where Wasm can today help with IoT protocols and tools."
+  },
+  "7": {
+    speakerId: "7",
+    title: "Building a Containerless Future with WebAssembly",
+    abstract:
+      "WebAssembly is the future of distributed computing. Its security, memory isolation, small footprint, and true portability are all advantages on the web, but become truly game-changing when used to build functions and services deployed in the cloud. This session illustrates how to host WebAssembly modules in Rust code, how to build modules in many different languages (including pros and cons of each), and how to securely grant cloud-native capabilities to these modules. Discussed in detail is the current state of the art in WebAssembly and what can be built with it today. Learn what developers can start doing now to build the containerless future where WebAssembly modules are the de-facto unit of immutable deployment in the cloud, at the edge, and even in IoT and embedded devices."
+  },
+  "8": {
+    speakerId: "8",
+    title: "WebAssembly as a <video> polyfill",
+    abstract:
+      "An introduction to Wikipedia's ogv.js media compatibility shim, which uses WebAssembly codecs to provide video file format compatibility for VP9 and AV1 video in browsers that don't play them natively. Will explore the division between the JS and Wasm parts of the code base, and how advances in emscripten and LLVM create opportunities and challenges for performance as different browsers implement different levels of the spec (threading, SIMD, etc)."
+  },
+  "9": {
+    speakerId: "9",
+    title: "Closing Keynote"
   }
 };
 
