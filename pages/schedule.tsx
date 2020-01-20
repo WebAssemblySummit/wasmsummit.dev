@@ -62,7 +62,10 @@ const SchedulePage: FC = () => (
         let itemJsx = (
           <ScheduleItem>
             <ScheduleItemTime>{item.time}</ScheduleItemTime>
-            {titleAndDescription}
+            <ScheduleItemCircle />
+            <ScheduleItemContent>
+              {titleAndDescription}
+            </ScheduleItemContent>
           </ScheduleItem>
         );
 
@@ -103,18 +106,46 @@ export const Schedule = styled.ul`
 `;
 
 export const ScheduleItem = styled.li`
-  border-left: 2px solid #FFFFFF;
-
+  display: flex;
+  flex-direction: row;
+ 
+  padding-top: 25px;
   padding-left: 10px;
   margin-bottom: 10px;
 `;
 
-export const ScheduleItemTitle = styled.h2`
-  margin-bottom: 5px;
+export const ScheduleItemTime = styled.p`
+  font-size: 1em;
+  color: #FFFFFF;
+  margin: -1px calc(2vw + 5px) 0 0;
+  @media screen and (max-width: 500px) {
+    font-size: 0.75em;
+    line-height: 1.7;
+    /* margin: 15px 0; */
+    transform-origin: center center;
+  }
 `;
 
-export const ScheduleItemTime = styled.p`
+const ScheduleItemCircle = styled.div`
+  border-radius: 100%;
+  border: 3px solid white;
+  z-index: 2;
+  margin-right: -8px;
+  background: hsla(237, 40%, 48%, 1);
+  width: 10px;
+  height: 10px;
+`;
 
+export const ScheduleItemContent = styled.p`
+  break-inside: avoid;
+  max-width: 600px;
+  flex: 1;
+  border-left: 2px dashed rgba(255, 255, 255, 0.15);
+  padding-left: calc(3vw + 10px);
+`;
+
+export const ScheduleItemTitle = styled.h2`
+  margin-bottom: 5px;
 `;
 
 export const ScheduleItemDescription = styled.p`
