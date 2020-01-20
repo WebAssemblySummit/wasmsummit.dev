@@ -44,17 +44,27 @@ const SchedulePage: FC = () => (
     <Schedule>
       {scheduleItems.map(item => {
 
-        let titleAndDescription = (
-          <>
+        let title = (
           <ScheduleItemTitle>{item.title}</ScheduleItemTitle>
-          <ScheduleItemDescription>{item.description}</ScheduleItemDescription>
-          </>
         );
 
+        let description;
+        if (item.description) {
+          description = (
+            <ScheduleItemDescription>{item.description}</ScheduleItemDescription>
+          )
+        }
+
+        let itemContent = (
+          <>
+            {title}
+            {description}
+          </>
+        );
         if (item.link) {
-          titleAndDescription = (
+          itemContent = (
             <ScheduleLink href={item.link}>
-              {titleAndDescription}
+              {itemContent}
             </ScheduleLink>
           )
         }
@@ -64,7 +74,7 @@ const SchedulePage: FC = () => (
             <ScheduleItemTime>{item.time}</ScheduleItemTime>
             <ScheduleItemCircle />
             <ScheduleItemContent>
-              {titleAndDescription}
+              {itemContent}
             </ScheduleItemContent>
           </ScheduleItem>
         );
@@ -89,6 +99,7 @@ export const Background = styled.div`
 `;
 
 export const Headline = styled.h1`
+  text-align: center;
   font-size: 3em;
   margin-top: 3vh;
   margin-bottom: 0vh;
@@ -100,6 +111,9 @@ export const Container = styled.div`
 `;
 
 export const Schedule = styled.ul`
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
   list-style-type: none;
   padding: 0px;
   padding-left: 0px;
@@ -118,6 +132,7 @@ export const ScheduleItemTime = styled.p`
   font-size: 1em;
   color: #FFFFFF;
   margin: -1px calc(2vw + 5px) 0 0;
+  width: 60px;
   @media screen and (max-width: 500px) {
     font-size: 0.75em;
     line-height: 1.7;
@@ -129,7 +144,6 @@ export const ScheduleItemTime = styled.p`
 const ScheduleItemCircle = styled.div`
   border-radius: 100%;
   border: 3px solid white;
-  z-index: 2;
   margin-right: -8px;
   background: hsla(237, 40%, 48%, 1);
   width: 10px;
@@ -142,14 +156,33 @@ export const ScheduleItemContent = styled.p`
   flex: 1;
   border-left: 2px dashed rgba(255, 255, 255, 0.15);
   padding-left: calc(3vw + 10px);
+  margin-left: -1px;
 `;
 
 export const ScheduleItemTitle = styled.h2`
-  margin-bottom: 5px;
+  font-size: 1.5em;
+  margin-top: 0;
+  padding-left: 5px;
+  font-weight: 700;
+  text-shadow: 2px 4px 5px hsla(237, 80%, 35%, 0.3);
+
+
+
+  @media screen and (max-width: 500px) {
+    font-size: 1.4em;
+  }
 `;
 
 export const ScheduleItemDescription = styled.p`
+  font-size: 1.3em;
   margin-top: 0px;
+  margin-bottom: 15px;
+  padding: 0 15px 0 5px;
+  font-weight: normal;
+  text-shadow: 2px 4px 5px hsla(237, 80%, 35%, 0.3);
+
+  padding-top: 30px;
+  border-top: 3px solid rgba(255, 255, 255, 0.4);
 `;
 
 export const ScheduleLink = styled.a`
