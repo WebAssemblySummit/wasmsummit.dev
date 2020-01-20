@@ -161,7 +161,7 @@ const textNavItems: {
   link?: string;
 }[] = [
   /* { label: "News", link: "/news" }, */
-  { label: "Schedule", link: "/schedule" },
+  /*{ label: "Schedule", link: "/schedule" },*/
   { label: "Speakers", link: "/speakers" },
   {
     label: "About",
@@ -175,11 +175,11 @@ const iconNavItems: {
   url?: string;
   external?: boolean;
 }[] = [
-  {
+  /*{
     Icon: FaRegCalendarAlt,
     label: "Schedule",
     url: "/schedule"
-  },
+  },*/
   {
     Icon: FaQuestionCircle,
     label: "About",
@@ -196,12 +196,12 @@ const iconNavItems: {
     url: "https://goo.gl/maps/uvivRUCkjAmC5Jqo6",
     external: true
   },
-  {
+  /*{
     Icon: FaDiscord,
     label: "Chat",
     url: "http://discordapp.com/invite/nEFErF8",
     external: true
-  },
+  },*/
   {
     Icon: FaTwitter,
     label: "Twitter",

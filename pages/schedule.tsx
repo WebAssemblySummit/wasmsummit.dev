@@ -42,7 +42,7 @@ const SchedulePage: FC = () => (
   <Container>
     <Headline>{title}</Headline>
     <Schedule>
-      {scheduleItems.map(item => {
+      {scheduleItems.map((item, index) => {
 
         let title = (
           <ScheduleItemTitle>{item.title}</ScheduleItemTitle>
@@ -70,7 +70,7 @@ const SchedulePage: FC = () => (
         }
 
         let itemJsx = (
-          <ScheduleItem>
+          <ScheduleItem key={index}>
             <ScheduleItemTime>{item.time}</ScheduleItemTime>
             <ScheduleItemCircle />
             <ScheduleItemContent>
@@ -150,12 +150,15 @@ const ScheduleItemCircle = styled.div`
   height: 10px;
 `;
 
-export const ScheduleItemContent = styled.p`
+export const ScheduleItemContent = styled.div`
   break-inside: avoid;
   max-width: 600px;
   flex: 1;
   border-left: 2px dashed rgba(255, 255, 255, 0.15);
   padding-left: calc(3vw + 10px);
+
+  margin-top: 1em;
+  margin-bottom: 1em;
   margin-left: -1px;
 `;
 
