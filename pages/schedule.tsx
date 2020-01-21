@@ -103,6 +103,12 @@ export const Headline = styled.h1`
   font-size: 3em;
   margin-top: 3vh;
   margin-bottom: 0vh;
+
+  @media screen and (max-width: 500px) {
+    font-size: 2.5em;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
 `;
 
 export const Container = styled.div`
@@ -123,7 +129,6 @@ export const ScheduleItem = styled.li`
   display: flex;
   flex-direction: row;
  
-  padding-top: 25px;
   padding-left: 10px;
   margin-bottom: 10px;
 `;
@@ -163,29 +168,24 @@ export const ScheduleItemContent = styled.div`
 `;
 
 export const ScheduleItemTitle = styled.h2`
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin-top: 0;
   padding-left: 5px;
+  font-weight: normal;
+  text-shadow: 2px 4px 5px hsla(237, 80%, 35%, 0.3);
+`;
+
+export const ScheduleItemDescription = styled.p`
+  font-size: 1.5em;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  padding: 0 15px 0 5px;
   font-weight: 700;
   text-shadow: 2px 4px 5px hsla(237, 80%, 35%, 0.3);
-
-
 
   @media screen and (max-width: 500px) {
     font-size: 1.4em;
   }
-`;
-
-export const ScheduleItemDescription = styled.p`
-  font-size: 1.3em;
-  margin-top: 0px;
-  margin-bottom: 15px;
-  padding: 0 15px 0 5px;
-  font-weight: normal;
-  text-shadow: 2px 4px 5px hsla(237, 80%, 35%, 0.3);
-
-  padding-top: 30px;
-  border-top: 3px solid rgba(255, 255, 255, 0.4);
 `;
 
 export const ScheduleLink = styled.a`
