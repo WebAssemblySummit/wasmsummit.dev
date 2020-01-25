@@ -2,59 +2,56 @@ import { FC, ReactNode } from "react";
 import styled from "styled-components";
 import { NavBar, navbarBlue } from "../components";
 
-import { schedule } from '../data/schedule';
+import { schedule } from "../data/schedule";
 
 const title = "Schedule";
 
 const SchedulePage: FC = () => (
   <>
-  <Background />
-  <NavBar title={title} backgroundColor={navbarBlue} bottom />
-  <Container>
-    <Headline>{title}</Headline>
-    <Schedule>
-      {schedule.map((item, index) => {
+    <Background />
+    <NavBar title={title} backgroundColor={navbarBlue} bottom />
+    <Container>
+      <Headline>{title}</Headline>
+      <Schedule>
+        {schedule.map((item, index) => {
+          let title = <ScheduleItemTitle>{item.title}</ScheduleItemTitle>;
 
-        let title = (
-          <ScheduleItemTitle>{item.title}</ScheduleItemTitle>
-        );
+          let description;
+          if (item.description) {
+            description = (
+              <ScheduleItemDescription>
+                {item.description}
+              </ScheduleItemDescription>
+            );
+          }
 
-        let description;
-        if (item.description) {
-          description = (
-            <ScheduleItemDescription>{item.description}</ScheduleItemDescription>
-          )
-        }
+          let itemContent = (
+            <>
+              {title}
+              {description}
+            </>
+          );
+          if (item.link) {
+            itemContent = (
+              <ScheduleLink href={item.link}>{itemContent}</ScheduleLink>
+            );
+          }
 
-        let itemContent = (
-          <>
-            {title}
-            {description}
-          </>
-        );
-        if (item.link) {
-          itemContent = (
-            <ScheduleLink href={item.link}>
-              {itemContent}
-            </ScheduleLink>
-          )
-        }
+          let itemJsx = (
+            <ScheduleItem key={index}>
+              <ScheduleItemTimeDesktop>{item.time}</ScheduleItemTimeDesktop>
+              <ScheduleItemCircle />
+              <ScheduleItemContent>
+                <ScheduleItemTimeMobile>{item.time}</ScheduleItemTimeMobile>
+                {itemContent}
+              </ScheduleItemContent>
+            </ScheduleItem>
+          );
 
-        let itemJsx = (
-          <ScheduleItem key={index}>
-            <ScheduleItemTimeDesktop>{item.time}</ScheduleItemTimeDesktop>
-            <ScheduleItemCircle />
-            <ScheduleItemContent>
-              <ScheduleItemTimeMobile>{item.time}</ScheduleItemTimeMobile>
-              {itemContent}
-            </ScheduleItemContent>
-          </ScheduleItem>
-        );
-
-        return itemJsx;
-      })}
-    </Schedule>
-  </Container>
+          return itemJsx;
+        })}
+      </Schedule>
+    </Container>
   </>
 );
 
@@ -91,7 +88,8 @@ export const Container = styled.div`
 export const Schedule = styled.ul`
   margin-left: auto;
   margin-right: auto;
-  max-width: 700px;
+  margin-top: 25px;
+  max-width: 900px;
   list-style-type: none;
   padding: 0px;
   padding-left: 0px;
@@ -100,14 +98,14 @@ export const Schedule = styled.ul`
 export const ScheduleItem = styled.li`
   display: flex;
   flex-direction: row;
- 
+
   padding-left: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 `;
 
 export const ScheduleItemTimeDesktop = styled.p`
   font-size: 1em;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: -1px calc(2vw + 5px) 0 0;
   width: 60px;
   @media screen and (max-width: 500px) {
@@ -118,7 +116,7 @@ export const ScheduleItemTimeDesktop = styled.p`
 export const ScheduleItemTimeMobile = styled.p`
   font-size: 1em;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #ffffff;
   width: 60px;
   line-height: 1.7;
   padding-left: 5px;
@@ -142,7 +140,7 @@ const ScheduleItemCircle = styled.div`
 
 export const ScheduleItemContent = styled.div`
   break-inside: avoid;
-  max-width: 600px;
+  max-width: 900px;
   flex: 1;
   border-left: 2px dashed rgba(255, 255, 255, 0.15);
   padding-left: calc(3vw + 10px);
@@ -154,33 +152,35 @@ export const ScheduleItemContent = styled.div`
 
 export const ScheduleItemTitle = styled.h2`
   font-size: 1.3em;
-  margin-top: 0;
+  margin-top: 5px;
   padding-left: 5px;
   font-weight: normal;
   text-shadow: 2px 4px 5px hsla(237, 80%, 35%, 0.3);
+
+  @media screen and (max-width: 500px) {
+    font-size: 1.3em;
+    font-weight: 700;
+  }
 `;
 
 export const ScheduleItemDescription = styled.p`
   font-size: 1.5em;
-  margin-top: 0px;
-  margin-bottom: 15px;
+  margin-top: 0;
+  margin-bottom: 25px;
   padding: 0 15px 0 5px;
   font-weight: 700;
   text-shadow: 2px 4px 5px hsla(237, 80%, 35%, 0.3);
 
   @media screen and (max-width: 500px) {
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: normal;
   }
 `;
 
 export const ScheduleLink = styled.a`
-  color: #FFFFFF;
+  color: #ffffff;
 
   :hover {
     text-decoration: underline;
   }
 `;
-
-
-
