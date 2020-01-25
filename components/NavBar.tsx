@@ -156,18 +156,6 @@ const Logo = styled.img`
   margin: 0 15px;
 `;
 
-const textNavItems: {
-  label: string;
-  link?: string;
-}[] = [
-  { label: "Schedule", link: "/schedule" },
-  { label: "Speakers", link: "/speakers" },
-  {
-    label: "About",
-    link: "/about"
-  }
-];
-
 const iconNavItems: {
   Icon: IconType;
   label?: string;
@@ -175,14 +163,14 @@ const iconNavItems: {
   external?: boolean;
 }[] = [
   {
-    Icon: FaRegCalendarAlt,
-    label: "Schedule",
-    url: "/schedule"
-  },
-  {
     Icon: FaQuestionCircle,
     label: "About",
     url: "/about"
+  },
+  {
+    Icon: FaRegCalendarAlt,
+    label: "Schedule",
+    url: "/schedule"
   },
   {
     Icon: GoPerson,
