@@ -116,9 +116,15 @@ export const faq: {
     question: "Will you have a livestream?",
     answer: (
       <>
-        Yes, the summit will be livestreamed on Youtube and posted here once
-        available. So no worries, even if you are not able to attend, you will
-        be able to follow the event.
+        Yes, the summit will be livestreamed on our{" "}
+        <a
+          href="https://www.youtube.com/channel/UCh9PqDCdacsTpyRaIryhA8g"
+          target="_blank"
+        >
+          Youtube channel
+        </a>
+        . So no worries, even if you are not able to attend, you will be able to
+        follow the event.
       </>
     )
   },
@@ -126,10 +132,15 @@ export const faq: {
     question: "Will you record the talks?",
     answer: (
       <>
-        Yes, the talks will be uploaded on Youtube and posted here once
-        available. So no worries, even if you cannot attend or follow the
-        livestream, you will be able to catch up on the talks later once they
-        are published.
+        Yes, the talks will be uploaded on our{" "}
+        <a
+          href="https://www.youtube.com/channel/UCh9PqDCdacsTpyRaIryhA8g"
+          target="_blank"
+        >
+          Youtube channel
+        </a>
+        . So no worries, even if you cannot attend or follow the livestream, you
+        will be able to catch up on the talks later once they are published.
       </>
     )
   },
