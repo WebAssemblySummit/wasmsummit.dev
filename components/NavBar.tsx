@@ -156,39 +156,26 @@ const Logo = styled.img`
   margin: 0 15px;
 `;
 
-const textNavItems: {
-  label: string;
-  link?: string;
-}[] = [
-  /* { label: "News", link: "/news" }, */
-  /*{ label: "Schedule", link: "/schedule" },*/
-  { label: "Speakers", link: "/speakers" },
-  {
-    label: "About",
-    link: "/about"
-  }
-];
-
 const iconNavItems: {
   Icon: IconType;
   label?: string;
   url?: string;
   external?: boolean;
 }[] = [
-  /*{
-    Icon: FaRegCalendarAlt,
-    label: "Schedule",
-    url: "/schedule"
-  },*/
-  {
-    Icon: FaQuestionCircle,
-    label: "About",
-    url: "/about"
-  },
   {
     Icon: GoPerson,
     label: "Speakers",
     url: "/speakers"
+  },
+  {
+    Icon: FaRegCalendarAlt,
+    label: "Schedule",
+    url: "/schedule"
+  },
+  {
+    Icon: FaQuestionCircle,
+    label: "About",
+    url: "/about"
   },
   {
     Icon: FaMapMarkerAlt,
