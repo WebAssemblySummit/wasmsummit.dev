@@ -163,9 +163,9 @@ const iconNavItems: {
   external?: boolean;
 }[] = [
   {
-    Icon: FaQuestionCircle,
-    label: "About",
-    url: "/about"
+    Icon: GoPerson,
+    label: "Speakers",
+    url: "/speakers"
   },
   {
     Icon: FaRegCalendarAlt,
@@ -173,15 +173,15 @@ const iconNavItems: {
     url: "/schedule"
   },
   {
-    Icon: GoPerson,
-    label: "Speakers",
-    url: "/speakers"
-  },
-  {
     Icon: FaMapMarkerAlt,
     label: "Venue",
     url: "https://goo.gl/maps/uvivRUCkjAmC5Jqo6",
     external: true
+  },
+  {
+    Icon: FaQuestionCircle,
+    label: "About",
+    url: "/about"
   },
   /*{
     Icon: FaDiscord,
