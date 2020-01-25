@@ -2,38 +2,9 @@ import { FC, ReactNode } from "react";
 import styled from "styled-components";
 import { NavBar, navbarBlue } from "../components";
 
+import { schedule } from '../data/schedule';
+
 const title = "Schedule";
-
-type mockScheduleItem = {
-  time: string,
-  title: string,
-  description?: string
-  link?: string
-}
-
-const scheduleItems: mockScheduleItem[] = [
-  {
-    time: "8:00am",
-    title: "Breakfast"
-  },
-  {
-    time: "9:15am",
-    title: "Introductions"
-  },
-  {
-    time: "9:30am",
-    title: "Lin Clark",
-    description: "Opening Keynote",
-    link: "/speakers/1/"
-  },
-  {
-    time: "10:15am",
-    title: "Alon Zakai",
-    description: "Shipping Tiny WebAssembly Builds",
-    link: "/speakers/2/"
-  }
-
-];
 
 const SchedulePage: FC = () => (
   <>
@@ -42,7 +13,7 @@ const SchedulePage: FC = () => (
   <Container>
     <Headline>{title}</Headline>
     <Schedule>
-      {scheduleItems.map((item, index) => {
+      {schedule.map((item, index) => {
 
         let title = (
           <ScheduleItemTitle>{item.title}</ScheduleItemTitle>
@@ -71,9 +42,10 @@ const SchedulePage: FC = () => (
 
         let itemJsx = (
           <ScheduleItem key={index}>
-            <ScheduleItemTime>{item.time}</ScheduleItemTime>
+            <ScheduleItemTimeDesktop>{item.time}</ScheduleItemTimeDesktop>
             <ScheduleItemCircle />
             <ScheduleItemContent>
+              <ScheduleItemTimeMobile>{item.time}</ScheduleItemTimeMobile>
               {itemContent}
             </ScheduleItemContent>
           </ScheduleItem>
@@ -133,16 +105,29 @@ export const ScheduleItem = styled.li`
   margin-bottom: 10px;
 `;
 
-export const ScheduleItemTime = styled.p`
+export const ScheduleItemTimeDesktop = styled.p`
   font-size: 1em;
   color: #FFFFFF;
   margin: -1px calc(2vw + 5px) 0 0;
   width: 60px;
   @media screen and (max-width: 500px) {
-    font-size: 0.75em;
-    line-height: 1.7;
-    /* margin: 15px 0; */
-    transform-origin: center center;
+    display: none;
+  }
+`;
+
+export const ScheduleItemTimeMobile = styled.p`
+  font-size: 1em;
+  font-weight: 700;
+  color: #FFFFFF;
+  width: 60px;
+  line-height: 1.7;
+  padding-left: 5px;
+  margin-top: -1.3em;
+  margin-bottom: 1em;
+
+  display: none;
+  @media screen and (max-width: 500px) {
+    display: block;
   }
 `;
 
@@ -185,6 +170,7 @@ export const ScheduleItemDescription = styled.p`
 
   @media screen and (max-width: 500px) {
     font-size: 1.4em;
+    font-weight: normal;
   }
 `;
 
