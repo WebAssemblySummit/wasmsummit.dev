@@ -173,15 +173,15 @@ const iconNavItems: {
     url: "/schedule"
   },
   {
+    Icon: FaQuestionCircle,
+    label: "About",
+    url: "/about"
+  },
+  {
     Icon: FaMapMarkerAlt,
     label: "Venue",
     url: "https://goo.gl/maps/uvivRUCkjAmC5Jqo6",
     external: true
-  },
-  {
-    Icon: FaQuestionCircle,
-    label: "About",
-    url: "/about"
   },
   /*{
     Icon: FaDiscord,
