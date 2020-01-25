@@ -160,8 +160,7 @@ const textNavItems: {
   label: string;
   link?: string;
 }[] = [
-  /* { label: "News", link: "/news" }, */
-  /*{ label: "Schedule", link: "/schedule" },*/
+  { label: "Schedule", link: "/schedule" },
   { label: "Speakers", link: "/speakers" },
   {
     label: "About",
@@ -175,11 +174,11 @@ const iconNavItems: {
   url?: string;
   external?: boolean;
 }[] = [
-  /*{
+  {
     Icon: FaRegCalendarAlt,
     label: "Schedule",
     url: "/schedule"
-  },*/
+  },
   {
     Icon: FaQuestionCircle,
     label: "About",
