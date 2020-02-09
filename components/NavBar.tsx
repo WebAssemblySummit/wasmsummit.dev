@@ -189,16 +189,18 @@ const iconNavItems: {
     url: "http://discordapp.com/invite/nEFErF8",
     external: true
   },*/
-  {
+  /* {
     Icon: FaTwitter,
     label: "Twitter",
     url: "https://twitter.com/search?q=%23WasmSummit&src=typed_query",
     external: true
-  }
-  /* {
-    Icon: FaYoutube,
-    label: "Youtube"
   } */
+  {
+    Icon: FaYoutube,
+    label: "Livestream",
+    url: "https://youtu.be/WZp0sPDvWfw",
+    external: true
+  }
 ];
 
 const HomeButton = styled.div`
