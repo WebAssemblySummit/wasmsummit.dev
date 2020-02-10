@@ -30,10 +30,7 @@ const LandingPage: FC = () => (
       </Oneliner>
 
       <CallToAction>
-        <Button
-          primary
-          href="https://youtu.be/WZp0sPDvWfw"
-        >
+        <Button primary href="https://youtu.be/WZp0sPDvWfw">
           Livestream
         </Button>
       </CallToAction>
@@ -47,7 +44,7 @@ const View = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 65px);
+  min-height: calc(100vh);
   background: linear-gradient(
     180deg,
     hsla(239, 60%, 48%, 0) 20%,
@@ -61,7 +58,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0;
-  margin: 0;
+  margin-top: 3vw;
+  margin-bottom: 60px;
 `;
 
 const Hero = styled.div`
@@ -94,7 +92,7 @@ export const Logo = styled.img`
 `;
 
 const Title = styled.div`
-  margin: 0 0 3.5vh 0;
+  margin: 5px 0 3.5vh 0;
 
   @media (orientation: portrait) {
     padding: 0 12.5vw;
@@ -199,12 +197,12 @@ const OnelinerHighlight = styled.span`
 `;
 
 const CallToAction = styled.div`
-  margin: 0 auto;
+  margin: 10px auto;
   text-align: center;
 `;
 
-    const Button = styled.a`
-  font-size: 1.6rem;
+const Button = styled.a`
+  font-size: 1.4rem;
   padding: 15px 20px;
   background: ${(props: { primary?: boolean }) =>
     props.primary ? "#2D16A4" : "#fff"};
@@ -220,8 +218,8 @@ const CallToAction = styled.div`
     transform: scale(1.07);
   }
   @media (max-width: 768px) {
+    font-size: 1.3rem;
     padding: 10px 20px;
     margin: 10px 5px;
   }
 `;
-
