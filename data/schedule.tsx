@@ -17,7 +17,7 @@ export const schedule: ScheduleDataItem[] = [
   {
     time: "9:15am",
     title: "Lin Clark",
-    description: "Opening Keynote",
+    description: "WebAssembly: Building a new kind of ecosystem",
     link: "/speakers/1/"
   },
   {
