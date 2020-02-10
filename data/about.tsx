@@ -68,7 +68,6 @@ export const faq: {
           <li>Michael Hablich</li>
           <li>Surma</li>
           <li>Thomas Tränkler</li>
-          <li>Till Schneidereit</li>
         </ul>
       </>
     )
