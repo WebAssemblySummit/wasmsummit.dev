@@ -2,6 +2,8 @@ import { FC } from "react";
 import styled from "styled-components";
 import { NavBar, navbarBlue } from "../components";
 
+// Dummy comment
+
 const LandingPage: FC = () => (
   <View>
     <NavBar backgroundColor={navbarBlue} bottom />
