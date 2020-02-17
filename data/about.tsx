@@ -83,12 +83,6 @@ export const faq: {
         </a>
         . <br />
         <br />
-        If you want to get in touch with one of the organizers directly, you can
-        use these phone numbers:
-        <ul>
-          <li>Ashley: <a href="tel:1-669-222-9296">+1 (908) 418 2532</a></li>
-          <li>Surma: <a href="tel:1-669-222-9296">+1 (669) 222 9296</a></li>
-        </ul>
         Thanks for all the support from the WebAssembly community!
       </>
     )
