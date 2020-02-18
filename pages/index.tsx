@@ -33,7 +33,10 @@ const LandingPage: FC = () => (
 
       <CallToAction>
         <Button primary href="https://youtu.be/WZp0sPDvWfw">
-          Livestream
+          Watch the recording
+        </Button>
+        <Button primary href="https://photos.google.com/share/AF1QipPBVFpXLx0OVpyk0U4KhddBE-69EXulgSEzLq8E5RYlkUvqDtsxL-xF1SdgBG5UUA?key=Q1c2cHlSS2RWNFZBVE9DOVhSamw4WXoxYThnU2l3">
+          See the photos
         </Button>
       </CallToAction>
     </Container>
