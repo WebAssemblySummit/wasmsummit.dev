@@ -164,7 +164,7 @@ const iconNavItems: {
 }[] = [
   {
     Icon: GoPerson,
-    label: "Speakers",
+    label: "Talks",
     url: "/speakers"
   },
   {
@@ -183,24 +183,24 @@ const iconNavItems: {
     url: "https://goo.gl/maps/uvivRUCkjAmC5Jqo6",
     external: true
   },
-  /*{
+  {
     Icon: FaDiscord,
     label: "Chat",
     url: "http://discordapp.com/invite/nEFErF8",
     external: true
-  },*/
+  }
   /* {
     Icon: FaTwitter,
     label: "Twitter",
     url: "https://twitter.com/search?q=%23WasmSummit&src=typed_query",
     external: true
   } */
-  {
+  /*  {
     Icon: FaYoutube,
-    label: "Livestream",
+    label: "Videos",
     url: "https://youtu.be/WZp0sPDvWfw",
     external: true
-  }
+  }*/
 ];
 
 const HomeButton = styled.div`

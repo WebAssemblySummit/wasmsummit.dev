@@ -32,10 +32,10 @@ const LandingPage: FC = () => (
       </Oneliner>
 
       <CallToAction>
-        <Button primary href="https://youtu.be/WZp0sPDvWfw">
-          Watch the recording
+        <Button primary href="https://www.youtube.com/playlist?list=PL6ed-L7Ni0yQ1pCKkw1g3QeN2BQxXvCPK">
+          Watch the talks
         </Button>
-        <Button primary href="https://photos.google.com/share/AF1QipPBVFpXLx0OVpyk0U4KhddBE-69EXulgSEzLq8E5RYlkUvqDtsxL-xF1SdgBG5UUA?key=Q1c2cHlSS2RWNFZBVE9DOVhSamw4WXoxYThnU2l3">
+        <Button href="https://photos.google.com/share/AF1QipPBVFpXLx0OVpyk0U4KhddBE-69EXulgSEzLq8E5RYlkUvqDtsxL-xF1SdgBG5UUA?key=Q1c2cHlSS2RWNFZBVE9DOVhSamw4WXoxYThnU2l3">
           See the photos
         </Button>
       </CallToAction>
