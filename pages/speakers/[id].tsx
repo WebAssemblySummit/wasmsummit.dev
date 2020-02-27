@@ -72,9 +72,9 @@ const SpeakerPage: FC = () => {
                 talk.time.start &&
                 talk.time.end &&
                 `${talk.time && talk.time.start} - ${talk.time &&
-                  talk.time.end}`}
+                talk.time.end}`}
             </SectionSubHeading>
-
+            <YoutubeEmbed embedId={talk.embedId} />
             <SectionContent>{talk.abstract}</SectionContent>
           </Section>
         </Columns>
@@ -82,6 +82,19 @@ const SpeakerPage: FC = () => {
     </>
   );
 };
+
+const YoutubeEmbed: FC<{ embedId: string }> = ({ embedId }) => {
+  return (
+    <iframe
+      width="100%"
+      height="450"
+      style={{ marginBottom: "20px" }}
+      src={`https://www.youtube.com/embed/${embedId}?list=PL6ed-L7Ni0yQ1pCKkw1g3QeN2BQxXvCPK`}
+      frameBorder="0"
+      allowFullScreen
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe >
+  )
+}
 
 export default SpeakerPage;
 
