@@ -1,0 +1,25 @@
+{
+  "name": "webassembly-summit.org",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/WebAssemblySummit/webassembly-summit.org.git"
+  },
+  "keywords": [],
+  "author": "Surma <surma@surma.dev>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/WebAssemblySummit/webassembly-summit.org/issues"
+  },
+  "homepage": "https://webassembly-summit.org",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.1.2"
+  }
+}
