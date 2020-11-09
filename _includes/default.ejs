@@ -1,0 +1,33 @@
+<!doctype HTML>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="minimum-scale=1, width=device-width" />
+	<meta name="theme-color" content="#3138c4" />
+	<meta property="og:url" content="<%= meta.canonical_url %>" />
+	<meta property="og:title" content="<%= meta.site_name %> <%= meta.year %>" />
+	<meta name="twitter:title" content="<%= meta.site_name %> <%= meta.year %>" />
+	<title><%= meta.site_name %> <%= meta.year %></title>
+	<meta property="og:type" content="article" />
+	<!-- <meta property="og:image" content="TODO" /> -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<!-- <meta name="twitter:image" content="TODO" /> -->
+	<meta property="og:description" content="<%= meta.site_name %> <%= meta.year %>" />
+	<meta name="twitter:description" content="<%= meta.site_name %> <%= meta.year %>" />
+	<meta name="twitter:site" content="<%= meta.twitter %>" />
+	<link rel="icon" type="image/png" href="assets/favicon.png"/>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<header>
+	</header>
+	<main lang="en">
+	  <%- content %>
+	</main>
+	<footer>
+		<% for (const social of ["twitter", "youtube", "github", "discord"]) { %>
+			<a href="<%= meta[social]; %>" class="social <%= social %>" rel="noopener noreferrer" target="_blank">
+					<span class="icon" style="--image: url(assets/<%= social; %>.svg)" />
+			</a>
+		<% } %>
+	</footer>
+</body>
