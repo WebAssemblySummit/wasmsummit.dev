@@ -3,7 +3,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 
 module.exports = withBundleAnalyzer({
-  exportTrailingSlash: true,
+  trailingSlash: true,
   exportPathMap: async function() {
     const paths = {
       "/": { page: "/" },
@@ -15,7 +15,7 @@ module.exports = withBundleAnalyzer({
     [1, 2, 3, 4, 5, 6, 7, 8, 9].forEach(id => {
       paths[`/speakers/${id}`] = {
         page: "/speakers/[id]",
-        query: { id }
+        //query: { id }
       };
     });
 
