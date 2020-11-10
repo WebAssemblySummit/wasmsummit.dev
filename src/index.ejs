@@ -1,14 +1,66 @@
 ---
 layout: default.ejs
 ---
+<style>
+	#landingpage {
+		padding: 1rem;
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
+	#landingpage .logo {
+		margin-bottom: 1rem;
+	}
+	#landingpage h1 {
+		color: var(--white);
+		margin: 0;
+		text-align: center;
+	}
+	#landingpage .year {
+		color: var(--offwhite);
+	}
+	#landingpage .meta {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+	#landingpage .meta li {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: .5rem 0;
+	}
+	#landingpage .meta .icon {
+		margin-right: .5rem;
+	}
+	#landingpage .cta {
+		display: block;
+		margin-top: 1rem;
+	}
+	#landingpage .text {
+		display: grid;
+		align-content: center;
+	}
+	@media (min-width: 720px) {
+		#landingpage {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows:
+		}
+		#landingpage .logo {
+			grid-row: 1 / -1;
+		}
+	}
+</style>
 <section id="landingpage">
 	<img src="assets/logo.svg" class="logo">
-	<div class="test">
-		<h1 class="name"><%= meta.site_name %></h1>
-		<h2 class="year"><%= meta.year %></h2>
+	<div class="text">
+		<h1 class="name">WebAssembly</h1>
+		<h1 class="name2">Summit <span class="year"><%= meta.year %></span></h1>
 		<ul class="meta">
-			<li> <span class="icon" style="--image: url(assets/date.svg)"></span> April-ish 2021</li>
-			<li> <span class="icon" style="--image: url(assets/location.svg)"></span> Everywhere!</li>
+			<li><span class="icon" style="--image: url(assets/date.svg)"></span>April-ish 2021</li>
+			<li><span class="icon" style="--image: url(assets/location.svg)"></span>Discord &amp; YouTube</li>
 		</ul>
+		<a href="<%=meta.cfp%>" class="cta">
+			Submit your talk
+		</a>
 	</div>
 </section>
