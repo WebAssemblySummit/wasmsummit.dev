@@ -1,4 +1,4 @@
-<!doctype HTML>
+<!DOCTYPE html>
 <meta charset="utf-8" />
 <meta name="viewport" content="minimum-scale=1, width=device-width" />
 <meta name="theme-color" content="#3138c4" />
@@ -7,149 +7,183 @@
 <meta name="twitter:title" content="<%= meta.site_name %> <%= meta.year %>" />
 <title><%= meta.site_name %> <%= meta.year %></title>
 <meta property="og:type" content="article" />
-<meta property="og:image" content="<%= meta.canonical_url %>/social.png" /> 
+<meta property="og:image" content="<%= meta.canonical_url %>/social.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="<%= meta.canonical_url %>/social.png" />
-<meta property="og:description" content="<%= meta.site_name %> <%= meta.year %>" />
-<meta name="twitter:description" content="<%= meta.site_name %> <%= meta.year %>" />
+<meta
+  property="og:description"
+  content="<%= meta.site_name %> <%= meta.year %>"
+/>
+<meta
+  name="twitter:description"
+  content="<%= meta.site_name %> <%= meta.year %>"
+/>
 <meta name="twitter:site" content="<%= meta.twitter %>" />
-<link rel="icon" type="image/png" href="assets/favicon.png"/>
+<link rel="icon" type="image/png" href="assets/favicon.png" />
 <style>
-:root {
-	<% for (const [name, val] of Object.entries(meta.colors)) { %>
-			--<%=name%>: <%=val%>;
-	<% } %>
-}
+  :root {
+  	<% for (const [name, val] of Object.entries(meta.colors)) { %>
+  			--<%=name%>: <%=val%>;
+  	<% } %>
+  }
 
-@font-face {
-	font-family: "IBM";
-	font-weight: normal;
-	font-style: normal;
-	src: url("../assets/fonts/IBMPlexSans-Regular.ttf");
-}
+  @font-face {
+  	font-family: "IBM";
+  	font-weight: normal;
+  	font-style: normal;
+  	src: url("../assets/fonts/IBMPlexSans-Regular.ttf");
+  }
 
-@font-face {
-	font-family: "IBM";
-	font-weight: bold;
-	font-style: normal;
-	src: url("../assets/fonts/IBMPlexSans-Bold.ttf");
-}
+  @font-face {
+  	font-family: "IBM";
+  	font-weight: bold;
+  	font-style: normal;
+  	src: url("../assets/fonts/IBMPlexSans-Bold.ttf");
+  }
 
-@font-face {
-	font-family: "IBM";
-	font-weight: normal;
-	font-style: italic;
-	src: url("../assets/fonts/IBMPlexSans-Italic.ttf");
-}
+  @font-face {
+  	font-family: "IBM";
+  	font-weight: normal;
+  	font-style: italic;
+  	src: url("../assets/fonts/IBMPlexSans-Italic.ttf");
+  }
 
-html {
-	font-family: "IBM";
-	font-size: 16px;
-	background: var(--dark-blue);
-	color: var(--offwhite);
-	height: 100%;
-}
-@media (min-width: 720px) {
-	html {
-		font-size: 24px;
-	}
-}
-body {
-	margin: 0;
-	background: var(--blue);
-	height: 100%;
-	display: grid;
-	grid-template-rows: min-content 1fr min-content;
-}
-main {
-	padding: 1rem;
-	display: grid;
-	align-content: center;
-	justify-content: stretch;
-}
+  html {
+  	font-family: "IBM";
+  	font-size: 16px;
+  	background: var(--dark-blue);
+  	color: var(--offwhite);
+  	height: 100%;
+  }
+  @media (min-width: 720px) {
+  	html {
+  		font-size: 24px;
+  	}
+  }
+  body {
+  	margin: 0;
+  	background: var(--blue);
+  	min-height: 100%;
+  	display: grid;
+  	grid-template-rows: min-content 1fr min-content;
+  }
+  main {
+  	padding: 1rem;
+  	display: grid;
+  	align-content: center;
+  	justify-content: stretch;
+  }
 
-h1 {
-	font-size: 2.5rem;
-	text-shadow: rgba(0, 0, 0, 0.25) 1px 4px 10px;
-	color: var(--white);
-}
+  h1 {
+  	font-size: 2.5rem;
+  	text-shadow: rgba(0, 0, 0, 0.25) 1px 4px 10px;
+  	color: var(--white);
+  }
 
-footer, header {
-    background: var(--dark-blue);
-    padding: 1rem;
-	box-shadow: rgba(15, 2, 49, 0.35) 0px 5px 5px inset;
-	display: flex;
-	flex-direction: column;
-}
-header {
-	box-shadow: rgba(15, 2, 49, 0.35) 0px -5px 5px inset;
-	color: var(--white);
-	display: flex;
-	flex-direction: row;
-}
-header a {
-	color: inherit;
-	text-decoration: none;
-	margin-right: 1rem;
-}
+  footer, header {
+      background: var(--dark-blue);
+      padding: 1rem;
+  	box-shadow: rgba(15, 2, 49, 0.35) 0px 5px 5px inset;
+  	display: flex;
+  	flex-direction: column;
+  }
+  header {
+  	box-shadow: rgba(15, 2, 49, 0.35) 0px -5px 5px inset;
+  	color: var(--white);
+  	display: flex;
+  	flex-direction: row;
+  }
+  header a {
+  	color: inherit;
+  	text-decoration: none;
+  	margin-right: 1rem;
+  }
 
-footer .cta {
-	margin-bottom: 1rem;
-}
+  footer .cta {
+  	margin-bottom: 1rem;
+  }
 
-footer .socialbar {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-}
+  footer .socialbar {
+  	display: flex;
+  	flex-direction: row;
+  	justify-content: flex-end;
+  	align-items: center;
+  }
 
-footer .social {
-	width: 2rem;
-}
+  footer .social {
+  	width: 2rem;
+  }
 
-.icon {
-	display: inline-block;
-	background: white;
-	--size: 1.5em;
-	width: var(--size);
-	height: var(--size);
-	mask-image: var(--image);
-	-webkit-mask-image: var(--image);
-	mask-size: contain;
-	-webkit-mask-size: contain;
-}
+  .icon {
+  	display: inline-block;
+  	background: white;
+  	--size: 1.5em;
+  	width: var(--size);
+  	height: var(--size);
+  	mask-image: var(--image);
+  	-webkit-mask-image: var(--image);
+  	mask-size: contain;
+  	-webkit-mask-size: contain;
+  }
 
-.cta {
-	background-color: var(--purple);
-	border-radius: 999px;
-	font-weight: bold;
-	text-decoration: none;
-	color: var(--white);
-	text-align: center;
-	padding: 0.5rem;
-	box-shadow: rgba(0, 0, 0, 0.25) 1px 4px 10px;
-}
-.weight-normal {
-	font-weight: normal;
-}
+  .cta {
+  	background-color: var(--purple);
+  	border-radius: 999px;
+  	font-weight: bold;
+  	text-decoration: none;
+  	color: var(--white);
+  	text-align: center;
+  	padding: 0.5rem;
+  	box-shadow: rgba(0, 0, 0, 0.25) 1px 4px 10px;
+  }
+  .oldpage {
+  	color: var(--offwhite);
+  	text-decoration: none;
+  	margin-right: 1em;
+  		font-size: 0.7rem;
+  }
+  .oldpage:after {
+  	display: inline-block;
+  	content: '';
+  	width: 1em;
+  	height: 1em;
+  	background: var(--offwhite);
+  	margin-left: 0.2em;
+  	--image: url(assets/link.svg);
+  	-webkit-mask-image: var(--image);
+  	mask-image: var(--image);
+  	-webkit-mask-size: contain;
+  	mask-size: contain;
+  }
+  .weight-normal {
+  	font-weight: normal;
+  }
 </style>
 <header>
-	<a href="/">Home</a>
-	<a href="/faq">FAQ</a>
+  <a href="/">Home</a>
+  <a href="/faq">FAQ</a>
 </header>
 <main lang="en">
   <%- content %>
 </main>
 <footer>
-	<a href="<%= meta.discord %>" class="cta discord">
-		<span class="weight-normal">Join our</span>
-		Discord
-	</a>
-	<div class="socialbar">
-		<% for (const social of ["twitter", "youtube", "github", "discord"]) { %>
-			<a href="<%= meta[social]; %>" class="social <%= social %>" rel="noopener noreferrer" target="_blank">
-					<span class="icon" style="--image: url(assets/<%= social; %>.svg)" />
-			</a>
-		<% } %>
-	</div>
+  <a href="<%= meta.discord %>" class="cta discord">
+    <span class="weight-normal">Join our</span>
+    Discord
+  </a>
+  <div class="socialbar">
+    <a href="https://2020.webassembly-summit.org" class="oldpage"
+      >Summit 2020</a
+    >
+    <% for (const social of ["twitter", "youtube", "github", "discord"]) { %>
+    <a
+      href="<%= meta[social]; %>"
+      class="social <%= social %>"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <span class="icon" style="--image: url(assets/<%= social; %>.svg)" />
+    </a>
+    <% } %>
+  </div>
 </footer>
