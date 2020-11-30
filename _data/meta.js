@@ -10,7 +10,7 @@ module.exports = {
   },
   canonical_url: "https://webassembly-summit.org",
   twitter: "https://twitter.com/wasm_summit",
-  discord: "https://discord.gg/mQTpt9nS",
+  discord: "https://discord.gg/cTVXmDfSYR",
   youtube: "https://youtube.com/c/WebAssemblySummit",
   github: "https://github.com/WebAssemblySummit/webassembly-summit.org",
   cfp:
