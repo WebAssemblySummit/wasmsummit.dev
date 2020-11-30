@@ -37,7 +37,7 @@ Our plan is to have spoken speakers pre-record talks, with them being livestream
 
 ## Discord
 
-We will be using Discord for communication to share announcements for the event, and for atendees to chat with one another. We will have channels for communicating during the broadcast of the Youtube livestream, as well as seperate channel topics for more focused discussions.
+We will be using Discord for communication to share announcements for the event, and for attendees to chat with one another. We will have channels for communicating during the broadcast of the Youtube livestream, as well as seperate channel topics for more focused discussions.
 
 We are also hoping to have "Fireside chats", which will be sessions hosted by selected speakers to do a deep dive or discussion into specific WebAssembly topics.
 
