@@ -9,7 +9,7 @@ module.exports = {
     purple: "#876AD1",
   },
   canonical_url: "https://webassembly-summit.org",
-  twitter: "https://twitter.com/@WasmSummit",
+  twitter: "https://twitter.com/wasm_summit",
   discord: "https://discord.gg/mQTpt9nS",
   youtube: "https://youtube.com/c/WebAssemblySummit",
   github: "https://github.com/WebAssemblySummit/webassembly-summit.org",
