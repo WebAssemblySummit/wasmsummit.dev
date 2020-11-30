@@ -41,6 +41,10 @@ We will be using Discord for communication to share announcements for the event,
 
 We are also hoping to have "Fireside chats", which will be sessions hosted by selected speakers to do a deep dive or discussion into specific WebAssembly topics.
 
+# Can I speak at WebAssembly Summit 2021?
+
+_Everyone_ is invited to apply to speak at WebAssembly Summit 2021. The application deadline is January 15th, 2021.
+
 # Do you have a code of conduct?
 
 WebAssembly Summit is intended an inclusive conference for everyone and will enforce our [code of conduct](https://github.com/WebAssemblySummit/webassembly-summit.org/blob/68e669d279ece17af2466534096f71094034ea60/CODE_OF_CONDUCT.md) to make sure everybody feels welcome and safe.
