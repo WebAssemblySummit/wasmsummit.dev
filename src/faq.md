@@ -25,7 +25,7 @@ WebAssembly Summit is a conference to bring together the WebAssembly community t
 
 # When is WebAssembly Summit 2021?
 
-April-ish 2021
+April 22nd, 2021
 
 # How will WebAssembly Summit 2021 be hosted?
 
