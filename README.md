@@ -11,7 +11,13 @@ Contributions should start by [opening an issue](https://github.com/WebAssemblyS
 ## Building & Running the project
 
 ```
+# After cloning
 $ npm i
-$ npm run build
+
+# For development
+$ npm watch
 $ npm run serve
+
+# For building
+$ npm run build
 ```
