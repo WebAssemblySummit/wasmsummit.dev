@@ -72,6 +72,7 @@ _The schedule is still being planned. Please find the order of talks for Wasm Su
 
 <div class="speaker-block">
   <h1>Opening Keynote</h1>
+  <img src="assets/speaker-images/deepti.jpg"></img>
   <h2>Deepti Gandluri</h2>
   <p></p>
 </div>
