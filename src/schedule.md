@@ -74,7 +74,7 @@ _The schedule is still being planned. Please find the order of talks for Wasm Su
   <h1>Opening Keynote</h1>
   <img src="assets/speaker-images/deepti.jpg"></img>
   <h2>Deepti Gandluri</h2>
-  <p></p>
+  <p>The opening keynote will be taking a look at what was acheived in WebAssembly in 2020, and what's to come in 2021!</p>
 </div>
 
 <div class="speaker-block">
@@ -104,8 +104,9 @@ _The schedule is still being planned. Please find the order of talks for Wasm Su
 
 <div class="speaker-block">
   <h1>Tensorflow inference on WebAssembly — from 10 minutes to 10 milliseconds</h1>
+  <img src="assets/speaker-images/michael-yuan.jpg"></img>
   <h2>Michael Yuan</h2>
-  <p></p>
+  <p>This presentation will cover options to run Tensorflow model inference on WebAssembly. We will start from the unique challenges of deploying AI inference models in production, and how Rust + WebAssembly could help. Using a Mobilenet image classification task as an example,  we will discuss the pros and cons of the plain JS approach, Tensorflow.js, pure Rust crates for Tensorflow compiled to Wasm, and WASI-like Tensorflow Wasm extensions that run on specialized inference chips. We will go through the journey of 60,000x performance gain over different WebAssembly approaches. We will also discuss what’s the future for WebAssembly-based AI on the edge cloud.</p>
 </div>
 
 <div class="speaker-block">
