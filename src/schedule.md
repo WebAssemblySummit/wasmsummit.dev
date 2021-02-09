@@ -98,8 +98,9 @@ _The schedule is still being planned. Please find the order of talks for Wasm Su
 
 <div class="speaker-block">
   <h1>Grain: Your WebAssembly-First Programming Language</h1>
+  <img src="assets/speaker-images/oscar.jpg"></img>
   <h2>Oscar Spencer</h2>
-  <p></p>
+  <p>While WebAssembly allows us to compile many of the languages that we know and love to something browser-compatible, it also opens the door for brand-new languages to share the stage with JavaScript. Grain is a strongly-typed language that aims to bring modern language features to the masses exclusively through WebAssembly. It has its roots in functional programming, but is flexible enough to suit your programming style while helping you catch bugs before runtime. This talk will give you a formal introduction to the language and a new outlook on the future WebAssembly ecosystem.</p>
 </div>
 
 <div class="speaker-block">
