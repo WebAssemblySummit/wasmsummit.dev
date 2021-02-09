@@ -49,6 +49,12 @@ main a:visited {
   width: 200px;
   height: 200px;
   object-fit: cover;
+  float: right;
+  margin-left: 1em;
+  border-radius: 10%;
+  max-width: 50vw;
+  height: auto;
+  aspect-ratio: 1;
 }
 
 .speaker-block p {}
