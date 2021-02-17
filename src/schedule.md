@@ -133,5 +133,5 @@ _The schedule is still being planned. Please find the order of talks for Wasm Su
 <div class="speaker-block">
   <h1>Building a WebAssembly Runtime for BBC iPlayer and enhanced audience experiences</h1>
   <h2>Tim Pearce (& team), British Broadcasting Corporation</h2>
-  <p></p>
+  <p>Join us on our journey into investigating the role of WebAssembly in delivering “Object-Based Media” experiences to BBC audiences on any device. We’ll demonstrate how we built our own WASM runtime, capable of playing back media based applications, by implementing and running BBC iPlayer as a WASM module! We’ll show how we plan to build on this work, including leveraging compute nodes in the cloud, edge and home devices to improve the performance of real-time interactive and personalised media applications.</p>
 </div>
