@@ -84,7 +84,7 @@ _The schedule is still being planned. Please find the order of talks for Wasm Su
   <h1>Opening Keynote</h1>
   <img src="assets/speaker-images/deepti.jpg"></img>
   <h2>Deepti Gandluri</h2>
-  <p>The opening keynote will be taking a look at what was acheived in WebAssembly in 2020, and what's to come in 2021!</p>
+  <p>The opening keynote will be taking a look at what was achieved in WebAssembly in 2020, and what's to come in 2021!</p>
 </div>
 
 <div class="speaker-block">
@@ -138,8 +138,8 @@ _The schedule is still being planned. Please find the order of talks for Wasm Su
   <h1>Building a WebAssembly Runtime for BBC iPlayer and enhanced audience experiences</h1>
   <img class="speaker-image-contain" src="assets/speaker-images/bbc-logo.png"></img>
   <h2>Tim Pearce (& team), British Broadcasting Corporation</h2>
-  <p>Join us on our journey into investigating the role of WebAssembly in delivering “Object-Based Media” experiences to BBC audiences on any device. We’ll demonstrate how we built our own WASM runtime, capable of playing back media based applications, by implementing and running BBC iPlayer as a WASM module!
+  <p>Join us on our journey into investigating the role of WebAssembly in delivering “Object-Based Media” experiences to BBC audiences on any device. We’ll demonstrate how we built our own Wasm runtime, capable of playing back media based applications, by implementing and running BBC iPlayer as a Wasm module!
 
-We’ll show how we plan to build on this work, including leveraging compute nodes in the cloud, edge and home devices to improve the performance of real-time interactive and personalised media applications.</p>
+We’ll show how we plan to build on this work, including leveraging compute nodes in the cloud, edge and home devices to improve the performance of real-time interactive and personalized media applications.</p>
 
 </div>
