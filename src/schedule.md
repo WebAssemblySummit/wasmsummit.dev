@@ -122,7 +122,7 @@ _The schedule is still being planned. Please find the order of talks for Wasm Su
 
 <div class="speaker-block">
   <h1>Raw Wasm: Hand-crafted WebAssembly Demos</h1>
-  <img src="assets/speaker-images/ben-smith.jpg"></img>
+  <img src="assets/speaker-images/ben-smith.png" style="image-rendering: pixelated"></img>
   <h2>Ben Smith</h2>
   <p>Over the past few years, I've been making small (each is &lt;2KiB), <a href="https://github.com/binji/raw-wasm" target="_blank">hand-written demos in WebAssembly</a>. I've also written a few blog posts about the largest (see raw wasm: making a maze race, <a href="https://binji.github.io/posts/raw-wasm-making-a-maze-race/" target="_blank">part 1</a> and <a href="https://binji.github.io/posts/raw-wasm-making-a-maze-race-part-2/" target="_blank">part 2</a>). In this talk, I'll give an overview about the project, including how I made the demos, some of the fun tricks I used to keep file sizes small, and even how it can be useful!</p>
 </div>
