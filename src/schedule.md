@@ -86,7 +86,7 @@ main a:visited {
 
 # Schedule
 
-_Times are listed in London time (GMT, UTC+0)_
+_Times are listed in London time (BST, UTC+1)_
 
 <div class="schedule-block">
   <em>11:30</em>
