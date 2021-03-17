@@ -57,7 +57,7 @@ layout: default.ejs
 		<h1 class="name">WebAssembly</h1>
 		<h1 class="name2">Summit <span class="year"><%= meta.year %></span></h1>
 		<ul class="meta">
-			<li><span class="icon" style="--image: url(assets/date.svg)"></span><%= new Intl.DateTimeFormat('en-US', { hour12: true, year: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit", month: "long", timeZoneName: "long" }).format(meta.start) %></li>
+			<li><span class="icon" style="--image: url(assets/date.svg)"></span><%= new Intl.DateTimeFormat('en-US', { hour12: true, year: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit", month: "long", timeZoneName: "short", timeZone: "Europe/London" }).format(meta.start) %></li>
 			<li><span class="icon" style="--image: url(assets/location.svg)"></span>Discord &amp; YouTube</li>
 		</ul>
 		<a href="<%=meta.cfp%>" class="cta">
