@@ -82,20 +82,48 @@ main a:visited {
 
 }
 
+.timestamp {
+  font-size: 0.6em;
+}
+
+.timestamp em:nth-child(2n) {
+  color: #fff;
+  opacity: 0.6;
+}
+
+.timestamp em:nth-child(2n+1) {
+  color: #fff;
+  opacity: 0.8;
+}
+
 </style>
 
 <h1>Schedule</h1>
 
 <em>Times are listed in London time (BST, UTC+1)</em>
-<% var d = new Date(meta.start); %>
+<% 
+  var d = new Date(meta.start); 
+  var timezones = {
+    "San Francisco": "America/Los_Angeles",
+    "New York": "America/New_York",
+    "London": "Europe/London",
+    "Moscow": "Europe/Moscow",
+    "Tokyo": "Asia/Tokyo",
+  }
+  function printTime(d) {
+    return `<div class="timestamp">` + Object.entries(timezones).map(([name, timeZone]) => 
+      `<em style="white-space:nowrap">${new Intl.DateTimeFormat('en-US', { hour12: true, hour: "2-digit", minute: "2-digit", timeZone}).format(d)} (${name})</em>`
+    ).join(" ") + `</div>`
+  }
+%>
 <div class="schedule-block">
-  <em><%= new Intl.DateTimeFormat('en-US', { hour12: true, hour: "2-digit", minute: "2-digit"}).format(d) %></em>
+  <%- printTime(d) %>
   <h1>Introductions! 👋😄</h1>
 </div>
 
 <div class="schedule-block">
   <% d.setMinutes(d.getMinutes() + 10); %>
-  <em><%= new Intl.DateTimeFormat('en-US', { hour12: true, hour: "2-digit", minute: "2-digit"}).format(d) %></em>
+  <%- printTime(d) %>
   <h1>Opening Keynote</h1>
   <div class="block-divider"></div>
   <img src="assets/speaker-images/deepti.jpg"></img>
@@ -105,7 +133,7 @@ main a:visited {
 
 <div class="schedule-block">
   <% d.setMinutes(d.getMinutes() + 30); %>
-  <em><%= new Intl.DateTimeFormat('en-US', { hour12: true, hour: "2-digit", minute: "2-digit"}).format(d) %></em>
+  <%- printTime(d) %>
   <h1>Production Ready Server-Side WebAssembly: The Challenging Parts</h1>
   <div class="block-divider"></div>
   <img src="assets/speaker-images/saul-cabrera.jpg"></img>
@@ -120,13 +148,13 @@ main a:visited {
 
 <div class="schedule-block">
   <% d.setMinutes(d.getMinutes() + 30); %>
-  <em><%= new Intl.DateTimeFormat('en-US', { hour12: true, hour: "2-digit", minute: "2-digit"}).format(d) %></em>
+  <%- printTime(d) %>
   <h1>30 Minute Coffee Break ☕</h1>
 </div>
 
 <div class="schedule-block">
   <% d.setMinutes(d.getMinutes() + 30); %>
-  <em><%= new Intl.DateTimeFormat('en-US', { hour12: true, hour: "2-digit", minute: "2-digit"}).format(d) %></em>
+  <%- printTime(d) %>
   <h1>Hit the Ground Running: Wasm Snapshots for Fast Startup</h1>
   <div class="block-divider"></div>
   <img src="assets/speaker-images/nick-fitzgerald.jpg"></img>
@@ -136,7 +164,7 @@ main a:visited {
 
 <div class="schedule-block">
   <% d.setMinutes(d.getMinutes() + 20); %>
-  <em><%= new Intl.DateTimeFormat('en-US', { hour12: true, hour: "2-digit", minute: "2-digit"}).format(d) %></em>
+  <%- printTime(d) %>
   <h1>Grain: Your WebAssembly-First Programming Language</h1>
   <div class="block-divider"></div>
   <img src="assets/speaker-images/oscar.jpg"></img>
@@ -146,14 +174,14 @@ main a:visited {
 
 <div class="schedule-block">
   <% d.setMinutes(d.getMinutes() + 30); %>
-  <em><%= new Intl.DateTimeFormat('en-US', { hour12: true, hour: "2-digit", minute: "2-digit"}).format(d) %></em>
-  <em>14:00</em>
+  <%- printTime(d) %>
+  <em></em>
   <h1>90 Minute Lunch Break 🍱</h1>
 </div>
 
 <div class="schedule-block">
   <% d.setMinutes(d.getMinutes() + 90); %>
-  <em><%= new Intl.DateTimeFormat('en-US', { hour12: true, hour: "2-digit", minute: "2-digit"}).format(d) %></em>
+  <%- printTime(d) %>
   <h1>Tensorflow inference on WebAssembly — from 10 minutes to 10 milliseconds</h1>
   <div class="block-divider"></div>
   <img src="assets/speaker-images/michael-yuan.jpg"></img>
@@ -163,7 +191,7 @@ main a:visited {
 
 <div class="schedule-block">
   <% d.setMinutes(d.getMinutes() + 30); %>
-  <em><%= new Intl.DateTimeFormat('en-US', { hour12: true, hour: "2-digit", minute: "2-digit"}).format(d) %></em>
+  <%- printTime(d) %>
   <h1>Raw Wasm: Hand-crafted WebAssembly Demos</h1>
   <div class="block-divider"></div>
   <img src="assets/speaker-images/ben-smith.png" style="image-rendering: pixelated"></img>
@@ -173,13 +201,13 @@ main a:visited {
 
 <div class="schedule-block">
   <% d.setMinutes(d.getMinutes() + 30); %>
-  <em><%= new Intl.DateTimeFormat('en-US', { hour12: true, hour: "2-digit", minute: "2-digit"}).format(d) %></em>
+  <%- printTime(d) %>
   <h1>30 Minute Coffee Break ☕</h1>
 </div>
 
 <div class="schedule-block">
   <% d.setMinutes(d.getMinutes() + 30); %>
-  <em><%= new Intl.DateTimeFormat('en-US', { hour12: true, hour: "2-digit", minute: "2-digit"}).format(d) %></em>
+  <%- printTime(d) %>
   <h1>Bring your language to Wasm!</h1>
   <div class="block-divider"></div>
   <img src="assets/speaker-images/wvo.jpg"></img>
@@ -189,7 +217,7 @@ main a:visited {
 
 <div class="schedule-block">
   <% d.setMinutes(d.getMinutes() + 30); %>
-  <em><%= new Intl.DateTimeFormat('en-US', { hour12: true, hour: "2-digit", minute: "2-digit"}).format(d) %></em>
+  <%- printTime(d) %>
   <h1>Building a WebAssembly Runtime for BBC iPlayer and enhanced audience experiences</h1>
   <div class="block-divider"></div>
   <img class="speaker-image-contain" src="assets/speaker-images/bbc-logo.png"></img>
@@ -202,6 +230,6 @@ We’ll show how we plan to build on this work, including leveraging compute nod
 
 <div class="schedule-block">
   <% d.setMinutes(d.getMinutes() + 30); %>
-  <em><%= new Intl.DateTimeFormat('en-US', { hour12: true, hour: "2-digit", minute: "2-digit"}).format(d) %></em>
+  <%- printTime(d) %>
   <h1>Conclusion and Goodbyes! 👋🎉</h1>
 </div>
