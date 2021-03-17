@@ -18,34 +18,42 @@ main a:visited {
   color: var(--purple);
 }
 
-.speaker-block {
+.schedule-block {
   border-left: dashed var(--white);
   padding-left: 0.5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-.speaker-block h1 {
+.schedule-block h1 {
   font-size: 2rem;
-  border-bottom: solid var(--offwhite);
   margin-top: 0px;
-  padding-bottom: 0.5rem;
+  margin-bottom: 0px;
+  padding-bottom: 0.25rem;
 }
 
-.speaker-block h2 {
+.schedule-block .block-divider {
+  width: 100%;
+  height: 0px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: solid var(--offwhite);
+}
+
+.schedule-block h2 {
   color: var(--white);
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-.speaker-block p {
+.schedule-block p {
   color: var(--white);
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
 }
 
 
-.speaker-block img {
+.schedule-block img {
   width: 200px;
   height: 200px;
   object-fit: cover;
@@ -57,18 +65,18 @@ main a:visited {
   aspect-ratio: 1;
 }
 
-.speaker-block .speaker-image-contain {
+.schedule-block .speaker-image-contain {
   object-fit: contain;
 }
 
-.speaker-block p {}
+.schedule-block p {}
 
 @media (max-width: 720px) {
-  .speaker-block h1 {
+  .schedule-block h1 {
     font-size: 1.5rem;
   }
 
-  .speaker-block h2 {
+  .schedule-block h2 {
     font-size: 1rem;
   }
 
@@ -78,17 +86,26 @@ main a:visited {
 
 # Schedule
 
-_The schedule is still being planned. Please find the order of talks for Wasm Summit below!_
+_Times are listed in London time (BST, UTC+1)_
 
-<div class="speaker-block">
+<div class="schedule-block">
+  <em>11:30</em>
+  <h1>Introductions! 👋😄</h1>
+</div>
+
+<div class="schedule-block">
+  <em>11:40</em>
   <h1>Opening Keynote</h1>
+  <div class="block-divider"></div>
   <img src="assets/speaker-images/deepti.jpg"></img>
   <h2>Deepti Gandluri</h2>
   <p>The opening keynote will be taking a look at what was achieved in WebAssembly in 2020, and what's to come in 2021!</p>
 </div>
 
-<div class="speaker-block">
+<div class="schedule-block">
+  <em>12:10</em>
   <h1>Production Ready Server-Side WebAssembly: The Challenging Parts</h1>
+  <div class="block-divider"></div>
   <img src="assets/speaker-images/saul-cabrera.jpg"></img>
   <h2>Saúl Cabrera</h2>
   <p>
@@ -99,47 +116,79 @@ _The schedule is still being planned. Please find the order of talks for Wasm Su
   </p>
 </div>
 
-<div class="speaker-block">
+<div class="schedule-block">
+  <em>12:40</em>
+  <h1>30 Minute Coffee Break ☕</h1>
+</div>
+
+<div class="schedule-block">
+  <em>13:10</em>
   <h1>Hit the Ground Running: Wasm Snapshots for Fast Startup</h1>
+  <div class="block-divider"></div>
   <img src="assets/speaker-images/nick-fitzgerald.jpg"></img>
   <h2>Nick Fitzgerald</h2>
   <p>Don't make your users wait while your Wasm module initializes itself! <a href="https://github.com/bytecodealliance/wizer" target="_blank">Wizer</a> instantiates your WebAssembly module, executes its initialization functions, and then snapshots the initialized state out into a new, pre-initialized WebAssembly module. Now you can use this new module to hit the ground running, without waiting for any of that first-time initialization code to complete. This talk will cover the design and implementation of Wizer; discuss its performance characteristics and the scenarios in which it excels and when it isn't the right tool; and finally, in the process of doing all that, we'll take a closer look at what makes up the guts of a WebAssembly module: memories, globals, tables, etc.</p>
 </div>
 
-<div class="speaker-block">
+<div class="schedule-block">
+  <em>13:30</em>
   <h1>Grain: Your WebAssembly-First Programming Language</h1>
+  <div class="block-divider"></div>
   <img src="assets/speaker-images/oscar.jpg"></img>
   <h2>Oscar Spencer</h2>
   <p>While WebAssembly allows us to compile many of the languages that we know and love to something browser-compatible, it also opens the door for brand-new languages to share the stage with JavaScript. Grain is a strongly-typed language that aims to bring modern language features to the masses exclusively through WebAssembly. It has its roots in functional programming, but is flexible enough to suit your programming style while helping you catch bugs before runtime. This talk will give you a formal introduction to the language and a new outlook on the future WebAssembly ecosystem.</p>
 </div>
 
-<div class="speaker-block">
+<div class="schedule-block">
+  <em>14:00</em>
+  <h1>90 Minute Lunch Break 🍱</h1>
+</div>
+
+<div class="schedule-block">
+  <em>15:30</em>
   <h1>Tensorflow inference on WebAssembly — from 10 minutes to 10 milliseconds</h1>
+  <div class="block-divider"></div>
   <img src="assets/speaker-images/michael-yuan.jpg"></img>
   <h2>Michael Yuan</h2>
   <p>This presentation will cover options to run Tensorflow model inference on WebAssembly. We will start from the unique challenges of deploying AI inference models in production, and how Rust + WebAssembly could help. Using a Mobilenet image classification task as an example,  we will discuss the pros and cons of the plain JS approach, Tensorflow.js, pure Rust crates for Tensorflow compiled to Wasm, and WASI-like Tensorflow Wasm extensions that run on specialized inference chips. We will go through the journey of 60,000x performance gain over different WebAssembly approaches. We will also discuss what’s the future for WebAssembly-based AI on the edge cloud.</p>
 </div>
 
-<div class="speaker-block">
+<div class="schedule-block">
+  <em>16:00</em>
   <h1>Raw Wasm: Hand-crafted WebAssembly Demos</h1>
+  <div class="block-divider"></div>
   <img src="assets/speaker-images/ben-smith.png" style="image-rendering: pixelated"></img>
   <h2>Ben Smith</h2>
   <p>Over the past few years, I've been making small (each is &lt;2KiB), <a href="https://github.com/binji/raw-wasm" target="_blank">hand-written demos in WebAssembly</a>. I've also written a few blog posts about the largest (see raw wasm: making a maze race, <a href="https://binji.github.io/posts/raw-wasm-making-a-maze-race/" target="_blank">part 1</a> and <a href="https://binji.github.io/posts/raw-wasm-making-a-maze-race-part-2/" target="_blank">part 2</a>). In this talk, I'll give an overview about the project, including how I made the demos, some of the fun tricks I used to keep file sizes small, and even how it can be useful!</p>
 </div>
 
-<div class="speaker-block">
+<div class="schedule-block">
+  <em>16:30</em>
+  <h1>30 Minute Coffee Break ☕</h1>
+</div>
+
+<div class="schedule-block">
+  <em>17:00</em>
   <h1>Bring your language to Wasm!</h1>
+  <div class="block-divider"></div>
   <img src="assets/speaker-images/wvo.jpg"></img>
   <h2>Wouter van Oortmerssen</h2>
   <p>Wasm is an exciting technology for language designers: supporting a wider range of possible languages than previous "VMs", it allows a new language to run on equal footing with others, wherever Wasm runs. This talk provides an overview of the various options and tools that can help a language implementer bring their language to Wasm. It dives into the ways Wasm is different from other platforms, how this may affect different kinds of languages, and the different ways to put together existing tools, languages and intermediate formats to make that happen.</p>
 </div>
 
-<div class="speaker-block">
+<div class="schedule-block">
+  <em>17:30</em>
   <h1>Building a WebAssembly Runtime for BBC iPlayer and enhanced audience experiences</h1>
+  <div class="block-divider"></div>
   <img class="speaker-image-contain" src="assets/speaker-images/bbc-logo.png"></img>
   <h2>Tim Pearce (& team), British Broadcasting Corporation</h2>
   <p>Join us on our journey into investigating the role of WebAssembly in delivering “Object-Based Media” experiences to BBC audiences on any device. We’ll demonstrate how we built our own Wasm runtime, capable of playing back media based applications, by implementing and running BBC iPlayer as a Wasm module!
 
 We’ll show how we plan to build on this work, including leveraging compute nodes in the cloud, edge and home devices to improve the performance of real-time interactive and personalized media applications.</p>
 
+</div>
+
+<div class="schedule-block">
+  <em>18:00</em>
+  <h1>Conclusion and Goodbyes! 👋🎉</h1>
 </div>
