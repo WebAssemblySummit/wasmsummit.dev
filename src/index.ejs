@@ -50,6 +50,40 @@ layout: default.ejs
 			grid-row: 1 / -1;
 		}
 	}
+
+	#sponsors {
+		margin-top: 10px;
+		border-top: 2px solid var(--white);
+	}
+
+	#sponsors h1 {
+		font-size: 1.6rem;
+	}
+
+	#sponsors .title {
+		text-align: center;
+	}
+
+	#sponsors .sponsors-row {
+		list-style-type: none;
+		padding: 0px;
+		margin: 0px;
+
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#sponsors .sponsor {
+		max-width: 300px;
+		margin: 10px;
+	}
+
+	#sponsors .sponsor img {
+		object-fit: contain;
+		width: 100%;
+	}
 </style>
 <section id="landingpage">
 	<img src="assets/logo.svg" class="logo">
@@ -60,8 +94,18 @@ layout: default.ejs
 			<li><span class="icon" style="--image: url(assets/date.svg)"></span><%= new Intl.DateTimeFormat('en-US', { hour12: true, year: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit", month: "long", timeZoneName: "short", timeZone: "Europe/London" }).format(meta.start) %></li>
 			<li><span class="icon" style="--image: url(assets/location.svg)"></span>Discord &amp; YouTube</li>
 		</ul>
-		<a href="<%=meta.cfp%>" class="cta">
-			Submit your talk
-		</a>
 	</div>
 </section>
+
+<section id="sponsors">
+	<h1 class="title">Sponsored by:</h1>
+	<ul class="sponsors-row">
+		<li class="sponsor">
+			<img src="assets/sponsors/google.svg">
+		</li>
+		<li class="sponsor">
+			<img src="assets/sponsors/Fastly-Wordmark-White.png">
+		</li>
+	</ul>
+</section>
+
