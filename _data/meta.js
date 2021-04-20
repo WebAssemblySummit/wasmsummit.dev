@@ -16,4 +16,5 @@ module.exports = {
   github: "https://github.com/WebAssemblySummit/webassembly-summit.org",
   cfp:
     "https://docs.google.com/forms/d/e/1FAIpQLSfPztNCmufXdnlme24ElihOncybjM-l_Oyv82jJBhRtJr9B0A/viewform?usp=sf_link",
+  livestream: "https://www.youtube.com/watch?v=-4zNzxqUBsk",
 };
