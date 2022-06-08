@@ -1,6 +1,6 @@
 module.exports = {
   site_name: "WebAssembly Summit",
-  year: 2021,
+  year: 2023,
   colors: {
     blue: "#3138c4",
     "dark-blue": "#1b1c6f",
@@ -14,7 +14,6 @@ module.exports = {
   discord: "https://discord.gg/cTVXmDfSYR",
   youtube: "https://youtube.com/c/WebAssemblySummit",
   github: "https://github.com/WebAssemblySummit/webassembly-summit.org",
-  cfp:
-    "https://docs.google.com/forms/d/e/1FAIpQLSfPztNCmufXdnlme24ElihOncybjM-l_Oyv82jJBhRtJr9B0A/viewform?usp=sf_link",
+  cfp: "https://docs.google.com/forms/d/e/1FAIpQLSfPztNCmufXdnlme24ElihOncybjM-l_Oyv82jJBhRtJr9B0A/viewform?usp=sf_link",
   livestream: "https://www.youtube.com/watch?v=-4zNzxqUBsk",
 };

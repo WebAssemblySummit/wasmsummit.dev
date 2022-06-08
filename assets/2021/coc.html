@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<meta name="viewport" content="minimum-scale=1, width=device-width" />
+<meta name="theme-color" content="#3138c4" />
+<meta property="og:url" content="https://webassembly-summit.org" />
+<meta property="og:title" content="WebAssembly Summit 2021" />
+<meta name="twitter:title" content="WebAssembly Summit 2021" />
+<title>WebAssembly Summit 2021</title>
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://webassembly-summit.org/assets/social.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://webassembly-summit.org/assets/social.png" />
+<meta
+  property="og:description"
+  content="WebAssembly Summit 2021"
+/>
+<meta
+  name="twitter:description"
+  content="WebAssembly Summit 2021"
+/>
+<meta name="twitter:site" content="https://twitter.com/wasm_summit" />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<style>
+  :root {
+  	
+  			--blue: #3138c4;
+  	
+  			--dark-blue: #1b1c6f;
+  	
+  			--offwhite: #cbccee;
+  	
+  			--white: #fff;
+  	
+  			--purple: #876AD1;
+  	
+  }
+
+  @font-face {
+  	font-family: "IBM";
+  	font-weight: normal;
+  	font-style: normal;
+  	src: url("assets/fonts/IBMPlexSans-Regular.ttf");
+  }
+
+  @font-face {
+  	font-family: "IBM";
+  	font-weight: bold;
+  	font-style: normal;
+  	src: url("assets/fonts/IBMPlexSans-Bold.ttf");
+  }
+
+  @font-face {
+  	font-family: "IBM";
+  	font-weight: normal;
+  	font-style: italic;
+  	src: url("assets/fonts/IBMPlexSans-Italic.ttf");
+  }
+
+  html {
+  	font-family: "IBM";
+  	font-size: 16px;
+  	background: var(--dark-blue);
+  	color: var(--offwhite);
+  	height: 100%;
+  }
+  @media (min-width: 720px) {
+  	html {
+  		font-size: 24px;
+  	}
+  }
+  body {
+  	margin: 0;
+  	background: var(--blue);
+  	min-height: 100%;
+  	display: grid;
+  	grid-template-rows: min-content 1fr min-content;
+  }
+  main {
+  	padding: 1rem;
+  	display: grid;
+  	align-content: center;
+  	justify-content: stretch;
+  }
+
+  h1 {
+  	font-size: 2.5rem;
+  	text-shadow: rgba(0, 0, 0, 0.25) 1px 4px 10px;
+  	color: var(--white);
+  }
+
+  footer, header {
+      background: var(--dark-blue);
+      padding: 1rem;
+  	box-shadow: rgba(15, 2, 49, 0.35) 0px 5px 5px inset;
+  	display: flex;
+  	flex-direction: column;
+  }
+  header {
+  	box-shadow: rgba(15, 2, 49, 0.35) 0px -5px 5px inset;
+  	color: var(--white);
+  	display: flex;
+  	flex-direction: row;
+  }
+  header a {
+  	color: inherit;
+  	text-decoration: none;
+  	margin-right: 1rem;
+  }
+
+  footer .cta {
+  	margin-bottom: 1rem;
+  }
+
+  footer .socialbar {
+  	display: flex;
+  	flex-direction: row;
+  	justify-content: flex-end;
+  	align-items: center;
+  }
+
+  footer .social {
+  	width: 2rem;
+  }
+
+  .icon {
+  	display: inline-block;
+  	background: white;
+  	--size: 1.5em;
+  	width: var(--size);
+  	height: var(--size);
+  	mask-image: var(--image);
+  	-webkit-mask-image: var(--image);
+  	mask-size: contain;
+  	-webkit-mask-size: contain;
+  }
+
+  .cta {
+  	background-color: var(--purple);
+  	border-radius: 999px;
+  	font-weight: bold;
+  	text-decoration: none;
+  	color: var(--white);
+  	text-align: center;
+  	padding: 0.5rem;
+  	box-shadow: rgba(0, 0, 0, 0.25) 1px 4px 10px;
+  }
+  .oldpage {
+  	color: var(--offwhite);
+  	text-decoration: none;
+  	margin-right: 1em;
+  		font-size: 0.7rem;
+  }
+  .oldpage:after {
+  	display: inline-block;
+  	content: '';
+  	width: 1em;
+  	height: 1em;
+  	background: var(--offwhite);
+  	margin-left: 0.2em;
+  	--image: url(assets/link.svg);
+  	-webkit-mask-image: var(--image);
+  	mask-image: var(--image);
+  	-webkit-mask-size: contain;
+  	mask-size: contain;
+  }
+  .weight-normal {
+  	font-weight: normal;
+  }
+</style>
+<header>
+  <a href="/assets/2021/home">Home</a>
+	<a href="https://youtube.com/c/WebAssemblySummit">YouTube</a>
+  <a href="/assets/2021/schedule">Schedule</a>
+  <a href="/assets/2021/faq">FAQ</a>
+  <a href="/assets/2021/coc">Code of Conduct</a>
+</header>
+<main lang="en">
+  <style>
+  main {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main a {
+    color: var(--off-white);
+  }
+
+  main a:visited {
+    color: var(--purple);
+  }
+</style>
+<h1>Code of Conduct</h1>
+<p>This code of conduct governs this repo, the organizers and organizers' communication
+channels, as well as the event.</p>
+<p>We draw heavily from the <a href="https://rustconf.com/about/#code-of-conduct">RustConf Code of Conduct</a>, and the <a href="https://2020.cascadiajs.com/coc">CascadiaJS 2020 Code of Conduct</a>.</p>
+<h2>WebAssembly Summit is intended to be an inclusive, welcoming conference for everyone.</h2>
+<p>In particular, we do not tolerate harassment of conference participants or organizers in any form. Conference participants and organizers violating these rules may be sanctioned or expelled from the conference at the discretion of the conference organizers.</p>
+<h2>Who does the Code of Conduct apply to?</h2>
+<p>Everyone - including attendees, sponsors, speakers, and organizers - is required to agree to and follow this Code of Conduct. Inappropriate behavior or harassment of any kind is not tolerated. Organizers will enforce this code with any event involvement, including, but not limited to: online engagement (Twitter/Discord), or any WebAssembly Summit hosted event.</p>
+<h2>What constitutes a Code of Conduct violation?</h2>
+<p>Harassment, including disparaging verbal comments related to gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, age, or religion; sexual images in public spaces; deliberate intimidation; stalking; sustained disruption of talks or other events; inappropriate physical contact; and unwelcome sexual attention. Participants and organizers asked to stop any harassing behavior are expected to comply immediately.</p>
+<p>If a participant or organizer engages in harassing behavior, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund. If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately.</p>
+<h2>Repoting Code of Conduct Issues</h2>
+<p>If you need help of any kind, to report a bad situation, or anything else not specified that we can help with, please DM us on Twitter or Discord.</p>
+<p>Organizers contact info:</p>
+<ul>
+<li>Aaron Turner, Twitter: <a href="https://twitter.com/torch2424">@torch2424</a>, Discord: torch2424#4615</li>
+<li>Surma, <a href="https://twitter.com/DasSurma">@dassurma</a>, Discord: surma#6368</li>
+</ul>
+
+</main>
+<footer>
+  <a href="https://discord.gg/cTVXmDfSYR" class="cta discord">
+    <span class="weight-normal">Join our</span>
+    Discord
+  </a>
+  <div class="socialbar">
+    <a href="https://2020.webassembly-summit.org" class="oldpage"
+      >Summit 2020</a
+    >
+    
+    <a
+      href="https://twitter.com/wasm_summit"
+      class="social twitter"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <span class="icon" style="--image: url(assets/twitter.svg)" />
+    </a>
+    
+    <a
+      href="https://youtube.com/c/WebAssemblySummit"
+      class="social youtube"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <span class="icon" style="--image: url(assets/youtube.svg)" />
+    </a>
+    
+    <a
+      href="https://github.com/WebAssemblySummit/webassembly-summit.org"
+      class="social github"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <span class="icon" style="--image: url(assets/github.svg)" />
+    </a>
+    
+    <a
+      href="https://discord.gg/cTVXmDfSYR"
+      class="social discord"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <span class="icon" style="--image: url(assets/discord.svg)" />
+    </a>
+    
+  </div>
+</footer>

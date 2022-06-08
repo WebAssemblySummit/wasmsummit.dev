@@ -31,21 +31,21 @@
   	font-family: "IBM";
   	font-weight: normal;
   	font-style: normal;
-  	src: url("../assets/fonts/IBMPlexSans-Regular.ttf");
+  	src: url("assets/fonts/IBMPlexSans-Regular.ttf");
   }
 
   @font-face {
   	font-family: "IBM";
   	font-weight: bold;
   	font-style: normal;
-  	src: url("../assets/fonts/IBMPlexSans-Bold.ttf");
+  	src: url("assets/fonts/IBMPlexSans-Bold.ttf");
   }
 
   @font-face {
   	font-family: "IBM";
   	font-weight: normal;
   	font-style: italic;
-  	src: url("../assets/fonts/IBMPlexSans-Italic.ttf");
+  	src: url("assets/fonts/IBMPlexSans-Italic.ttf");
   }
 
   html {
@@ -162,22 +162,14 @@
 <header>
   <a href="/">Home</a>
 	<a href="<%= meta.youtube %>">YouTube</a>
-  <a href="/schedule">Schedule</a>
-  <a href="/faq">FAQ</a>
-  <a href="/coc">Code of Conduct</a>
 </header>
 <main lang="en">
   <%- content %>
 </main>
 <footer>
-  <a href="<%= meta.discord %>" class="cta discord">
-    <span class="weight-normal">Join our</span>
-    Discord
-  </a>
   <div class="socialbar">
-    <a href="https://2020.webassembly-summit.org" class="oldpage"
-      >Summit 2020</a
-    >
+    <a href="/assets/2021/home" class="oldpage">Summit 2021</a>
+    <a href="https://2020.webassembly-summit.org" class="oldpage">Summit 2020</a>
     <% for (const social of ["twitter", "youtube", "github", "discord"]) { %>
     <a
       href="<%= meta[social]; %>"
