@@ -20,7 +20,7 @@
   },
   "homepage": "https://webassembly-summit.org",
   "dependencies": {
-    "@11ty/eleventy": "^0.11.1"
+    "@11ty/eleventy": "^1.0.2"
   },
   "devDependencies": {
     "husky": "^4.3.0",
