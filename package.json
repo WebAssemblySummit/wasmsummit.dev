@@ -27,6 +27,9 @@
     "prettier": "^2.1.2",
     "serve": "^14.1.2"
   },
+  "engines": {
+    "node": ">=16"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
