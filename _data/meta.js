@@ -14,6 +14,6 @@ module.exports = {
   discord: "https://discord.gg/cTVXmDfSYR",
   youtube: "https://youtube.com/c/WebAssemblySummit",
   github: "https://github.com/WebAssemblySummit/webassembly-summit.org",
-  cfp: "https://docs.google.com/forms/d/e/1FAIpQLSfPztNCmufXdnlme24ElihOncybjM-l_Oyv82jJBhRtJr9B0A/viewform?usp=sf_link",
+  cfp: "https://forms.gle/rMG2Ka6Pm3TCJ1oEA",
   livestream: "https://www.youtube.com/watch?v=-4zNzxqUBsk",
 };

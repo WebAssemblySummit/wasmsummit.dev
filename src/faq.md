@@ -19,59 +19,54 @@ main a:visited {
 }
 </style>
 
-# What is WebAssembly Summit?
+## What is WebAssembly Summit?
 
 WebAssembly Summit is a conference to bring together the WebAssembly community to discuss and share new and interesting ideas in WebAssembly!
 
-# When is WebAssembly Summit 2021?
+The event is explicitly for _everyone_ at all levels of experience.
 
-April 22nd, 2021
+## When is WebAssembly Summit 2023?
 
-# How will WebAssembly Summit 2021 be hosted?
+We don't have exact dates yet, but it will be around June/July 2023. Join the [Discord] for updates!
 
-Due to current events with the Covid-19 Pandemic, WebAssembly Summit 2021 will be virtual! The event will be happening online in two forms: Youtube for the talks and Discord for communication.
+## How will WebAssembly Summit 2023 be hosted?
 
-## YouTube
-
-Our plan is to have spoken speakers pre-record talks, with them being livestreamed during the time of the event on our [WebAssemblySummit Youtube Channel](https://www.youtube.com/channel/UCh9PqDCdacsTpyRaIryhA8g). We will have live MC-ing before and in-between the talks.
+The event will by hybrid. There will be a 2-day in-person event in London, UK. All talks will also be live-streamed with a live chat on [our Discord server][discord].
 
 ## Discord
 
-We will be using Discord for communication to share announcements for the event, and for attendees to chat with one another. We will have channels for communicating during the broadcast of the Youtube livestream, as well as seperate channel topics for more focused discussions.
+We will be using [our Discord server][discord] for communication to share announcements for the event, and for attendees to stay in touch during and after the event.
 
-We are also hoping to have "Fireside chats", which will be sessions hosted by selected speakers to do a deep dive or discussion into specific WebAssembly topics.
+## Can I speak at WebAssembly Summit 2023?
 
-# Can I speak at WebAssembly Summit 2021?
+_Everyone_ is invited to apply to speak at WebAssembly Summit 2023. The deadline to [submit a talk][cfp] is January 15th, 2023.
 
-_Everyone_ is invited to apply to speak at WebAssembly Summit 2021. The application deadline is January 15th, 2021.
+## Do you have a code of conduct?
 
-# Do you have a code of conduct?
+WebAssembly Summit is an inclusive conference for everyone and we will enforce our [code of conduct][coc] to make sure everybody feels welcome and safe, both in person and on our [Discord] server.
 
-WebAssembly Summit is intended an inclusive conference for everyone and will enforce our [code of conduct](/coc) to make sure everybody feels welcome and safe.
+## Will you record the talks?
 
-This code of conduct is subject to change to match our virtual attendance for Wasm Summit 2021. Especially with things in accordance of online communication, both in the WebAssembly Summit Discord, and outside as well.
+Yes, the talks will be live streamed and also uploaded as videos. So no worries, even if you cannot attend or follow the livestream, you will be able to catch up on the talks later once they are published.
 
-# Will you record the talks?
+## Is this a community event?
 
-Yes, the talks will be uploaded on our [Youtube channel](https://www.youtube.com/channel/UCh9PqDCdacsTpyRaIryhA8g). So no worries, even if you cannot attend or follow the livestream, you will be able to catch up on the talks later once they are published.
+Yes, the summit is organized by individual people in the WebAssembly community.
 
-# Is this a community event?
-
-Yes, the summit is organized by individual people in the WebAssembly community, and at the time of writing sponsored by Google. Please reach out if you would like the organizers to consider your sponsorship of WebAssembly Summit.
-
-# Who is organizing this?
+## Who is organizing this?
 
 The organizers are (in alphabetical order):
 
-- Aaron Turner
-- Surma
+- Ashley Williams (Discord: `ag_dubs#0023`)
+- Surma (Discord: `surma#6368`)
 
-# How do I contact you?
+## How do I contact you?
 
-If you need to get in contact with the organizers for whatever reason, please reach out on the [WebAssembly Summit Discord](https://discord.gg/mQTpt9nS).
+If you need to get in contact with the organizers for whatever reason, please reach out on the [WebAssembly Summit Discord][discord].
 
 Thanks for all the support from the WebAssembly community!
 
-# How do I find you on Twitter?
-
-You can find us at [@wasm_summit](https://twitter.com/wasm_summit).
+[discord]: <%= meta.discord; %>
+[twitter]: <%= meta.twitter; %>
+[cfp]: <%= meta.cfp; %>
+[coc]: /coc
