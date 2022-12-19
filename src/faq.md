@@ -39,7 +39,7 @@ We will be using [our Discord server][discord] for communication to share announ
 
 ## Can I speak at WebAssembly Summit 2023?
 
-_Everyone_ is invited to apply to speak at WebAssembly Summit 2023. The deadline to [submit a talk][cfp] is January 15th, 2023.
+_Everyone_ is invited to apply to speak at WebAssembly Summit 2023. The deadline to [submit a talk][cfp] is January 31st, 2023.
 
 ## Do you have a code of conduct?
 
