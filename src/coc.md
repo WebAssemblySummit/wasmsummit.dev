@@ -40,7 +40,7 @@ Harassment, including disparaging verbal comments related to gender, gender iden
 
 If a participant or organizer engages in harassing behavior, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund. If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately.
 
-## Repoting Code of Conduct Issues
+## Reporting Code of Conduct Issues
 
 If you need help of any kind, to report a bad situation, or anything else not specified that we can help with, please DM us on Twitter or Discord.
 
