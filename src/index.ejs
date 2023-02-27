@@ -25,22 +25,27 @@ layout: default.ejs
 		color: var(--offwhite);
 	}
 	#landingpage .meta {
+		display: grid;
+		grid-template-columns: max-content max-content;
+		justify-content: center;
 		padding: 0;
 		margin: 0;
-		list-style-type: none;
+		align-items: center;
+		column-gap: 1rem;
+		row-gap: 2rem;
 	}
 	#landingpage .meta li {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: .5rem 0;
-	}
-	#landingpage .meta .icon {
-		margin-right: .5rem;
+		display: contents;
 	}
 	#landingpage .cta {
 		display: block;
 		margin-top: 1rem;
+		background-color: var(--dark-blue);
+		font-weight: normal;
+	}
+	#landingpage .cta-important {
+		background-color: var(--purple);
+		font-weight: bold;
 	}
 	#landingpage .text {
 		display: grid;
@@ -55,6 +60,19 @@ layout: default.ejs
 			grid-row: 1 / -1;
 		}
 	}
+	#landingpage .datetable {
+		display: grid;
+		grid-template-columns: minmax(min-content, 1fr) 1fr;
+		column-gap: 1rem;
+		margin: 0;
+		padding: 0;
+	}
+	#landingpage .datetable li {
+		display: contents !important;
+	}
+	#landingpage .datetable span {
+		font-weight: bold;
+	}
 </style>
 <section id="landingpage">
 	<img src="assets/logo.svg" class="logo">
@@ -62,12 +80,21 @@ layout: default.ejs
 		<h1 class="name">WebAssembly</h1>
 		<h1 class="name2">Summit <span class="year"><%= meta.year %></span></h1>
 		<ul class="meta">
-	    <li><span class="icon" style="--image: url(assets/date.svg)"></span>Mid 2023</li>
-      <li><span class="icon" style="--image: url(assets/location.svg)"></span>London UK, Discord &amp; YouTube</li>
+	    <li><span class="icon" style="--image: url(assets/date.svg)"></span>
+				<ul class="datetable">
+					<li><span>Conference:</span> July 24th, 2023</li>
+					<li><span>Hackday:</span> July 25th, 2023</li>
+					<li><span>Community Group:</span> July 26th & 27th, 2023</li>
+				</ul>
+			</li>
+      <li>
+				<span class="icon" style="--image: url(assets/location.svg)"></span>
+			<span><strong>Imperial College London, UK</strong><br>Discord &amp; YouTube</span></li>
+
     </ul>
 		<p style="text-align: center">More information in our <a href="/faq">FAQs</a>.
-		<a href="<%= meta.cfp %>" class="cta">
-			Submit a talk!
+		<a href="<%= meta.prospectus %>" class="cta cta-important">
+			Become a sponsor!
 		</a>
 		<a href="<%= meta.discord %>" class="cta">
 			 Join our Discord for Updates!
